@@ -1,0 +1,16 @@
+.button-css{
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    padding: 14px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.button-css:hover {
+    background-color: #555555;
+    color: white;
+}
+.buttonHolder{ 
+    text-align: center; 
+}
