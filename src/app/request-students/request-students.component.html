@@ -1,13 +1,30 @@
-<nav>
-  request-students works!
- <a routerLink="/login">log out</a> 
- <a routerLink="/active-students">Active Students</a>
-</nav>
-<div>
+<Nav>
 
+    active-students works!
+    <a routerLink="/login">log out</a>
+    <a routerLink="/active-students">Active Students</a>
+</Nav>
 
+<div class="CenterPage">
 
-
-
-  
+    <table id="customers">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>RCS ID</th>
+          <th>RIN</th>
+        </tr>
+        <tr *ngFor="let student of Students">
+          <td>{{student.fname}}</td>
+          <td>{{student.lname}}</td>
+          <td>{{student.rcsId}}</td>
+          <td>{{student.rin}}</td>
+        </tr>
+      </table>
+    
 </div>
+
+
+<p>
+ 
+</p>

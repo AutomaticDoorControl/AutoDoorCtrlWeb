@@ -1,3 +1,9 @@
+<Nav>
+    active-students works!
+    <a routerLink="/login">log out</a>
+    <a routerLink="/request-students">Student Requests</a>
+</Nav>
+
 <div class="CenterPage">
 
     <table id="customers">
@@ -7,17 +13,11 @@
           <th>RCS ID</th>
           <th>RIN</th>
         </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Berglunds snabbköp</td>
-          <td>Christina Berglund</td>
-          <td>Sweden</td>
-          <td></td>
+        <tr *ngFor="let student of Students">
+          <td>{{student.fname}}</td>
+          <td>{{student.lname}}</td>
+          <td>{{student.rcsId}}</td>
+          <td>{{student.rin}}</td>
         </tr>
       </table>
       
@@ -27,8 +27,4 @@
 </div>
 
 
-<p>
-  active-students works!
-  <a routerLink="/login">log out</a>
-  <a routerLink="/request-students">Student Requests</a>
-</p>
+

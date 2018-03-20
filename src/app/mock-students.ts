@@ -1,6 +1,6 @@
 import {Student} from './student'
 
-export const Students: Student[] = [
+export const AStudents: Student[] = [
     {id:1, fname:"Erin", lname: "Jordan", access: "Active", rin:661419468, rcsId: "jordae4"}, 
     {id:2, fname:"Emily", lname: "James", access: "Active", rin:661345987, rcsId: "jame13"},
     {id:3, fname:"Marina", lname: "Splatt", access: "Active", rin:661902485, rcsId: "splam18"},

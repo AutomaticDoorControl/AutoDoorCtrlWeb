@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ButtonComponent } from './button/button.component';
 import { ActiveStudentsComponent } from './active-students/active-students.component';
 import { RequestStudentsComponent } from './request-students/request-students.component';
+import { StudentService } from './student.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { RequestStudentsComponent } from './request-students/request-students.co
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
