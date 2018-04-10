@@ -1,6 +1,7 @@
 # AutoDoorCtrlWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+intructions download angular cli  https://angular.io/tutorial/toh-pt0
 
 ## Development server
 
