@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 AutoDoorCtrlWeb is the Website with which Students can login and access the button that allows them to open the service doors from their mobile devices. This website makes use of a Node server that connect to a microsoft database and aut0 for authenticatiion. The server repository can be found [here](https://github.com/AutomaticDoorControl/AutoDoorCtrlWebAPI).
 
 ## Installation Instructions
-  * clone repository: git@github.com:AutomaticDoorControl/AutoDoorCtrlWeb.git
+  * clone repository: `git@github.com:AutomaticDoorControl/AutoDoorCtrlWeb.git`
   * Download Node and npm onto your machine(if you haven't already)
   * Install angular cli using `npm install -g @angular/cli`
   * Navigate to the AutoDoorCtrlWed folder
