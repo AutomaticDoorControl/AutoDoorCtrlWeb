@@ -1,30 +1,50 @@
-<Nav>
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
 
-    active-students works!
-    <a routerLink="/login">log out</a>
-    <a routerLink="/active-students">Active Students</a>
-</Nav>
-
-<div class="CenterPage">
-
-    <table id="customers">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>RCS ID</th>
-          <th>RIN</th>
-        </tr>
-        <tr *ngFor="let student of Students">
-          <td>{{student.fname}}</td>
-          <td>{{student.lname}}</td>
-          <td>{{student.rcsId}}</td>
-          <td>{{student.rin}}</td>
-        </tr>
-      </table>
-    
+      <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    </div>
 </div>
 
-
-<p>
- 
-</p>
+<div class="main">
+    <div class="w3-main" style="margin-left:250px">
+        <!-- Sidebar -->
+           <div class="sidenav">
+              <h4>Menu</h4>
+              <a href="/request-students">Student Requests</a>
+              <a href="/active-students">Active students</a>
+              <div>
+                 <button> Add all </button>
+              </div>             
+              </div>
+           
+           <div class="w3-row w3-padding-64">
+              <h3>Student Requests</h3>
+               <div class="CenterPage">
+     
+               <table id="customers">
+                   <tr>
+                     <th>First Name</th>
+                     <th>Last Name</th>
+                     <th>RCS ID</th>
+                     <th>RIN</th>
+                     <th></th>
+                   </tr>
+                   <tr *ngFor="let student of Students">
+                     <td>{{student.fname}}</td>
+                     <td>{{student.lname}}</td>
+                     <td>{{student.rcsId}}</td>
+                     <td>{{student.rin}}</td>
+                     <td><button>add</button></td>
+                   </tr>
+                 </table>
+                 
+           
+           
+               </div>
+           </div>    
+       </div>
+     </div>
+         

@@ -2,8 +2,7 @@
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     position: absolute;
-    width: 100%;
-    top: 5%;
+    width: 65%;
     border-radius: 12px;
 }
 
@@ -25,4 +24,45 @@
 }
 .CenterPage{ 
     text-align: center
+}
+
+.sidenav {
+    height: 87%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 43px;
+    left: 0;
+    background-color: midnightblue;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav h4 {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: whitesmoke;
+    display: block;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: whitesmoke;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: paleturquoise;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
