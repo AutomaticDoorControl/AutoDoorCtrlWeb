@@ -18,8 +18,8 @@ export class StudentService {
     return this.http.get<any>("http://localhost:8080/api/active_user")
   }
 
-  getRequest():Observable<Student[]> {
-    return of(RStudents)
+  getRequest():Observable<any> {
+    return this.http.get<any>("http://localhost:8080/api/inactive_user")
   }
 
 }

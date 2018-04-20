@@ -10,7 +10,7 @@ import {StudentService} from '../student.service';
 })
 export class RequestStudentsComponent implements OnInit {
 
-  Students: Student[];
+  Students: any[];
   
   /*constructors*/
   constructor(private studentService:StudentService) { }
