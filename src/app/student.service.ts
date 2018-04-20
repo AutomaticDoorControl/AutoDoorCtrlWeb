@@ -11,10 +11,11 @@ import {RStudents} from './mock-addStudents';
 @Injectable()
 export class StudentService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getActive():Observable<Student[]> {
-    return of(AStudents);
+  getActive():Observable<any> {
+
+    return this.http.get<any>("http://localhost:8080/api/active_user")
   }
 
   getRequest():Observable<Student[]> {
