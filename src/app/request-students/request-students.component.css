@@ -53,6 +53,10 @@
     display: block;
 }
 
+.sidenav button {
+    margin-bottom:16px;
+}
+
 .sidenav div {
     padding: 6px 8px 6px 16px;
     

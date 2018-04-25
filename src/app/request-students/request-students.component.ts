@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Student} from '../student';
+import { Angular2Csv } from 'angular2-csv/Angular2-csv';
 import {StudentService} from '../student.service'; 
 
 
@@ -25,5 +25,20 @@ export class RequestStudentsComponent implements OnInit {
     this.studentService.getRequest()
     .subscribe(List => this.Students = List);
   }
+
+  addStudent(username):void{
+    this.studentService.addOne(username);
+    window.location.reload();
+  }
+
+  addAll():void{
+    this.studentService.addAll
+  }
+
+downloadCSV():void{
+  var blob = new Angular2Csv(this.Students, 'My Report');
+  var downloadUrl= URL.createObjectURL(blob);
+    window.open(downloadUrl);
+}
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-button',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(public loginService:LoginService) { }
 
   ngOnInit() {
   }

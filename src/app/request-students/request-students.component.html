@@ -16,7 +16,8 @@
               <a href="/request-students">Student Requests</a>
               <a href="/active-students">Active students</a>
               <div>
-                 <button> Add all </button>
+                 <button (click)="addAllStudents()"> Add all </button>
+                 <button (click)="downloadCSV()"> Download </button>
               </div>             
               </div>
            
@@ -33,7 +34,7 @@
                    <tr *ngFor="let student of Students">
                      <td>{{student.RCSid}}</td>
                      <td>{{student.Status}}</td>
-                     <td><button>add</button></td>
+                     <td><button (click)="addStudent(student.RCSid)">add</button></td>
                    </tr>
                  </table>
                  
