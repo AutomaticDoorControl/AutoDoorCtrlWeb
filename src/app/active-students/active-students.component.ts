@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Student} from '../student';
+
 import {StudentService} from '../student.service'; 
 
 
@@ -10,7 +10,7 @@ import {StudentService} from '../student.service';
 })
 export class ActiveStudentsComponent implements OnInit {
   /*variables*/
-  Students: Student[];
+  Students: any[];
   
   /*constructors*/
   constructor(private studentService:StudentService) { }
@@ -25,5 +25,11 @@ export class ActiveStudentsComponent implements OnInit {
     this.studentService.getActive()
     .subscribe(List => this.Students = List);
   }
+
+  removeOne(username):void{
+    this.studentService.remove(username);
+  }
+
+
 
 }

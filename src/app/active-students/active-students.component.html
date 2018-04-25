@@ -1,30 +1,51 @@
-<Nav>
-    active-students works!
-    <a routerLink="/login">log out</a>
-    <a routerLink="/request-students">Student Requests</a>
-</Nav>
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
 
-<div class="CenterPage">
-
-    <table id="customers">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>RCS ID</th>
-          <th>RIN</th>
-        </tr>
-        <tr *ngFor="let student of Students">
-          <td>{{student.fname}}</td>
-          <td>{{student.lname}}</td>
-          <td>{{student.rcsId}}</td>
-          <td>{{student.rin}}</td>
-        </tr>
-      </table>
-      
-
-
-
+      <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    </div>
 </div>
+
+<div class="main">
+  
+
+      
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+  <div class="w3-main" style="margin-left:250px">
+   <!-- Sidebar -->
+      <div class="sidenav">
+          <h4>Menu</h4>
+          <a href="/request-students">Student Requests</a>
+          <a href="/active-students">Active students</a>
+        </div>
+      
+      <div class="w3-row w3-padding-64">
+          <h3>Active Students</h3>
+          <div class="CenterPage">
+          
+          <table id="customers">
+              <tr>
+                <th>RCS ID</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+              <tr *ngFor="let student of Students">
+                
+                <td>{{student.RCSid}}</td>
+                <td>{{student.Status}}</td>
+                <td><button (click)="removeOne(student.RCSid)">remove</button></td>
+              </tr>
+            </table>
+            
+      
+      
+          </div>
+      </div>    
+  </div>
+</div>
+    
 
 
 
