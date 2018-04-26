@@ -14,6 +14,9 @@ import { StudentService } from './student.service';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
 import { LoginService } from './login.service';
+import { AdminService } from './admin.service';
+import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
+import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import { LoginService } from './login.service';
     ButtonComponent,
     ActiveStudentsComponent,
     RequestStudentsComponent,
-    MessagesComponent
+    MessagesComponent,
+    SubmitComplaintComponent,
+    ListComplaintsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import { LoginService } from './login.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [StudentService, MessageService, LoginService],
+  providers: [StudentService, MessageService, LoginService, AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
