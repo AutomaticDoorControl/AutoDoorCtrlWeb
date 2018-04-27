@@ -1,9 +1,10 @@
 <!-- Navbar -->
 <div class="w3-top">
     <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+      
       <a class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id03').style.display='block'">Register</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+      <a href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="/submit-complaint" class="w3-bar-item w3-button w3-hide-small w3-hover-white" >Contact us</a>
       <a class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'">Admin</a>
     </div>
   </div>
@@ -34,19 +35,19 @@
     <div class="container">
       <div >
           
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <input #usernameA type="text" placeholder="Enter Username" name="uname" required>
 
       </div>
       <div>
           
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input #passwordA type="password" placeholder="Enter Password" name="psw" required>
 
       </div>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
 
-        <button type="submit" routerLink="/active-students">Login</button>
+        <button type="submit" (click)="Adminlogin(usernameA.value,passwordA.value)>Login">Login</button>
       
     </div>
   </form>
@@ -68,7 +69,7 @@
     </div>
     <div class="container" style="background-color:#f1f1f1">
       
-      <button type="submit" routerLink="/button" (click)="Studentlogin(studentL.value)">Login</button>
+      <button type="submit"  (click)="Studentlogin(studentL.value)">Login</button>
       
     </div>
   </form>

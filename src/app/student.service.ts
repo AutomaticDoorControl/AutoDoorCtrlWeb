@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 
 
 
 @Injectable()
 export class StudentService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   getActive():Observable<any> {
 
@@ -66,5 +66,29 @@ export class StudentService {
       err =>{
       console.log("err: issue with server");
       })
+  }
+
+  listComplaints():Observable<any>{
+    return this.http.get<any>("http://localhost:8080/api/get-complaints")
+
+  }
+  submitComplaint(location,message,isLI:boolean):void{
+    const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
+    let body = JSON.stringify({Location:location, Message:message});
+    this.http.post<any>("http://localhost:8080/api/submit-complaint",body,{headers: headers}).subscribe(
+      data =>{
+        console.log("complaint added to Database as request");
+        if(isLI){
+          this.router.navigate(['button']);
+        }
+        else{
+          this.router.navigate(['login']);
+        }
+        
+      },
+      err =>{
+      console.log("err: issue with server");
+      })
+
   }
 }

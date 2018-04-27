@@ -3,11 +3,8 @@ button.open{
     color: black;
     font-size: 48px;
     border-radius: 12px;
-    margin-top: 35%
-  
-
-
 }
+
 button.logout{
     background-color: navy;
     color: white;

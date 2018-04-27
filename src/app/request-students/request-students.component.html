@@ -2,7 +2,7 @@
 <div class="w3-top">
     <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
 
-      <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
+      <a (click)="logout()" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
     </div>
@@ -15,6 +15,7 @@
               <h4>Menu</h4>
               <a href="/request-students">Student Requests</a>
               <a href="/active-students">Active students</a>
+              <a href="/list-complaints">ADA Concern Areas</a>
               <div>
                  <button (click)="addAllStudents()"> Add all </button>
                  <button (click)="downloadCSV()"> Download </button>

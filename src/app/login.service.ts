@@ -62,4 +62,14 @@ export class LoginService implements CanActivate {
       return true;
     }
   }
+
+  loggedIn():boolean{
+    if (localStorage.getItem("user") === null){
+      console.log("current user: ",localStorage.getItem("user"))
+      return false
+    }
+    else{
+      return true;
+    }
+  }
 }

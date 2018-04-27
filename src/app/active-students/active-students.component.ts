@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {StudentService} from '../student.service'; 
-
+import {AdminService} from '../admin.service';
 
 @Component({
   selector: 'app-active-students',
@@ -13,7 +13,7 @@ export class ActiveStudentsComponent implements OnInit {
   Students: any[];
   
   /*constructors*/
-  constructor(private studentService:StudentService) { }
+  constructor(private admin:AdminService, private studentService:StudentService) { }
 
   /*On load function calls*/
   ngOnInit() {
@@ -28,6 +28,10 @@ export class ActiveStudentsComponent implements OnInit {
 
   removeOne(username):void{
     this.studentService.remove(username);
+  }
+
+  logout():void{
+    this.admin.logout();
   }
 
 

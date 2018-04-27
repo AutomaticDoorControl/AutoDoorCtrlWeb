@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Angular2Csv } from 'angular2-csv/Angular2-csv';
 import {StudentService} from '../student.service'; 
-
+import {AdminService} from '../admin.service';
 
 @Component({
   selector: 'app-request-students',
@@ -13,7 +13,7 @@ export class RequestStudentsComponent implements OnInit {
   Students: any[];
   
   /*constructors*/
-  constructor(private studentService:StudentService) { }
+  constructor(private admin:AdminService, private studentService:StudentService) { }
 
   /*On load function calls*/
   ngOnInit() {
@@ -35,10 +35,15 @@ export class RequestStudentsComponent implements OnInit {
     this.studentService.addAll
   }
 
-downloadCSV():void{
-  var blob = new Angular2Csv(this.Students, 'My Report');
-  var downloadUrl= URL.createObjectURL(blob);
-    window.open(downloadUrl);
-}
+  downloadCSV():void{
+    var blob = new Angular2Csv(this.Students, 'Student Requests');
+    var downloadUrl= URL.createObjectURL(blob);
+      window.open(downloadUrl);
+  }
+
+  logout():void{
+    this.admin.logout();
+  }
+
 
 }
