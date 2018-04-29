@@ -9,6 +9,7 @@ AutoDoorCtrlWeb is the Website with which Students can login and access the butt
   * Download Node and npm onto your machine(if you haven't already)
   * Install angular cli using `npm install -g @angular/cli`
   * Navigate to the AutoDoorCtrlWed folder
+  * run `npm install --save angular2-csv`
   * run with `ng serve --open`
   * Website should open on localhost:4200
 
