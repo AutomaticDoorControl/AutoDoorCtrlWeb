@@ -9,17 +9,21 @@ import { Router } from '@angular/router';
 @Injectable()
 export class StudentService {
 
+  // constructors needed 
   constructor(private http: HttpClient, private router:Router) { }
 
+  // gets active student data from api
   getActive():Observable<any> {
 
     return this.http.get<any>("http://localhost:8080/api/active_user")
   }
 
+  // gets inactive student data from api
   getRequest():Observable<any> {
     return this.http.get<any>("http://localhost:8080/api/inactive_user")
   }
 
+  // adds studet request to db through api
   register(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
@@ -32,6 +36,7 @@ export class StudentService {
       })
   }
 
+  // adds one student to the active student list
   addOne(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
@@ -44,6 +49,7 @@ export class StudentService {
       })
   }
 
+  // adds all students with request to the active students list
   addAll():void {
     
     this.http.get<any>("http://localhost:8080/api/addAll").subscribe(
@@ -54,7 +60,7 @@ export class StudentService {
       console.log("err: issue with server");
       })
   }
-
+// removes a student from the active student list
   remove(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
@@ -67,11 +73,13 @@ export class StudentService {
       console.log("err: issue with server");
       })
   }
-
+// lusts the student complaints stored in the db
   listComplaints():Observable<any>{
     return this.http.get<any>("http://localhost:8080/api/get-complaints")
 
   }
+
+  // adds student complaint to the db
   submitComplaint(location,message,isLI:boolean):void{
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({Location:location, Message:message});

@@ -11,14 +11,17 @@ import { Angular2Csv } from 'angular2-csv/Angular2-csv';
 })
 export class ListComplaintsComponent implements OnInit {
 
+  // constructors needed to use the different services 
   constructor(private admin:AdminService, private studentService:StudentService) { }
 
   Complaints:any[];
 
+  /*On load function calls*/  
   ngOnInit() {
     this.getComplaints();
   }
 
+  //loads complaints onto page using student service
   getComplaints():void{
     this.studentService.listComplaints().subscribe(
       data =>{
@@ -30,12 +33,14 @@ export class ListComplaintsComponent implements OnInit {
       })
   }
 
+  //download list of complaints to csv
   downloadCSV():void{
     var blob = new Angular2Csv(this.Complaints, 'Student Requests');
     var downloadUrl= URL.createObjectURL(blob);
       window.open(downloadUrl);
   }
 
+  // logs admin out of admin pages
   logout():void{
     this.admin.logout();
   }

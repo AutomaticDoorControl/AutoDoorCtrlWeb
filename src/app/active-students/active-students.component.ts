@@ -12,7 +12,7 @@ export class ActiveStudentsComponent implements OnInit {
   /*variables*/
   Students: any[];
   
-  /*constructors*/
+  // constructors needed to use the different services
   constructor(private admin:AdminService, private studentService:StudentService) { }
 
   /*On load function calls*/
@@ -20,16 +20,18 @@ export class ActiveStudentsComponent implements OnInit {
     this.getStudents();
   }
 
-  /*functions*/
+  //loads students into table using student service
   getStudents():void{
     this.studentService.getActive()
     .subscribe(List => this.Students = List);
   }
 
+  //removes a student from the active list using student service
   removeOne(username):void{
     this.studentService.remove(username);
   }
 
+  // logs the admin out using admin service
   logout():void{
     this.admin.logout();
   }

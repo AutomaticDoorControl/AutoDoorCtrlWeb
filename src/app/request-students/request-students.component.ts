@@ -12,7 +12,7 @@ export class RequestStudentsComponent implements OnInit {
 
   Students: any[];
   
-  /*constructors*/
+  // constructors needed to use the different services 
   constructor(private admin:AdminService, private studentService:StudentService) { }
 
   /*On load function calls*/
@@ -20,27 +20,31 @@ export class RequestStudentsComponent implements OnInit {
     this.getStudents();
   }
 
-  /*functions*/
+  // loads students info into table using student service
   getStudents():void{
     this.studentService.getRequest()
     .subscribe(List => this.Students = List);
   }
 
+  // adds student to the active students list using student service 
   addStudent(username):void{
     this.studentService.addOne(username);
     window.location.reload();
   }
 
+  // adds all students to the active students list using student service 
   addAll():void{
     this.studentService.addAll
   }
 
+  //downloads student list in csv gfile
   downloadCSV():void{
     var blob = new Angular2Csv(this.Students, 'Student Requests');
     var downloadUrl= URL.createObjectURL(blob);
       window.open(downloadUrl);
   }
-
+  
+  // allows admin to logout using log out service 
   logout():void{
     this.admin.logout();
   }
