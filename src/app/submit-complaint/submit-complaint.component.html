@@ -1,5 +1,5 @@
-<<!--Navbar (different for logged in and not logged in users by way of *ngif="isLI") -->
-  div class="w3-top">
+<!--Navbar (different for logged in and not logged in users by way of *ngif="isLI") -->
+  <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a *ngIf="isLI" href="/button"class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'"> Back to Button</a>
     <a *ngIf="!isLI" href="/login"class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'">Back</a>
