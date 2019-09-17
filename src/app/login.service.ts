@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import {Http, Response, Headers, } from "@angular/http";
 import { Router, CanActivate } from '@angular/router';
 import { MessageService } from './message.service';
+import { apiServer } from './globals';
 /*
 this service takes care of student logins. Due to issues with the administration about privacy laws
 and such, login functionality for students and administrators are currently split between two services
@@ -25,7 +26,7 @@ export class LoginService implements CanActivate {
       
       let body = JSON.stringify({RCSid:username});
       console.log('this is username in service',body)
-      this.http.post<any>("http://localhost:8080/api/login",body,{headers: headers}).subscribe(
+      this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
         data =>{ this.user = data;
                   console.log("this is the user we get",this.user);
                   console.log("this is the user status",this.user[0].Status.trim());

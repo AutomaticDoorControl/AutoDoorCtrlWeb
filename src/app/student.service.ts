@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { apiServer } from './globals';
 
 
 
@@ -15,19 +16,19 @@ export class StudentService {
   // gets active student data from api
   getActive():Observable<any> {
 
-    return this.http.get<any>("http://localhost:8080/api/active_user")
+    return this.http.get<any>(apiServer + "/api/active_user")
   }
 
   // gets inactive student data from api
   getRequest():Observable<any> {
-    return this.http.get<any>("http://localhost:8080/api/inactive_user")
+    return this.http.get<any>(apiServer + "/api/inactive_user")
   }
 
   // adds studet request to db through api
   register(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
-    this.http.post<any>("http://localhost:8080/api/request-access",body,{headers: headers}).subscribe(
+    this.http.post<any>(apiServer + "/api/request-access",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
       },
@@ -40,7 +41,7 @@ export class StudentService {
   addOne(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
-    this.http.post<any>("http://localhost:8080/api/addtoActive",body,{headers: headers}).subscribe(
+    this.http.post<any>(apiServer + "/api/addtoActive",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
       },
@@ -52,7 +53,7 @@ export class StudentService {
   // adds all students with request to the active students list
   addAll():void {
     
-    this.http.get<any>("http://localhost:8080/api/addAll").subscribe(
+    this.http.get<any>(apiServer + "/api/addAll").subscribe(
       data =>{
         console.log(" All request users added to Database as Active");
       },
@@ -64,7 +65,7 @@ export class StudentService {
   remove(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
-    this.http.post<any>("http://localhost:8080/api/remove",body,{headers: headers}).subscribe(
+    this.http.post<any>(apiServer + "/api/remove",body,{headers: headers}).subscribe(
       data =>{
         console.log("user removed from Database");
         window.location.reload();
@@ -75,7 +76,7 @@ export class StudentService {
   }
 // lusts the student complaints stored in the db
   listComplaints():Observable<any>{
-    return this.http.get<any>("http://localhost:8080/api/get-complaints")
+    return this.http.get<any>(apiServer + "/api/get-complaints")
 
   }
 
@@ -83,7 +84,7 @@ export class StudentService {
   submitComplaint(location,message,isLI:boolean):void{
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({Location:location, Message:message});
-    this.http.post<any>("http://localhost:8080/api/submit-complaint",body,{headers: headers}).subscribe(
+    this.http.post<any>(apiServer + "/api/submit-complaint",body,{headers: headers}).subscribe(
       data =>{
         console.log("complaint added to Database as request");
         if(isLI){
