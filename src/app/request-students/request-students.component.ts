@@ -34,7 +34,7 @@ export class RequestStudentsComponent implements OnInit {
 
   // adds all students to the active students list using student service 
   addAll():void{
-    this.studentService.addAll
+    this.studentService.addAll();
   }
 
   //downloads student list in csv gfile
