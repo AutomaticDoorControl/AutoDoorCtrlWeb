@@ -29,7 +29,6 @@ export class RequestStudentsComponent implements OnInit {
   // adds student to the active students list using student service 
   addStudent(username):void{
     this.studentService.addOne(username);
-    window.location.reload();
   }
 
   // adds all students to the active students list using student service 

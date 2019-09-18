@@ -30,6 +30,7 @@ export class StudentService {
     this.http.post<any>("http://localhost:8080/api/request-access",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
@@ -43,6 +44,7 @@ export class StudentService {
     this.http.post<any>("http://localhost:8080/api/addtoActive",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
@@ -55,6 +57,7 @@ export class StudentService {
     this.http.get<any>("http://localhost:8080/api/addAll").subscribe(
       data =>{
         console.log(" All request users added to Database as Active");
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
@@ -67,7 +70,7 @@ export class StudentService {
     this.http.post<any>("http://localhost:8080/api/remove",body,{headers: headers}).subscribe(
       data =>{
         console.log("user removed from Database");
-        window.location.reload();
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
