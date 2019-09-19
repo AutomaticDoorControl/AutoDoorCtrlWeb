@@ -20,8 +20,6 @@ export class AdminService {
   //constructors needed
   constructor( public router: Router,private http: HttpClient) { }
 
-  admin: any[];
-
   // checks to see if admin is in our db to be logged in
   login(username,password): boolean {
       const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
@@ -29,19 +27,15 @@ export class AdminService {
       let body = JSON.stringify({username:username, password:password});
       console.log('this is username in service',body)
       this.http.post<any>(apiServer + "/api/admin/login",body,{headers: headers}).subscribe(
-        data =>{ this.admin = data;
-                  console.log("this is the admin we get",this.admin);
-                  if(this.admin.length>0){
-                    
-                      localStorage.setItem("admin", this.admin[0].username);
-                      console.log("the user set in storage:",localStorage.getItem("admin"));
-                      this.router.navigate(['active-students']);
-                      return true;
-                  }
-                  else{
-                    
-                    return false;
-                  }   
+        data =>{
+          if(typeof(data.SESSIONID) != "undefined"){
+	    localStorage.setItem("admin", data.SESSIONID);
+	    this.router.navigate(['active-students']);
+	    return true;
+	  }
+	  else{
+	    return false;
+	  }
         },
         err => {console.log("error on the server")}
       );
