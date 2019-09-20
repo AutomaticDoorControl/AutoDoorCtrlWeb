@@ -24,7 +24,7 @@ export class StudentService {
     return this.http.get<any>(apiServer + "/api/inactive_user")
   }
 
-  // adds studet request to db through api
+  // adds student request to db through api
   register(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
@@ -74,7 +74,7 @@ export class StudentService {
       console.log("err: issue with server");
       })
   }
-// lusts the student complaints stored in the db
+// lists the student complaints stored in the db
   listComplaints():Observable<any>{
     return this.http.get<any>(apiServer + "/api/get-complaints")
 
