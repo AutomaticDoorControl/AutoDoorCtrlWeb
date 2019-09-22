@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {StudentService} from '../student.service';
 import {AdminService} from '../admin.service';
-import { Angular2Csv } from 'angular2-csv/Angular2-csv';
+import { convertArrayToCSV } from 'convert-array-to-csv';
 
 
 @Component({
@@ -35,9 +35,16 @@ export class ListComplaintsComponent implements OnInit {
 
   //download list of complaints to csv
   downloadCSV():void{
-    var blob = new Angular2Csv(this.Complaints, 'Student Requests');
-    var downloadUrl= URL.createObjectURL(blob);
-      window.open(downloadUrl);
+    let csv = convertArrayToCSV(this.Complaints);
+    let blob = new Blob([csv], {type: 'text/csv;charset=utf8;'});
+    let uri = 'data:attachment/csv;charset=utf-8,' + encodeURI(csv);
+    let link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.setAttribute('visibility', 'hidden');
+    link.download = 'Complaints.csv';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   // logs admin out of admin pages
