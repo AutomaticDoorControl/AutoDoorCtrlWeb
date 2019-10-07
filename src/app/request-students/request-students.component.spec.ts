@@ -1,5 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { AdminService } from '../admin.service';
+import { StudentService } from '../student.service';
+
 import { RequestStudentsComponent } from './request-students.component';
 
 describe('RequestStudentsComponent', () => {
@@ -8,7 +14,12 @@ describe('RequestStudentsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RequestStudentsComponent ]
+      imports: [
+        RouterTestingModule,
+	HttpClientTestingModule
+      ],
+      declarations: [ RequestStudentsComponent ],
+      providers: [ AdminService, StudentService ]
     })
     .compileComponents();
   }));

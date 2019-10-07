@@ -40,8 +40,8 @@ export class LoginService implements CanActivate {
                       return true;
                     }
                     else{
-                      
-                      return false;
+		      localStorage.removeItem("user");
+		      return false;
                     }
                   }
                   

@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MessageService } from '../message.service';
+
 import { MessagesComponent } from './messages.component';
 
 describe('MessagesComponent', () => {
@@ -8,7 +10,8 @@ describe('MessagesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessagesComponent ]
+      declarations: [ MessagesComponent ],
+      providers: [ MessageService ]
     })
     .compileComponents();
   }));
