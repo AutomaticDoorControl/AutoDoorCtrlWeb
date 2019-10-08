@@ -45,8 +45,9 @@ describe('AdminService', () => {
     let httpMock = TestBed.get(HttpTestingController);
     localStorage.removeItem("admin")
     service.login('test', 'test');
-    let loginRequest = httpMock.expectOne(apiServer + '/api/admin/login');
-    loginRequest.flush([{username: 'test', password: 'thisShouldBeAHash'}]);
+    let req = httpMock.expectOne(apiServer + '/api/admin/login');
+    req.flush([{username: 'test', password: 'thisShouldBeAHash'}]);
+    expect(req.request.method).toBe('POST');
     expect(localStorage.getItem("admin")).not.toEqual(null);
     httpMock.verify();
   });
@@ -55,8 +56,9 @@ describe('AdminService', () => {
     let httpMock = TestBed.get(HttpTestingController);
     localStorage.setItem("admin", "removeme");
     service.login('test', 'test');
-    let loginRequest = httpMock.expectOne(apiServer + '/api/admin/login');
-    loginRequest.flush([]);
+    let req = httpMock.expectOne(apiServer + '/api/admin/login');
+    req.flush([]);
+    expect(req.request.method).toBe('POST');
     expect(localStorage.getItem("admin")).toEqual(null);
     httpMock.verify();
   });

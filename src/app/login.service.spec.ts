@@ -54,9 +54,10 @@ describe('LoginService', () => {
     let httpMock = TestBed.get(HttpTestingController);
     localStorage.removeItem("user")
     service.login('test');
-    let loginRequest = httpMock.expectOne(apiServer + '/api/login');
-    loginRequest.flush([{RCSid: 'test', Status: 'Active'}]);
+    let req = httpMock.expectOne(apiServer + '/api/login');
+    req.flush([{RCSid: 'test', Status: 'Active'}]);
     expect(localStorage.getItem("user")).not.toEqual(null);
+    expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
 
@@ -64,9 +65,10 @@ describe('LoginService', () => {
     let httpMock = TestBed.get(HttpTestingController);
     localStorage.setItem("user", "removeme");
     service.login('test');
-    let loginRequest = httpMock.expectOne(apiServer + '/api/login');
-    loginRequest.flush([]);
+    let req = httpMock.expectOne(apiServer + '/api/login');
+    req.flush([]);
     expect(localStorage.getItem("user")).toEqual(null);
+    expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
 });

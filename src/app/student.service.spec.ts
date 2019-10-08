@@ -37,6 +37,7 @@ describe('StudentService', () => {
     );
     let req = httpMock.expectOne(apiServer + '/api/active_user');
     req.flush(active_users);
+    expect(req.request.method).toBe('GET');
   });
 
   it('should return a list of requested users', (done) => {
@@ -51,6 +52,7 @@ describe('StudentService', () => {
     );	
     let req = httpMock.expectOne(apiServer + '/api/inactive_user');
     req.flush(request_users);
+    expect(req.request.method).toBe('GET');
   });
 
   it('should post a single RCSid to addtoActive', () => {
@@ -60,6 +62,7 @@ describe('StudentService', () => {
     req.flush("good work!");
     let expectedRequest = '{"RCSid":"testing"}';
     expect(req.request.body).toBe(expectedRequest);
+    expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
 
@@ -68,6 +71,7 @@ describe('StudentService', () => {
     service.addAll();
     let req = httpMock.expectOne(apiServer + '/api/addAll');
     req.flush("");
+    expect(req.request.method).toBe('GET');
     httpMock.verify();
   }); 
 
@@ -78,6 +82,7 @@ describe('StudentService', () => {
     req.flush("good work!");
     let expectedRequest = '{"RCSid":"testing"}';
     expect(req.request.body).toBe(expectedRequest);
+    expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
 
@@ -93,6 +98,7 @@ describe('StudentService', () => {
     );	
     let req = httpMock.expectOne(apiServer + '/api/get-complaints');
     req.flush(complaints);
+    expect(req.request.method).toBe('GET');
   });
 
   it('should post a single complaint', () => {
@@ -102,6 +108,7 @@ describe('StudentService', () => {
     req.flush("good work!");
     let expectedRequest = '{"Location":"locationTest","Message":"messageTest"}';
     expect(req.request.body).toBe(expectedRequest);
+    expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
 });
