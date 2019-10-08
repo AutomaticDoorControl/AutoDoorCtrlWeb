@@ -28,23 +28,17 @@ export class LoginService implements CanActivate {
       console.log('this is username in service',body)
       this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
         data =>{ this.user = data;
-                  console.log("this is the user we get",this.user);
-                  console.log("this is the user status",this.user[0].Status.trim());
-                  var stat: string = String(this.user[0].Status.trim());
-                  console.log("this is stat", stat);
-                  if(this.user.length>0){
-                    if(stat === "Active" ){
+                  if(this.user.length > 0 && this.user[0].Status === "Active" ){
                       localStorage.setItem("user", this.user[0].RCSid);
                       console.log("the user set in storage:",localStorage.getItem("user"));
                       this.router.navigate(['button']);
                       return true;
-                    }
-                    else{
+		  }
+                  else {
 		      localStorage.removeItem("user");
 		      return false;
-                    }
                   }
-                  
+                                    
         },
         err => {console.log("error on the server")}
       );

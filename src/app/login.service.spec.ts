@@ -1,11 +1,14 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
+import { apiServer } from './globals';
 
 import { LoginService } from './login.service';
 
 describe('LoginService', () => {
+  let service: LoginService;
   beforeEach(() => {
     TestBed.configureTestingModule({
      imports: [
@@ -14,35 +17,56 @@ describe('LoginService', () => {
       ],
       providers: [LoginService]
     });
+    service = TestBed.get(LoginService);
   });
 
-  it('should be created', inject([LoginService], (service: LoginService) => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
-  }));
+  });
 
-  it('#logout should remove user from localstorage', inject([LoginService], (service: LoginService) => {
+  it('#logout should remove user from localStorage', () => {
     localStorage.setItem("user", "failure");
     service.logout();
     expect(localStorage.getItem("user")).toBe(null);
-  }));
+  });
 
-  it('#canActivate should be false if not logged in', inject([LoginService], (service: LoginService) => {
+  it('#canActivate should be false if not logged in', () => {
     localStorage.setItem("user", "failure");
     service.logout();
     expect(service.canActivate()).toBe(false);
-  }));
+  });
 
-  it('#canActivate should be true if logged in', inject([LoginService], (service: LoginService) => {
+  it('#canActivate should be true if logged in', () => {
     localStorage.setItem("user", "loggedIn");
     expect(service.canActivate()).toBe(true);
-  }));
+  });
 
-  it('#canActivate should always be equivalent to #loggedIn', inject([LoginService], (service: LoginService) => {
+  it('#canActivate should always be equivalent to #loggedIn', () => {
     localStorage.setItem("user", "loggedIn");
     expect(service.canActivate()).toBe(true);
     expect(service.loggedIn()).toBe(true);
     service.logout();
     expect(service.canActivate()).toBe(false);
     expect(service.loggedIn()).toBe(false);
-  }));
+  });
+
+  it('#login should set localStorage with good credentials', () => {
+    let httpMock = TestBed.get(HttpTestingController);
+    localStorage.removeItem("user")
+    service.login('test');
+    let loginRequest = httpMock.expectOne(apiServer + '/api/login');
+    loginRequest.flush([{RCSid: 'test', Status: 'Active'}]);
+    expect(localStorage.getItem("user")).not.toEqual(null);
+    httpMock.verify();
+  });
+
+  it('#login should not set localStorage with bad credentials', () => {
+    let httpMock = TestBed.get(HttpTestingController);
+    localStorage.setItem("user", "removeme");
+    service.login('test');
+    let loginRequest = httpMock.expectOne(apiServer + '/api/login');
+    loginRequest.flush([]);
+    expect(localStorage.getItem("user")).toEqual(null);
+    httpMock.verify();
+  });
 });
