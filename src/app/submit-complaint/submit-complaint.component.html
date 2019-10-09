@@ -15,7 +15,7 @@
   <p>Please let us know about areas on campus that are in need of improved/added disability access</p>
 
   <div class="container">
-    <form action="/action_page.php">
+    <form>
       <div class="row">
         <div class="col-25">
           <label for="fname">Location</label>
@@ -33,8 +33,7 @@
         </div>
       </div>
       <div class="row">
-        <input *ngIf="isLI" (click)="submit(loc.value,mes.value,isLI)" type="submit" value="Submit">
-        <input *ngIf="!isLI" (click)="submit(loc.value,mes.value,isLI)" type="submit" value="Submit">
+	      <button type="button" (click)="submit(loc.value,mes.value,isLI)">Submit</button>
       </div>
     </form>
   </div>
