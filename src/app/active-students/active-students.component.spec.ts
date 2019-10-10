@@ -55,4 +55,15 @@ describe('ActiveStudentsComponent', () => {
     expect(StudentMock.remove).toHaveBeenCalledWith("userThree");
   });
 
+  it('should populate table with values', () => {
+    const hostElement = fixture.nativeElement;
+    let table: HTMLElement = hostElement.querySelector('table');
+    expect(table.children[1].children[0].innerHTML).toBe('userOne');
+    expect(table.children[2].children[0].innerHTML).toBe('userTwo');
+    expect(table.children[3].children[0].innerHTML).toBe('userThree');
+    expect(table.children[4].children[0].innerHTML).toBe('userFour');
+    for(var i = 1; i < 4; ++i)
+      expect(table.children[i].children[1].innerHTML).toBe('Active');
+  });
+
 });
