@@ -2,6 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { Router } from '@angular/router';
 
 import { apiServer } from './globals';
 
@@ -71,4 +72,29 @@ describe('LoginService', () => {
     expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
+
+  it('#login should not set localStorage for inactive user', () => {
+    let httpMock = TestBed.get(HttpTestingController);
+    localStorage.setItem("user", "removeme");
+    service.login('test');
+    let req = httpMock.expectOne(apiServer + '/api/login');
+    req.flush([{RCSid: 'test', Status: 'Request'}]);
+    expect(localStorage.getItem("user")).toEqual(null);
+    expect(req.request.method).toBe('POST');
+    httpMock.verify();
+  });
+
+  it('successful login should redirect to /button', () => {
+    let httpMock = TestBed.get(HttpTestingController);
+    let router = TestBed.get(Router);
+    let navigateSpy = spyOn(router, 'navigate');
+    service.login('test');
+    let req = httpMock.expectOne(apiServer + '/api/login');
+    req.flush([{RCSid: 'test', Status: 'Active'}]);
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toBe('{"RCSid":"test"}');
+    expect(navigateSpy).toHaveBeenCalledWith(['button']);
+    httpMock.verify();
+  });
+
 });
