@@ -48,7 +48,7 @@ export class StudentService {
 	window.location.reload();
       },
       err =>{
-        localStore.removeItem("admin");
+        localStorage.removeItem("admin");
 	this.router.navigate(['login']);
       })
   }
@@ -62,7 +62,7 @@ export class StudentService {
 	window.location.reload();
       },
       err =>{
-        localStore.removeItem("admin");
+        localStorage.removeItem("admin");
 	this.router.navigate(['login']);
       })
   }
@@ -76,7 +76,7 @@ export class StudentService {
 	window.location.reload();
       },
       err =>{
-        localStore.removeItem("admin");
+        localStorage.removeItem("admin");
 	this.router.navigate(['login']);
       })
   }
