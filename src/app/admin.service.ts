@@ -27,6 +27,7 @@ export class AdminService {
       let body = JSON.stringify({username:username, password:password});
       console.log('this is username in service',body)
       this.http.post<any>(apiServer + "/api/admin/login",body,{headers: headers}).subscribe(
+
         data =>{
           if(data.SESSIONID != ""){
 	    localStorage.setItem("admin", data.SESSIONID);
@@ -34,6 +35,7 @@ export class AdminService {
 	    return true;
 	  }
 	  else{
+      localStorage.removeItem("admin");
 	    return false;
 	  }
         },
