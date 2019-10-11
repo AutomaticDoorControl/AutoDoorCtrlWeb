@@ -27,18 +27,16 @@ export class LoginService implements CanActivate {
       let body = JSON.stringify({RCSid:username});
       console.log('this is username in service',body)
       this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
-        data =>{ this.user = data;
-                  if(this.user.length > 0 && this.user[0].Status === "Active" ){
-                      localStorage.setItem("user", this.user[0].RCSid);
-                      console.log("the user set in storage:",localStorage.getItem("user"));
-                      this.router.navigate(['button']);
-                      return true;
-		  }
-                  else {
-		      localStorage.removeItem("user");
-		      return false;
-                  }
-                                    
+        data =>{
+          if(data.SESSIONID != ""){
+            localStorage.setItem("user", data.SESSIONID);
+            this.router.navigate(['button']);
+            return true;
+          }
+          else {
+            localStorage.removeItem("user");
+            return false;
+          }
         },
         err => {console.log("error on the server")}
       );
