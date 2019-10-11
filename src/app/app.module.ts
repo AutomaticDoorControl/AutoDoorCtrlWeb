@@ -17,6 +17,7 @@ import { LoginService } from './login.service';
 import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ListComplaintsComponent } from './list-complaints/list-complaints.compo
     RequestStudentsComponent,
     MessagesComponent,
     SubmitComplaintComponent,
-    ListComplaintsComponent
+    ListComplaintsComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
