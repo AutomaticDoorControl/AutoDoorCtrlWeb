@@ -13,8 +13,8 @@
       <!-- Sidebar -->
          <div class="sidenav">
             <h4>Menu</h4>
-            <a href="/request-students">Student Requests</a>
-            <a href="/active-students">Active students</a>
+            <a (click)="this.router.navigate(['request-students'])">Student Requests</a>
+            <a (click)="this.router.navigate(['active-students'])">Active students</a>
             <a href="/list-complaints">ADA Concern Areas</a>
             <div>
                <button (click)="downloadCSV()"> Download </button>

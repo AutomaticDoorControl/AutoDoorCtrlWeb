@@ -28,7 +28,7 @@ export class AdminService {
       console.log('this is username in service',body)
       this.http.post<any>(apiServer + "/api/admin/login",body,{headers: headers}).subscribe(
         data =>{
-          if(typeof(data.SESSIONID) != "undefined"){
+          if(data.SESSIONID != ""){
 	    localStorage.setItem("admin", data.SESSIONID);
 	    this.router.navigate(['active-students']);
 	    return true;

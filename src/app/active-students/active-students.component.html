@@ -17,9 +17,9 @@
    <!-- Sidebar -->
       <div class="sidenav">
           <h4>Menu</h4>
-          <a href="/request-students">Student Requests</a>
+          <a (click)="this.router.navigate(['request-students'])">Student Requests</a>
           <a href="/active-students">Active students</a>
-          <a href="/list-complaints">ADA Concern Areas</a>        
+	  <a (click)="this.router.navigate(['list-complaints'])">ADA Concern Areas</a>
         </div>
       
       <div class="w3-row w3-padding-64">
