@@ -48,7 +48,8 @@ export class StudentService {
 	window.location.reload();
       },
       err =>{
-      console.log("err: issue with server");
+        localStorage.removeItem("admin");
+	this.router.navigate(['login']);
       })
   }
 
@@ -61,7 +62,8 @@ export class StudentService {
 	window.location.reload();
       },
       err =>{
-      console.log("err: issue with server");
+        localStorage.removeItem("admin");
+	this.router.navigate(['login']);
       })
   }
 // removes a student from the active student list
@@ -74,7 +76,8 @@ export class StudentService {
 	window.location.reload();
       },
       err =>{
-      console.log("err: issue with server");
+        localStorage.removeItem("admin");
+	this.router.navigate(['login']);
       })
   }
 // lists the student complaints stored in the db

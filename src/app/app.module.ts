@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }    from '@angular/forms';
 import { AppRoutingModule }     from './app-routing.module';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { LoginService } from './login.service';
 import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
+import { AuthInterceptor } from './authinterceptor.service';
 
 
 @NgModule({
@@ -36,7 +37,13 @@ import { ListComplaintsComponent } from './list-complaints/list-complaints.compo
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [StudentService, MessageService, LoginService, AdminService],
+  providers: [
+    StudentService,
+    MessageService,
+    LoginService,
+    AdminService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
