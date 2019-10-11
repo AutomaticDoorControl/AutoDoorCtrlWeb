@@ -24,13 +24,14 @@ export class StudentService {
     return this.http.get<any>(apiServer + "/api/inactive_user")
   }
 
-  // adds studet request to db through api
+  // adds student request to db through api
   register(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
     this.http.post<any>(apiServer + "/api/request-access",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
@@ -44,6 +45,7 @@ export class StudentService {
     this.http.post<any>(apiServer + "/api/addtoActive",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
@@ -56,6 +58,7 @@ export class StudentService {
     this.http.get<any>(apiServer + "/api/addAll").subscribe(
       data =>{
         console.log(" All request users added to Database as Active");
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
@@ -68,13 +71,13 @@ export class StudentService {
     this.http.post<any>(apiServer + "/api/remove",body,{headers: headers}).subscribe(
       data =>{
         console.log("user removed from Database");
-        window.location.reload();
+	window.location.reload();
       },
       err =>{
       console.log("err: issue with server");
       })
   }
-// lusts the student complaints stored in the db
+// lists the student complaints stored in the db
   listComplaints():Observable<any>{
     return this.http.get<any>(apiServer + "/api/get-complaints")
 
