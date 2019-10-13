@@ -17,7 +17,7 @@ import { LoginService } from './login.service';
 import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
-import { AuthInterceptor } from './authinterceptor.service';
+import { AuthInterceptorService } from './authinterceptor.service';
 
 
 @NgModule({
@@ -42,7 +42,7 @@ import { AuthInterceptor } from './authinterceptor.service';
     MessageService,
     LoginService,
     AdminService,
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]
 })

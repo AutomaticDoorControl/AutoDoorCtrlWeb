@@ -56,8 +56,8 @@ describe('LoginService', () => {
     localStorage.removeItem("user")
     service.login('test');
     let req = httpMock.expectOne(apiServer + '/api/login');
-    req.flush([{RCSid: 'test', Status: 'Active'}]);
-    expect(localStorage.getItem("user")).not.toEqual(null);
+    req.flush({SESSIONID:'testJWT'});
+    expect(localStorage.getItem("user")).toEqual('testJWT');
     expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
@@ -67,18 +67,7 @@ describe('LoginService', () => {
     localStorage.setItem("user", "removeme");
     service.login('test');
     let req = httpMock.expectOne(apiServer + '/api/login');
-    req.flush([]);
-    expect(localStorage.getItem("user")).toEqual(null);
-    expect(req.request.method).toBe('POST');
-    httpMock.verify();
-  });
-
-  it('#login should not set localStorage for inactive user', () => {
-    let httpMock = TestBed.get(HttpTestingController);
-    localStorage.setItem("user", "removeme");
-    service.login('test');
-    let req = httpMock.expectOne(apiServer + '/api/login');
-    req.flush([{RCSid: 'test', Status: 'Request'}]);
+    req.flush({SESSIONID:''});
     expect(localStorage.getItem("user")).toEqual(null);
     expect(req.request.method).toBe('POST');
     httpMock.verify();
@@ -90,7 +79,7 @@ describe('LoginService', () => {
     let navigateSpy = spyOn(router, 'navigate');
     service.login('test');
     let req = httpMock.expectOne(apiServer + '/api/login');
-    req.flush([{RCSid: 'test', Status: 'Active'}]);
+    req.flush({SESSIONID:'jwtTest'});
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toBe('{"RCSid":"test"}');
     expect(navigateSpy).toHaveBeenCalledWith(['button']);

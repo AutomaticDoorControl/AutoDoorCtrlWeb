@@ -6,11 +6,11 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 
 @Injectable()
-export class AuthInterceptor implements HttpInterceptor {
+export class AuthInterceptorService implements HttpInterceptor {
 
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 		//checks for the existence of SESSIONID in localStorage
-		if (req.url.indexOf(apiServer) == 0 && localStorage.getItem("admin") !== null) {
+		if (req.url.indexOf(apiServer + "/api/") == 0 && localStorage.getItem("admin") !== null) {
 			//retrieve token from localStorage
 			var idToken = localStorage.getItem("admin");
 			//add the token to request headers and let the request go through
