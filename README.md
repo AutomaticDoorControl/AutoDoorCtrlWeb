@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
-AutoDoorCtrlWeb is the Website with which Students can login and access the button that allows them to open the service doors from their mobile devices. This website connects to a Node Express API that uses a MySQL databse. The API repository can be found [here](https://github.com/AutomaticDoorControl/AutoDoorCtrlWebAPI).
+AutoDoorCtrlWeb is the Website with which Students can login and access the button that allows them to open the service doors from their mobile devices. This website connects to a PHP API that uses a MySQL databse. The API repository can be found [here](https://github.com/AutomaticDoorControl/AutoDoorCtrlWebAPIPHP).
 
 ## Installation Instructions
   * clone repository: `https://github.com/AutomaticDoorControl/AutoDoorCtrlWeb.git`
