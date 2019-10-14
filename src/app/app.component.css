@@ -36,7 +36,7 @@ li.nav-item{
 }
 body{
   font-size: 20px;
-  color: #212529;
+  color: black;
   
   margin-bottom: 0;
 }
@@ -44,8 +44,8 @@ body{
 footer {
   padding: 50px;
   text-decoration: underline;
-  color: #ceffe2;
-  /*background-color: #191970;*/
+  color: black;
+  background-color: white;
 }
 
 footer .list-inline {
@@ -61,6 +61,6 @@ footer .copyright {
 
 }
 p{
-  background-color: #ceffe2;
+  background-color: white;
 }
 
