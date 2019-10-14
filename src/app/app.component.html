@@ -1,9 +1,12 @@
 <body>
-   <!-- <h1 class="site-heading text-center d-none d-lg-block">ADC</h1><br/> -->
-   <!-- <nav class="navbar navbar-expand fixed-top navbar-light" style="background-color:#ffffff ;" id="mainNav">
+   <h1 class="site-heading text-center d-none d-lg-block">ADC</h1><br/>
+   <nav class="navbar navbar-expand fixed-top navbar-light" style="background-color:white ;" id="mainNav">
     <div class="container">
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/landing-page" routerLinkActive="active">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
           </li>
@@ -13,8 +16,8 @@
           <li class="nav-item" [hidden]="loggedIn">
             <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about-us" routerLinkActive="active">Contact Us</a>
+          <li class="nav-item" [hidden]="!loggedIn">
+            <a class="nav-link" routerLink="/inventory" routerLinkActive="active"> Inventory</a>
           </li>
           <li class="nav-item" [hidden]="!loggedIn">
             <a class="nav-link" placement="right" (click)="logoutUser()">Logout</a>
@@ -22,8 +25,18 @@
         </ul>
       </div>
     </div>
-  </nav> -->
+  </nav>
   <router-outlet (activate)="changeOfRoutes()"></router-outlet>
 </body>
+<!---Footer--->
+<footer >
+<div class="container rounded">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p class="copyright text-muted ">Copyright &copy; ITWS-4500-group1-section2 Project 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 

@@ -1,3 +1,3 @@
 'use strict'
 
-export const apiServer: string = "http://69.55.54.25:80"
+export const apiServer: string = "https://69.55.54.25/api"

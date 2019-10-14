@@ -42,8 +42,8 @@ export class AdminService {
                     
                     return false;
                   }   
-        },
-        err => {console.log("error on the server")}
+        },//err => {console.log("error on the server")}
+        err => {console.log(err)}
       );
      return false;
   }
