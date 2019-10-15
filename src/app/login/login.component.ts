@@ -21,6 +21,12 @@ export class LoginComponent implements OnInit {
   /*On load function calls*/
   
   ngOnInit() {
+    if(this.adminService.canActivate()) {
+      this.router.navigate(['active-students']);
+    }
+    else if(this.loginService.canActivate()) {
+      this.router.navigate(['button']);
+    }
   }
 
   // allows students to login via login service
