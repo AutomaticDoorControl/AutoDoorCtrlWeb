@@ -9,6 +9,7 @@ import{RequestStudentsComponent} from './request-students/request-students.compo
 import{ListComplaintsComponent} from './list-complaints/list-complaints.component';
 import{SubmitComplaintComponent} from './submit-complaint/submit-complaint.component';
 import{AdminService} from './admin.service';
+import{LandingPageComponent} from './landing-page/landing-page.component'
 
 
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'request-students', component: RequestStudentsComponent,canActivate:[AdminService]},
   { path: 'list-complaints', component:ListComplaintsComponent,canActivate:[AdminService]},
   { path: 'submit-complaint', component:SubmitComplaintComponent},
-  { path: '**', redirectTo: 'login'}
+  { path: 'landing-page', component: LandingPageComponent},
+   { path: '**', redirectTo: '/landing-page', pathMatch: 'full' }
 ];
 
 

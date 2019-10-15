@@ -1,21 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-.navbar-brand {
-  text-align: center;  
-  float: left;
-  margin-right: 2rem;
-/*  padding-right: 1rem;
-*/}
 .nav-item{
-	float: left;
-	text-align: center;
-  margin-right: 2rem;
+  justify-content: center;
 }
 
+
 #Footer {
-    position:absolute;
-    bottom:1rem;
-    width:100%;
-    text-align: center;    
+  position:absolute;
+  bottom:1rem;
+  width:100%;
+  text-align: center;    
  }
 p{
 	color: black;

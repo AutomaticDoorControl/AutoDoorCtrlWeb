@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <link rel="stylesheet" href="styles.css">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,34 +13,40 @@
 
 <body>
 	<!-- Navbar -->
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-light bg-light nav-fill w-100">
   <a class="navbar-brand" href="#">
-    <img src="../assets/ADCLogoRed.png" width="90" height="70" class="d-inline-block align-top" alt="">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
+    <a class="navbar-brand" href="#">
+    <img src="../assets/ADCLogoRed.png" alt="Logo" style="width:6rem;">
+  </a>
+     <div class="container">
+      <div class="nav nav-pills nav-fill justify-content" id="navbarResponsive">      
+          <li class="nav-item text-sm-center">
             <a class="nav-link" routerLink="/landing-page" routerLinkActive="active">About Us</a>
           </li>
-          <li class="nav-item" [hidden]="loggedIn">
+          <li class="nav-item text-sm-center" [hidden]="loggedIn">
             <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
           </li>
-          <li class="nav-item" [hidden]="loggedIn">
+          <li class="nav-item text-sm-center" [hidden]="loggedIn">
             <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
           </li>
-          <li class="nav-item" [hidden]="!loggedIn">
+          <li class="nav-item text-sm-center" [hidden]="!loggedIn">
             <a class="nav-link" routerLink="/submit-complaint" routerLinkActive="active">Contact Us</a>
           </li>
           <!---hide this --->
 <!--           <li class="nav-item" [hidden]="!loggedIn">
             <a class="nav-link" placement="right" (click)="logoutUser()">Logout</a>
           </li> -->
-        </ul>
+
       </div>
     </div>
   </a>
 </nav>
-
+<!-- <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div> -->
 
   <app-root></app-root>
 
