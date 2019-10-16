@@ -30,11 +30,10 @@ export class StudentService {
     let body = JSON.stringify({RCSid:username});
     this.http.post<any>(apiServer + "/api/request-access",body,{headers: headers}).subscribe(
       data =>{
-        console.log("user added to Database as request");
 	this.reload();
       },
       err =>{
-      console.log("err: issue with server");
+        console.error("Server error: " + err);
       })
   }
 
@@ -44,7 +43,6 @@ export class StudentService {
     let body = JSON.stringify({RCSid:username});
     this.http.post<any>(apiServer + "/api/addtoActive",body,{headers: headers}).subscribe(
       data =>{
-        console.log("user added to Database as request");
 	this.reload();
       },
       err =>{
@@ -58,7 +56,6 @@ export class StudentService {
     
     this.http.get<any>(apiServer + "/api/addAll").subscribe(
       data =>{
-        console.log(" All request users added to Database as Active");	
 	this.reload();
       },
       err =>{
@@ -72,7 +69,6 @@ export class StudentService {
     let body = JSON.stringify({RCSid:username});
     this.http.post<any>(apiServer + "/api/remove",body,{headers: headers}).subscribe(
       data =>{
-        console.log("user removed from Database");
 	this.reload();
       },
       err =>{
@@ -92,7 +88,6 @@ export class StudentService {
     let body = JSON.stringify({Location:location, Message:message});
     this.http.post<any>(apiServer + "/api/submit-complaint",body,{headers: headers}).subscribe(
       data =>{
-        console.log("complaint added to Database as request");
         if(isLI){
           this.router.navigate(['button']);
         }
@@ -102,7 +97,7 @@ export class StudentService {
         
       },
       err =>{
-      console.log("err: issue with server");
+        console.error("Server error: " + err);
       })
 
   }

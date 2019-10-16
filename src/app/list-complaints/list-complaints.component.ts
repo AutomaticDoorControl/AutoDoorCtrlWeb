@@ -29,10 +29,9 @@ export class ListComplaintsComponent implements OnInit {
     this.studentService.listComplaints().subscribe(
       data =>{
         this.Complaints = data;
-        console.log("listed all complaints");
       },
       err =>{
-        localStorage.removeItem("admin");
+        this.admin.logout();
 	this.router.navigate(['login']);
       })
   }

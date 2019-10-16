@@ -1,3 +1,3 @@
 'use strict'
 
-export const apiServer: string = "http://localhost:8080"
+export const apiServer: string = "https://rpiadc.com"
