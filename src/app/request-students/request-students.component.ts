@@ -16,7 +16,7 @@ export class RequestStudentsComponent implements OnInit {
   Students: any[];
   
   // constructors needed to use the different services 
-  constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
+  constructor(private admin:AdminService, private studentService:StudentService, public router:Router) { }
 
   /*On load function calls*/
   ngOnInit() {
