@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+	padding: 1rem;
+}
 .nav-item{
   justify-content: center;
 }
 
+.text-title,.text{
+	background-color: black;
+	color: white;
+	
+}
 
 #Footer {
-  position:absolute;
+  /*position:fixed;*/
   bottom:1rem;
   width:100%;
   text-align: center;    
@@ -13,4 +21,8 @@
 p{
 	color: black;
 	background-color: white;
+}
+img{
+	float: right;
+
 }
