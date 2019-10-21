@@ -1,87 +1,9 @@
-
-<!-- Main Page Content-->
 <div class="w3-row w3-padding-64">
-  <h1> Automatic Door Control </h1>
-  <h3> Welcome! </h3>
- 
-  <div>
-      <button onclick="document.getElementById('id02').style.display='block'" class="button-css" >Login</button>
-  </div>
+	<h1> Automatic Door Control </h1>
+	<h3> Welcome! </h3>
 
-
-
-
-  
+	<div>
+		<button onclick="document.getElementById('id02').style.display='block'" class="button-css" >Login</button>
+	</div>
 </div> 
-<!-- End of Main Page Content-->
 
-
-<!-- ADMIN LOGIN FORM -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Administrator </h2>
-    <div class="container">
-      <div >
-          
-          <input #usernameA type="text" placeholder="Enter Username" name="uname" required>
-
-      </div>
-      <div>
-          
-          <input #passwordA type="password" placeholder="Enter Password" name="psw" required>
-
-      </div>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-
-        <button type="submit" (click)="Adminlogin(usernameA.value,passwordA.value)>Login">Login</button>
-      
-    </div>
-  </form>
-</div>
-
-
-<!-- Student LOGIN FORM -->
-<div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Student </h2>
-    <div class="container">
-      <div >
-          
-          <input #studentL type="text" placeholder="Enter RCS id" name="uname" required>
-
-      </div>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-      
-      <button type="submit"  (click)="Studentlogin(studentL.value)">Login</button>
-      
-    </div>
-  </form>
-</div>
-
-<!-- Student Register LOGIN FORM -->
-<div id="id03" class="modal">
-  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Register </h2>
-    <div class="container">
-      <div >
-          
-          <input #studentR type="text" placeholder="Enter RCS id" name="uname" required>
-
-      </div>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-      
-      <button type="submit" routerLink="/button" (click)="Studentregister(studentR.value)">Submit Request</button>
-      
-    </div>
-  </form>
-</div>

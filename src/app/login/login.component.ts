@@ -21,19 +21,4 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  // allows students to login via login service
-  Studentlogin(username):void{
-    this.loginService.login(username);
-  }
-
-  // allows admin to login using admin service
-  Adminlogin(username,password):void{
-    this.adminService.login(username,password);
-  }
-
-  //allows students to register via student service
-  Studentregister(username):void{
-    this.studentService.register(username);
-  }
-
 }

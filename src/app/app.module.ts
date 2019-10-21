@@ -18,6 +18,7 @@ import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MessagesComponent,
     SubmitComplaintComponent,
     ListComplaintsComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
