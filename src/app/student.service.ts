@@ -31,7 +31,7 @@ export class StudentService {
     this.http.post<any>(apiServer + "/api/request-access",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
-	window.location.reload();
+	this.reload();
       },
       err =>{
       console.log("err: issue with server");
@@ -45,10 +45,11 @@ export class StudentService {
     this.http.post<any>(apiServer + "/api/addtoActive",body,{headers: headers}).subscribe(
       data =>{
         console.log("user added to Database as request");
-	window.location.reload();
+	this.reload();
       },
       err =>{
-      console.log("err: issue with server");
+        localStorage.removeItem("admin");
+	this.router.navigate(['login']);
       })
   }
 
@@ -57,24 +58,26 @@ export class StudentService {
     
     this.http.get<any>(apiServer + "/api/addAll").subscribe(
       data =>{
-        console.log(" All request users added to Database as Active");
-	window.location.reload();
+        console.log(" All request users added to Database as Active");	
+	this.reload();
       },
       err =>{
-      console.log("err: issue with server");
+        localStorage.removeItem("admin");
+	this.router.navigate(['login']);
       })
   }
-// removes a student from the active student list
+  // removes a student from the active student list
   remove(username):void {
     const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
     let body = JSON.stringify({RCSid:username});
     this.http.post<any>(apiServer + "/api/remove",body,{headers: headers}).subscribe(
       data =>{
         console.log("user removed from Database");
-	window.location.reload();
+	this.reload();
       },
       err =>{
-      console.log("err: issue with server");
+        localStorage.removeItem("admin");
+	this.router.navigate(['login']);
       })
   }
 // lists the student complaints stored in the db
@@ -102,5 +105,9 @@ export class StudentService {
       console.log("err: issue with server");
       })
 
+  }
+
+  reload():void {
+    window.location.reload();
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { LoginService } from '../login.service';
 import { AdminService } from '../admin.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ import { AdminService } from '../admin.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private adminService: AdminService) { }
+  constructor(private loginService: LoginService, private adminService: AdminService, private studentService: StudentService) { }
 
   loggedIn:boolean = false;
 
