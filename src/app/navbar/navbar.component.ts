@@ -14,13 +14,28 @@ export class NavbarComponent implements OnInit {
   constructor(private loginService: LoginService, private adminService: AdminService, private studentService: StudentService) { }
 
   loggedIn:boolean = false;
+  loggedInStudent:boolean = false;
+  loggedInAdmin:boolean = false;
 
   ngOnInit() {
-    this.loggedIn = this.loginService.loggedIn(); 
+    this.loggedInStudent = this.loginService.loggedIn(); 
+    this.loggedInAdmin = this.adminService.loggedIn();
+    this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
+  }
+
+  logout():void {
+    if(this.loggedInAdmin)
+      this.adminLogout();
+    else if(this.loggedInStudent)
+      this.studentLogout();
   }
 
   studentLogout():void {
     this.loginService.logout();
+  }
+
+  adminLogout():void {
+    this.adminService.logout();
   }
 
   // allows students to login via login service

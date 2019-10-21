@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -19,7 +20,10 @@ describe('LoginComponent', () => {
         RouterTestingModule,
 	HttpClientTestingModule
       ],
-      declarations: [ LoginComponent ],
+      declarations: [
+        LoginComponent,
+	Component({selector: 'app-navbar', template: ''})(class _ {})
+      ],
       providers: [ LoginService, StudentService, AdminService ]
     })
     .compileComponents();

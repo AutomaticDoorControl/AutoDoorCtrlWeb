@@ -62,4 +62,8 @@ export class AdminService {
       return true;
     }
   }
+
+  loggedIn():boolean {
+    return localStorage.getItem("admin") !== null;
+  }
 }

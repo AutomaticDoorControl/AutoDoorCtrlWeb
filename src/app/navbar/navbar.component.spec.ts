@@ -9,9 +9,9 @@ import { NavbarComponent } from './navbar.component';
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
-  let StudentMock = jasmine.createSpyObj('StudentService', ['login', 'logout']);
-  let LoginMock = jasmine.createSpyObj('LoginService', ['loggedIn', 'login']);
-  let AdminMock = jasmine.createSpyObj('AdminService', ['login']);
+  let StudentMock = jasmine.createSpyObj('StudentService', ['register']);
+  let LoginMock = jasmine.createSpyObj('LoginService', ['loggedIn', 'login', 'logout']);
+  let AdminMock = jasmine.createSpyObj('AdminService', ['loggedIn', 'login', 'logout']);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

@@ -10,10 +10,7 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule
       ],
-      declarations: [
-        AppComponent,
-	Component({selector: 'app-navbar', template: ''})(class _ {})
-      ]
+      declarations: [ AppComponent ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
@@ -20,7 +21,10 @@ describe('ActiveStudentsComponent', () => {
         RouterTestingModule,
 	HttpClientTestingModule
       ],
-      declarations: [ ActiveStudentsComponent ],
+      declarations: [
+        ActiveStudentsComponent,
+	Component({selector: 'app-navbar', template: ''})(class _ {})
+      ],
       providers: [ AdminService, {provide:StudentService, useValue:StudentMock} ]
     })
     .compileComponents();
