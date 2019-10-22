@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import {StudentService} from '../student.service'; 
 import {AdminService} from '../admin.service';
+
 import { convertArrayToCSV } from 'convert-array-to-csv';
 
 @Component({
@@ -13,7 +16,7 @@ export class RequestStudentsComponent implements OnInit {
   Students: any[];
   
   // constructors needed to use the different services 
-  constructor(private admin:AdminService, private studentService:StudentService) { }
+  constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
 
   /*On load function calls*/
   ngOnInit() {
@@ -23,7 +26,10 @@ export class RequestStudentsComponent implements OnInit {
   // loads students info into table using student service
   getStudents():void{
     this.studentService.getRequest()
-    .subscribe(List => this.Students = List);
+    .subscribe(
+      List => this.Students = List,
+      err => {localStorage.removeItem("admin"); this.router.navigate(['login']);}
+    );
   }
 
   // adds student to the active students list using student service 

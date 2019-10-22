@@ -1,21 +1,10 @@
-<!--Navbar (different for logged in and not logged in users by way of *ngif="isLI") -->
-  <div class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a *ngIf="isLI" href="/button"class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'"> Back to Button</a>
-    <a *ngIf="!isLI" href="/login"class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'">Back</a>
-    <!--<a *ngIf="!isLI" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id03').style.display='block'">Register</a>-->
-    <a *ngIf="!isLI" href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-    <!--<a *ngIf="!isLI" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'">Admin</a>-->
-    
-  </div>
-</div>
 <!--Submit form-->
 <div class="w3-row w3-padding-64">
   <h2>Where Could RPI do better?</h2>
   <p>Please let us know about areas on campus that are in need of improved/added disability access</p>
 
   <div class="container">
-    <form action="/action_page.php">
+    <form>
       <div class="row">
         <div class="col-25">
           <label for="fname">Location</label>
@@ -33,8 +22,7 @@
         </div>
       </div>
       <div class="row">
-        <input *ngIf="isLI" (click)="submit(loc.value,mes.value,isLI)" type="submit" value="Submit">
-        <input *ngIf="!isLI" (click)="submit(loc.value,mes.value,isLI)" type="submit" value="Submit">
+	      <button type="button" (click)="submit(loc.value,mes.value,isLI)">Submit</button>
       </div>
     </form>
   </div>

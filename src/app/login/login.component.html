@@ -1,87 +1,59 @@
+<app-navbar></app-navbar>
+<div class="row row-eq-height">
+	<div class="col-10">
+		<div class="text-title">Automatic Door Control(ADC) </div>
+		<div class="text">Aims to develop a mobile application and hardware to remotely open automatic doors on campus within a specific range, to improve on campus accessibility for disabled students.</div>
 
-<!-- Main Page Content-->
-<div class="w3-row w3-padding-64">
-  <h1> Automatic Door Control </h1>
-  <h3> Welcome! </h3>
- 
-  <div>
-      <button onclick="document.getElementById('id02').style.display='block'" class="button-css" >Login</button>
-  </div>
-
-
-
-
-  
-</div> 
-<!-- End of Main Page Content-->
-
-
-<!-- ADMIN LOGIN FORM -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Administrator </h2>
-    <div class="container">
-      <div >
-          
-          <input #usernameA type="text" placeholder="Enter Username" name="uname" required>
-
-      </div>
-      <div>
-          
-          <input #passwordA type="password" placeholder="Enter Password" name="psw" required>
-
-      </div>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-
-        <button type="submit" (click)="Adminlogin(usernameA.value,passwordA.value)>Login">Login</button>
-      
-    </div>
-  </form>
+	</div>
+	<div class="col-2">
+		<img class="card-img float-right" src="../assets/ADC1.jpg" alt="ADC1">
+	</div>
 </div>
 
+<div class="row row-eq-height">
+	<div class="col-6">
+		<img class="card-img float-left" src="../assets/ADC2.jpg" alt="ADC2">
+	</div>
+	<div class="col-6">
+		<div class="text-title1">ABOUT US </div>
+		<div class="text1">The story behind ADC: <br>
+			Mallory has a disability that requires her to use an assistive device to get around, and she was very frustrated with the poor placement of the automatic door control buttons in public spaces.<br>
+			Being an applied mathematician, she tend to see things in terms of models, and she noticed the poor button placement is dangerous for the user who has to back up while people are walking through.<br>
+			<br>
+			She pitched ADC to RCOS and got a team together in Spring 2019. 
+		</div>
 
-<!-- Student LOGIN FORM -->
-<div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Student </h2>
-    <div class="container">
-      <div >
-          
-          <input #studentL type="text" placeholder="Enter RCS id" name="uname" required>
+	</div>
+	<div class="row row-eq-height">
+		<div class="col-5">
+			<div class="text-title1">TIMELINE</div>
+			<div class="text1">January 2018: ADC was founded by Mallory Gaspard in RPI<br><br>
 
-      </div>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-      
-      <button type="submit"  (click)="Studentlogin(studentL.value)">Login</button>
-      
-    </div>
-  </form>
-</div>
+				Fall 2018: ADC launched its first iOS prototype <br><br>
 
-<!-- Student Register LOGIN FORM -->
-<div id="id03" class="modal">
-  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Register </h2>
-    <div class="container">
-      <div >
-          
-          <input #studentR type="text" placeholder="Enter RCS id" name="uname" required>
+				February 2019:  Mallory was announced as a finalist for Red Hat’s Woman of the Year <br><br>
 
-      </div>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-      
-      <button type="submit" routerLink="/button" (click)="Studentregister(studentR.value)">Submit Request</button>
-      
-    </div>
-  </form>
+				Spring 2019: Class of 1958 award and RPI E-ship’s Change the World Challenge
+			</div>
+
+		</div>
+		<div class="col-7">
+			<img class="card-img float-right" src="../assets/ADC3.jpg" alt="ADC3">
+		</div>
+	</div>
+	<div class="row row-eq-height">
+		<div class="col-6">
+			<img class="card-img float-left" src="../assets/ADC4.jpg" alt="ADC4">
+		</div>
+		<div class="col-6">
+			<div class="text-title1">GOALS </div>
+			<div class="text1">
+				<li>iOS verion in app store</li>
+				<li>Android version in app store</li>
+				<li>Website</li>
+
+			</div>
+
+		</div>
+	</div>
 </div>

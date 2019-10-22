@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { LoginService } from '../login.service';
 
 @Component({
@@ -14,7 +16,7 @@ export class ButtonComponent implements OnInit {
   sure to change this once you are able to connect to the hardware (or earlier too)
   
   */
-  constructor(public loginService:LoginService) { }
+  constructor(public loginService:LoginService, private router:Router) { }
 
   /*On load function calls*/  
   ngOnInit() {

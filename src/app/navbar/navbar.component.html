@@ -1,0 +1,101 @@
+<nav class="navbar nav-fill w-100">
+  <a class="navbar-brand" href="#">
+
+    <img src="/assets/ADCLogoRed.png" alt="Logo" style="width:6rem;">
+   </a>
+
+    <div class="container">
+      <div class="nav nav-pills nav-fill justify-content" id="navbarResponsive"> 
+      <li class="nav-item text-sm-center">    
+        <a class="navbar-brand" routerLink="/login"></a>
+      </li>     
+        <li class="nav-item text-sm-center" [hidden]="loggedIn">
+          <a class="nav-link" onclick="document.getElementById('studentRequest').style.display='block'; return false" href='#'>Register</a>
+        </li>
+        <li class="nav-item text-sm-center">
+          <a class="nav-link" routerLink="/submit-complaint" routerLinkActive="active">Contact Us</a>
+        </li>
+        <li class="nav-item text-sm-center" [hidden]="loggedIn">
+          <a class="nav-link" onclick="document.getElementById('studentLogin').style.display='block'; return false" href='#'>Login</a>
+        </li>
+        <li class="nav-item text-sm-center" [hidden]="loggedIn">
+          <a class="nav-link" onclick="document.getElementById('adminLogin').style.display='block'; return false" href='#'>Admin Login</a>
+        </li>
+        <li class="nav-item" [hidden]="!loggedIn">
+          <a class="nav-link" placement="right" href="#" (click)="logout();">Logout</a>
+        </li> 
+      </div>
+    </div>
+  
+</nav>
+
+
+<!-- ADMIN LOGIN FORM -->
+<div id="adminLogin" class="modal" *ngIf="!loggedIn">
+  <span onclick="document.getElementById('adminLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <h2> Administrator </h2>
+    <div class="container">
+      <div >
+          
+          <input #usernameA type="text" placeholder="Enter Username" name="uname" required>
+
+      </div>
+      <div>
+          
+          <input #passwordA type="password" placeholder="Enter Password" name="psw" required>
+
+      </div>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+
+        <button type="button" (click)="adminLogin(usernameA.value,passwordA.value)>Login">Login</button>
+      
+    </div>
+  </form>
+</div>
+
+
+<!-- Student LOGIN FORM -->
+<div id="studentLogin" class="modal" *ngIf="!loggedIn">
+  <span onclick="document.getElementById('studentLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <!-- Modal Content -->
+  <form class="modal-content animate">
+    <h2> Student </h2>
+    <div class="container">
+      <div >
+          
+          <input #studentL type="text" placeholder="Enter RCS id" name="uname" required>
+
+      </div>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      
+      <button type="button"  (click)="studentLogin(studentL.value)">Login</button>
+      
+    </div>
+  </form>
+</div>
+
+<!-- Student Register LOGIN FORM -->
+<div id="studentRequest" class="modal" *ngIf="!loggedIn">
+  <span onclick="document.getElementById('studentRequest').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <!-- Modal Content -->
+  <form class="modal-content animate">
+    <h2> Register </h2>
+    <div class="container">
+      <div >
+          
+          <input #studentR type="text" placeholder="Enter RCS id" name="uname" required>
+
+      </div>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      
+      <button type="button" (click)="studentRegister(studentR.value)">Submit Request</button>
+      
+    </div>
+  </form>
+</div>
