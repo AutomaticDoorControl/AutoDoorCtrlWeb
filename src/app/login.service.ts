@@ -25,7 +25,7 @@ export class LoginService implements CanActivate {
       const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
       
       let body = JSON.stringify({RCSid:username, password:password});
-      console.log('this is username in service',body)
+
       this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
         data =>{
           if(data.SESSIONID != ""){
@@ -38,14 +38,15 @@ export class LoginService implements CanActivate {
             return false;
           }
         },
-        err => {console.log("error on the server")}
+	err => {
+	  console.error("Server error: " + err);
+	}
       );
      return false;
   }
 // deletes user from local storage
   logout():void{
     localStorage.removeItem("user");
-    console.log("user is empty")
     this.router.navigate(['login']);
 
   }
@@ -53,7 +54,6 @@ export class LoginService implements CanActivate {
   // checks if the student can access pages restricted to logged in users 
   canActivate():boolean {
     if (localStorage.getItem("user") === null){
-      console.log("current user: ",localStorage.getItem("user"))
       this.router.navigate(['login']);
       return false
     }
@@ -64,7 +64,6 @@ export class LoginService implements CanActivate {
   //checks if student is logged in
   loggedIn():boolean{
     if (localStorage.getItem("user") === null){
-      console.log("current user: ",localStorage.getItem("user"))
       return false
     }
     else{

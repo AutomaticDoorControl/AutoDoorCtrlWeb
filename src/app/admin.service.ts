@@ -25,7 +25,6 @@ export class AdminService {
       const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
       
       let body = JSON.stringify({username:username, password:password});
-      console.log('this is username in service',body)
       this.http.post<any>(apiServer + "/api/admin/login",body,{headers: headers}).subscribe(
 
         data =>{
@@ -35,11 +34,13 @@ export class AdminService {
 	    return true;
 	  }
 	  else{
-      localStorage.removeItem("admin");
+	    localStorage.removeItem("admin");
 	    return false;
 	  }
         },
-        err => {console.log("error on the server")}
+	err => {
+	 console.error("Server error: " + err);
+        }
       );
      return false;
   }
@@ -47,7 +48,6 @@ export class AdminService {
   // deletes admin from local storage
   logout():void{
     localStorage.removeItem("admin");
-    console.log("admin is empty")
     this.router.navigate(['login']);
 
   }
@@ -59,7 +59,6 @@ export class AdminService {
       return false
     }
     else{
-      console.log("current admin: ",localStorage.getItem("admin"));
       return true;
     }
   }

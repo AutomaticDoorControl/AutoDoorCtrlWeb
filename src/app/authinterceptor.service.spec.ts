@@ -51,7 +51,6 @@ describe('AuthInterceptorService', () => {
 	done.fail();
     });
     let req = httpMock.expectOne(apiServer + "/active_user/api/");
-    console.log(req.request.headers);
     expect(req.request.headers.has("Authorization")).toEqual(false);
     expect(req.request.method).toBe('GET');
     req.flush(active_users);
@@ -73,7 +72,6 @@ describe('AuthInterceptorService', () => {
 	done.fail();
     });
     let req = httpMock.expectOne(apiServer + ".blackhat.com/api/test");
-    console.log(req.request.headers);
     expect(req.request.headers.has("Authorization")).toEqual(false);
     expect(req.request.method).toBe('GET');
     req.flush(active_users);
@@ -95,7 +93,6 @@ describe('AuthInterceptorService', () => {
 	done.fail();
     });
     let req = httpMock.expectOne(apiServer + "/api/active_user");
-    console.log(req.request.headers);
     expect(req.request.headers.has("Authorization")).toEqual(false);
     expect(req.request.method).toBe('GET');
     req.flush(active_users);

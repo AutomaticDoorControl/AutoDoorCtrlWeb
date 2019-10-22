@@ -11,7 +11,7 @@ import { LoginService } from '../login.service'
 })
 export class SubmitComplaintComponent implements OnInit {
   // constructors needed to use the different services 
-  constructor(private studentService:StudentService, private loginService:LoginService, private router:Router) { }
+  constructor(private studentService:StudentService, private loginService:LoginService, public router:Router) { }
   
   // if the student is logged in whil submiting a complaint, the back button leads back to the service button
   // if the student is not logged in while submiting a complaint, the back button leads back to the login page 

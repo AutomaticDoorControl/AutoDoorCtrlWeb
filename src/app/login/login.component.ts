@@ -16,7 +16,7 @@ import {AdminService} from '../admin.service';
 export class LoginComponent implements OnInit {
 
   // constructors needed to use the different services 
-  constructor( private loginService:LoginService, private studentService:StudentService, private adminService:AdminService, private router:Router) { }
+  constructor( private loginService:LoginService, private studentService:StudentService, private adminService:AdminService, public router:Router) { }
 
   /*On load function calls*/
   
