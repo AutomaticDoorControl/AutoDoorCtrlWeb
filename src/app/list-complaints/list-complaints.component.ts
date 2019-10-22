@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import {StudentService} from '../student.service';
 import {AdminService} from '../admin.service';
+
 import { convertArrayToCSV } from 'convert-array-to-csv';
 
 
@@ -12,7 +15,7 @@ import { convertArrayToCSV } from 'convert-array-to-csv';
 export class ListComplaintsComponent implements OnInit {
 
   // constructors needed to use the different services 
-  constructor(private admin:AdminService, private studentService:StudentService) { }
+  constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
 
   Complaints:any[];
 
@@ -29,7 +32,8 @@ export class ListComplaintsComponent implements OnInit {
         console.log("listed all complaints");
       },
       err =>{
-      console.log("err: issue with server");
+        localStorage.removeItem("admin");
+	this.router.navigate(['login']);
       })
   }
 
