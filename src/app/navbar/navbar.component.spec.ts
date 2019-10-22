@@ -15,12 +15,12 @@ describe('NavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-    declarations: [ NavbarComponent ],
-    providers: [
-      {provide:StudentService, useValue:StudentMock},
-      {provide:LoginService, useValue:LoginMock},
-      {provide:AdminService, useValue:AdminMock}
-    ]
+      declarations: [ NavbarComponent ],
+      providers: [
+        {provide:StudentService, useValue:StudentMock},
+        {provide:LoginService, useValue:LoginMock},
+        {provide:AdminService, useValue:AdminMock}
+      ]
     })
     .compileComponents();
   }));
@@ -31,7 +31,45 @@ describe('NavbarComponent', () => {
     fixture.detectChanges();
   });
 
+  afterEach(() => {
+    AdminMock.logout.calls.reset();
+    LoginMock.logout.calls.reset();
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should logout as admin when logged in as admin', () => {
+    AdminMock.loggedIn.and.returnValue(true);
+    LoginMock.loggedIn.and.returnValue(false);
+    fixture = TestBed.createComponent(NavbarComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    component.logout();
+    expect(AdminMock.logout).toHaveBeenCalled();
+    expect(LoginMock.logout).not.toHaveBeenCalled();
+  });
+
+  it('should logout as student when logged in as student', () => {
+    AdminMock.loggedIn.and.returnValue(false);
+    LoginMock.loggedIn.and.returnValue(true);
+    fixture = TestBed.createComponent(NavbarComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    component.logout();
+    expect(AdminMock.logout).not.toHaveBeenCalled();
+    expect(LoginMock.logout).toHaveBeenCalled();
+  });
+
+  it('should not logout when not logged in', () => {
+    AdminMock.loggedIn.and.returnValue(false);
+    LoginMock.loggedIn.and.returnValue(false);
+    fixture = TestBed.createComponent(NavbarComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    component.logout();
+    expect(AdminMock.logout).not.toHaveBeenCalled();
+    expect(LoginMock.logout).not.toHaveBeenCalled();
   });
 });
