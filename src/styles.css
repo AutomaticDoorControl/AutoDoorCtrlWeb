@@ -11,7 +11,10 @@ body{
 	color: white;
 	
 }
+.team{
+	float: center;
 
+}
 #Footer {
   /*position:fixed;*/
   bottom:1rem;
