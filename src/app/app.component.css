@@ -40,8 +40,11 @@ body{
   
   margin-bottom: 0;
 }
+#sticky-footer{
+  flex-shrink: none;
+}
 
-footer {
+/*footer {
   padding: 50px;
   text-decoration: underline;
   color: black;
@@ -59,7 +62,7 @@ footer .copyright {
   margin-bottom: 0;
   text-align: center;
 
-}
+}*/
 p{
   background-color: white;
 }
