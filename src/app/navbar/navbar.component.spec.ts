@@ -61,4 +61,15 @@ describe('NavbarComponent', () => {
     expect(AdminMock.logout).not.toHaveBeenCalled();
     expect(LoginMock.logout).toHaveBeenCalled();
   });
+
+  it('should not logout when not logged in', () => {
+    AdminMock.loggedIn.and.returnValue(false);
+    LoginMock.loggedIn.and.returnValue(false);
+    fixture = TestBed.createComponent(NavbarComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    component.logout();
+    expect(AdminMock.logout).not.toHaveBeenCalled();
+    expect(LoginMock.logout).not.toHaveBeenCalled();
+  });
 });
