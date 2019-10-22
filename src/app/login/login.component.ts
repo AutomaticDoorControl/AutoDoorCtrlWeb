@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
   }
 
   // allows students to login via login service
-  Studentlogin(username):void{
-    this.loginService.login(username);
+  Studentlogin(username, password):void{
+    this.loginService.login(username, password);
   }
 
   // allows admin to login using admin service

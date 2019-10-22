@@ -21,10 +21,11 @@ export class LoginService implements CanActivate {
   user: any[];
 
   // Checks if the user is in the db
-  login(username): boolean {
+  login(username, password): boolean {
       const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
       
-      let body = JSON.stringify({RCSid:username});
+      let body = JSON.stringify({RCSid:username, password:password});
+
       this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
         data =>{
           if(data.SESSIONID != ""){
