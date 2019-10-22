@@ -15,7 +15,7 @@ import { convertArrayToCSV } from 'convert-array-to-csv';
 export class ListComplaintsComponent implements OnInit {
 
   // constructors needed to use the different services 
-  constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
+  constructor(private admin:AdminService, private studentService:StudentService, public router:Router) { }
 
   Complaints:any[];
 
@@ -29,10 +29,9 @@ export class ListComplaintsComponent implements OnInit {
     this.studentService.listComplaints().subscribe(
       data =>{
         this.Complaints = data;
-        console.log("listed all complaints");
       },
       err =>{
-        localStorage.removeItem("admin");
+        this.admin.logout();
 	this.router.navigate(['login']);
       })
   }
