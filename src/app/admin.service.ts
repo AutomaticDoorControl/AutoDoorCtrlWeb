@@ -39,7 +39,7 @@ export class AdminService {
 	  }
         },
 	err => {
-	 console.error("Server error: " + err);
+	 console.error("Server error: ", err);
         }
       );
      return false;

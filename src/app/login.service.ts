@@ -39,7 +39,7 @@ export class LoginService implements CanActivate {
           }
         },
 	err => {
-	  console.error("Server error: " + err);
+	  console.error("Server error: ", err);
 	}
       );
      return false;
