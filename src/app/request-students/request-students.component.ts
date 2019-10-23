@@ -14,6 +14,7 @@ import { convertArrayToCSV } from 'convert-array-to-csv';
 export class RequestStudentsComponent implements OnInit {
 
   Students: any[];
+  buttons = ["Add All", "Download"];
   
   // constructors needed to use the different services 
   constructor(private admin:AdminService, private studentService:StudentService, public router:Router) { }
@@ -61,5 +62,11 @@ export class RequestStudentsComponent implements OnInit {
     this.admin.logout();
   }
 
+  buttonClick(button):void {
+    if(button == this.buttons[0])
+      this.addAll();
+    else if(button == this.buttons[1])
+      this.downloadCSV();
+  }
 
 }

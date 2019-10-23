@@ -1,0 +1,9 @@
+<div class="sidenav">
+	<h4>Menu</h4>
+	<a routerLink="/request-students">Student Requests</a>
+	<a routerLink="/active-students">Active students</a>
+	<a routerLink="/list-complaints">ADA Concern Areas</a>
+	<div>
+		<button *ngFor="let button of buttons" type="button" (click)="buttonClicked(button)">{{button}}</button>
+	</div>
+</div>

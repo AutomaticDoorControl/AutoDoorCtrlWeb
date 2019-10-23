@@ -18,6 +18,7 @@ export class ListComplaintsComponent implements OnInit {
   constructor(private admin:AdminService, private studentService:StudentService, public router:Router) { }
 
   Complaints:any[];
+  buttons = ["Download"];
 
   /*On load function calls*/  
   ngOnInit() {
@@ -53,6 +54,11 @@ export class ListComplaintsComponent implements OnInit {
   // logs admin out of admin pages
   logout():void{
     this.admin.logout();
+  }
+
+  buttonClick(button):void {
+    if(button == this.buttons[0])
+      this.downloadCSV();
   }
 
 }
