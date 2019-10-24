@@ -27,7 +27,20 @@ export class NavbarComponent implements OnInit {
     if(this.loggedInAdmin)
       this.adminService.logout();
     else if(this.loggedInStudent)
-      this.loginService.logout();
+
+      this.studentLogout();
+    this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
+  }
+
+  studentLogout():void {
+    this.loginService.logout();
+    this.loggedInStudent = false;
+  }
+
+  adminLogout():void {
+    this.adminService.logout();
+    this.loggedInAdmin = false;
+
   }
 
   // allows students to login via login service
