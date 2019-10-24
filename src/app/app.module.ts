@@ -18,6 +18,8 @@ import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
 import { AuthInterceptorService } from './authinterceptor.service';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { AuthInterceptorService } from './authinterceptor.service';
     RequestStudentsComponent,
     MessagesComponent,
     SubmitComplaintComponent,
-    ListComplaintsComponent
+    ListComplaintsComponent,
+    AdminSidebarComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

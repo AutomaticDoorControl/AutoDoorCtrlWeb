@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, Input, Output, EventEmitter, Directive } from '@angular/core';
 
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
@@ -10,6 +11,15 @@ import { ActiveStudentsComponent } from './active-students.component';
 import { apiServer } from '../globals';
 
 describe('ActiveStudentsComponent', () => {
+  @Directive({
+    selector: 'app-admin-sidebar'
+  })
+  class SidebarMock {
+    @Input('buttons')
+    @Output('clicker')
+    public clickEmitter = new EventEmitter<void>();
+  }
+
   let component: ActiveStudentsComponent;
   let fixture: ComponentFixture<ActiveStudentsComponent>;
   let StudentMock = jasmine.createSpyObj('StudentService', ['getStudents', 'getActive', 'remove', 'logout']);
@@ -20,7 +30,10 @@ describe('ActiveStudentsComponent', () => {
         RouterTestingModule,
 	HttpClientTestingModule
       ],
-      declarations: [ ActiveStudentsComponent ],
+      declarations: [
+        ActiveStudentsComponent,
+	SidebarMock
+      ],
       providers: [ AdminService, {provide:StudentService, useValue:StudentMock} ]
     })
     .compileComponents();

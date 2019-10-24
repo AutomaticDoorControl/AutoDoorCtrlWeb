@@ -33,7 +33,7 @@ export class StudentService {
 	this.reload();
       },
       err =>{
-        console.error("Server error: " + err);
+        console.error("Server error: ", err);
       })
   }
 
@@ -97,9 +97,20 @@ export class StudentService {
         
       },
       err =>{
-        console.error("Server error: " + err);
+        console.error("Server error: ", err);
       })
+  }
 
+  resetStudentPassword(RCSid, password):void {
+    const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
+    let body = JSON.stringify({RCSid:RCSid, newPassword:password});
+    this.http.post<any>(apiServer + "/api/reset-password",body,{headers: headers}).subscribe(
+      data =>{
+        this.reload();
+      },
+      err =>{
+        console.error("Server error: ", err);
+      })
   }
 
   reload():void {

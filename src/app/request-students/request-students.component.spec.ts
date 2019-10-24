@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, Input, Output, EventEmitter, Directive } from '@angular/core';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -6,10 +7,20 @@ import { Observable } from 'rxjs/Observable';
 
 import { AdminService } from '../admin.service';
 import { StudentService } from '../student.service';
+import { AdminSidebarComponent } from '../admin-sidebar/admin-sidebar.component';
 
 import { RequestStudentsComponent } from './request-students.component';
 
 describe('RequestStudentsComponent', () => {
+  @Directive({
+    selector: 'app-admin-sidebar'
+  })
+  class SidebarMock {
+    @Input('buttons')
+    @Output('clicker')
+    public clickEmitter = new EventEmitter<void>();
+  }
+
   let component: RequestStudentsComponent;
   let fixture: ComponentFixture<RequestStudentsComponent>;
   let StudentMock = jasmine.createSpyObj('StudentService', ['getRequest', 'addOne', 'addAll', 'logout']);
@@ -20,7 +31,10 @@ describe('RequestStudentsComponent', () => {
         RouterTestingModule,
 	HttpClientTestingModule
       ],
-      declarations: [ RequestStudentsComponent ],
+      declarations: [
+        RequestStudentsComponent,
+	SidebarMock
+      ],
       providers: [ AdminService, {provide: StudentService, useValue: StudentMock} ]
     })
     .compileComponents();
@@ -47,19 +61,12 @@ describe('RequestStudentsComponent', () => {
 
   it('should add a student when clicked', () => {
     const hostElement = fixture.nativeElement;
-    let submitButton: HTMLElement = hostElement.querySelectorAll('button')[2];
-    submitButton.click();
-    expect(StudentMock.addOne).toHaveBeenCalledWith("userOne");
-    submitButton = hostElement.querySelectorAll('button')[4];
-    submitButton.click();
-    expect(StudentMock.addOne).toHaveBeenCalledWith("userThree");
-  });
-
-  it('should add all students when clicked', () => {
-    const hostElement = fixture.nativeElement;
     let submitButton: HTMLElement = hostElement.querySelectorAll('button')[0];
     submitButton.click();
-    expect(StudentMock.addAll).toHaveBeenCalled();
+    expect(StudentMock.addOne).toHaveBeenCalledWith("userOne");
+    submitButton = hostElement.querySelectorAll('button')[2];
+    submitButton.click();
+    expect(StudentMock.addOne).toHaveBeenCalledWith("userThree");
   });
 
   it('should populate table with values', () => {

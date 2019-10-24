@@ -111,4 +111,15 @@ describe('StudentService', () => {
     expect(req.request.method).toBe('POST');
     httpMock.verify();
   });
+
+  it('should send the reset password', () => {
+    let httpMock = TestBed.get(HttpTestingController);
+    service.resetStudentPassword('test', 'testPass');
+    let req = httpMock.expectOne(apiServer + '/api/reset-password');
+    req.flush("good work!");
+    let expectedRequest = '{"RCSid":"test","newPassword":"testPass"}';
+    expect(req.request.body).toBe(expectedRequest);
+    expect(req.request.method).toBe('POST');
+    httpMock.verify();
+  });
 });
