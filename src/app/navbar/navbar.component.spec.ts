@@ -7,69 +7,104 @@ import { LoginService } from '../login.service';
 import { NavbarComponent } from './navbar.component';
 
 describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
-  let StudentMock = jasmine.createSpyObj('StudentService', ['register']);
-  let LoginMock = jasmine.createSpyObj('LoginService', ['loggedIn', 'login', 'logout']);
-  let AdminMock = jasmine.createSpyObj('AdminService', ['loggedIn', 'login', 'logout']);
+	let component: NavbarComponent;
+	let fixture: ComponentFixture<NavbarComponent>;
+	let StudentMock = jasmine.createSpyObj('StudentService', ['register']);
+	let LoginMock = jasmine.createSpyObj('LoginService', ['loggedIn', 'login', 'logout', 'changePassword']);
+	let AdminMock = jasmine.createSpyObj('AdminService', ['loggedIn', 'login', 'logout', 'changePassword']);
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ],
-      providers: [
-        {provide:StudentService, useValue:StudentMock},
-        {provide:LoginService, useValue:LoginMock},
-        {provide:AdminService, useValue:AdminMock}
-      ]
-    })
-    .compileComponents();
-  }));
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			declarations: [ NavbarComponent ],
+			providers: [
+				{provide:StudentService, useValue:StudentMock},
+				{provide:LoginService, useValue:LoginMock},
+				{provide:AdminService, useValue:AdminMock}
+			]
+		})
+			.compileComponents();
+	}));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  afterEach(() => {
-    AdminMock.logout.calls.reset();
-    LoginMock.logout.calls.reset();
-  });
+	afterEach(() => {
+		AdminMock.logout.calls.reset();
+		LoginMock.logout.calls.reset();
+		AdminMock.changePassword.calls.reset();
+		LoginMock.changePassword.calls.reset();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 
-  it('should logout as admin when logged in as admin', () => {
-    AdminMock.loggedIn.and.returnValue(true);
-    LoginMock.loggedIn.and.returnValue(false);
-    fixture = TestBed.createComponent(NavbarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    component.logout();
-    expect(AdminMock.logout).toHaveBeenCalled();
-    expect(LoginMock.logout).not.toHaveBeenCalled();
-  });
+	it('should logout as admin when logged in as admin', () => {
+		AdminMock.loggedIn.and.returnValue(true);
+		LoginMock.loggedIn.and.returnValue(false);
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+		component.logout();
+		expect(AdminMock.logout).toHaveBeenCalled();
+		expect(LoginMock.logout).not.toHaveBeenCalled();
+	});
 
-  it('should logout as student when logged in as student', () => {
-    AdminMock.loggedIn.and.returnValue(false);
-    LoginMock.loggedIn.and.returnValue(true);
-    fixture = TestBed.createComponent(NavbarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    component.logout();
-    expect(AdminMock.logout).not.toHaveBeenCalled();
-    expect(LoginMock.logout).toHaveBeenCalled();
-  });
+	it('should logout as student when logged in as student', () => {
+		AdminMock.loggedIn.and.returnValue(false);
+		LoginMock.loggedIn.and.returnValue(true);
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+		component.logout();
+		expect(AdminMock.logout).not.toHaveBeenCalled();
+		expect(LoginMock.logout).toHaveBeenCalled();
+	});
 
-  it('should not logout when not logged in', () => {
-    AdminMock.loggedIn.and.returnValue(false);
-    LoginMock.loggedIn.and.returnValue(false);
-    fixture = TestBed.createComponent(NavbarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    component.logout();
-    expect(AdminMock.logout).not.toHaveBeenCalled();
-    expect(LoginMock.logout).not.toHaveBeenCalled();
-  });
+	it('should not logout when not logged in', () => {
+		AdminMock.loggedIn.and.returnValue(false);
+		LoginMock.loggedIn.and.returnValue(false);
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+		component.logout();
+		expect(AdminMock.logout).not.toHaveBeenCalled();
+		expect(LoginMock.logout).not.toHaveBeenCalled();
+	});
+
+	it('should change admin password when logged in as admin', () => {
+		AdminMock.loggedIn.and.returnValue(true);
+		LoginMock.loggedIn.and.returnValue(false);
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+		component.changePassword('testUser', 'testPass', 'testNewPass');
+		expect(AdminMock.changePassword).toHaveBeenCalled();
+		expect(LoginMock.changePassword).not.toHaveBeenCalled();
+	});
+
+	it('should change student password when logged in as student', () => {
+		AdminMock.loggedIn.and.returnValue(false);
+		LoginMock.loggedIn.and.returnValue(true);
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+		component.changePassword('testUser', 'testPass', 'testNewPass');
+		expect(AdminMock.changePassword).not.toHaveBeenCalled();
+		expect(LoginMock.changePassword).toHaveBeenCalled();
+	});
+
+	it('should not change password when not logged in', () => {
+		AdminMock.loggedIn.and.returnValue(false);
+		LoginMock.loggedIn.and.returnValue(false);
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+		component.changePassword('testUser', 'testPass', 'testNewPass');
+		expect(AdminMock.changePassword).not.toHaveBeenCalled();
+		expect(LoginMock.changePassword).not.toHaveBeenCalled();
+	});
 });
