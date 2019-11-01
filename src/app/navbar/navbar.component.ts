@@ -28,14 +28,18 @@ export class NavbarComponent implements OnInit {
       this.adminLogout();
     else if(this.loggedInStudent)
       this.studentLogout();
+    this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
   }
 
   studentLogout():void {
     this.loginService.logout();
+    this.loggedInStudent = false;
   }
 
   adminLogout():void {
     this.adminService.logout();
+    this.loggedInAdmin = false;
+
   }
 
   // allows students to login via login service
@@ -51,6 +55,13 @@ export class NavbarComponent implements OnInit {
   //allows students to register via student service
   studentRegister(username):void{
     this.studentService.register(username);
+  }
+
+  changePassword(username, oldPass, newPass):void {
+    if(this.loggedInAdmin)
+      this.adminService.changePassword(username, oldPass, newPass);
+    else if(this.loggedInStudent)
+      this.loginService.changePassword(username, oldPass, newPass);
   }
 
 

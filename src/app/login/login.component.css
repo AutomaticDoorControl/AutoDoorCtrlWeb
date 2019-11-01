@@ -1,3 +1,16 @@
+.container1{
+/*    float: left;
+*/    
+    background-image: url("ADC1.jpeg");
+    background-size: cover;
+    color: white;
+    height: 120%;
+}
+.lead{
+    background: transparent;
+    color: white;
+}
+
 #view{
     height: 40px;
 }

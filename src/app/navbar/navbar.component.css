@@ -2,6 +2,9 @@
     padding: 16px;
     text-align: center; 
 }
+.nav-link{
+    color:black;
+}
 
 span.psw {
     float: right;
