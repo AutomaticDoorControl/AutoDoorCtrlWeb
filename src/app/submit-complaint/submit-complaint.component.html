@@ -7,22 +7,34 @@
     <form>
       <div class="row">
         <div class="col-25">
-          <label for="fname">Location</label>
+<!--           <label for="fname">Location</label>
+ -->          <label for="defaultFormSubjectModalEx">Location</label>
         </div>
         <div class="col-75">
-          <input #loc placeholder="Location...">
+          <input #loc placeholder="Location..." type="text" id="defaultFormSubjectModalEx" class="form-control form-control-sm">
         </div>
+
+
+        
+        
+
+        
+
+
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="subject">Subject</label>
+<!--           <label for="subject">Subject</label>
+ -->           <label for="defaultFormMessageModalEx">Your Message</label>
         </div>
         <div class="col-75">
-          <textarea #mes placeholder="Message..." style="height:200px"></textarea>
+<!--           <textarea class="md-textarea form-control" #mes placeholder="Message..." style="height:200px"></textarea>
+ -->          <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control" #mes placeholder="Message..."></textarea>
+
         </div>
       </div>
       <div class="row">
-	      <button type="button" (click)="submit(loc.value,mes.value,isLI)">Submit</button>
+	      <button  class="btn btn-info btn-lg btn-block" type="submit" value="Submit" (click)="submit(loc.value,mes.value,isLI)">Submit</button>
       </div>
     </form>
   </div>

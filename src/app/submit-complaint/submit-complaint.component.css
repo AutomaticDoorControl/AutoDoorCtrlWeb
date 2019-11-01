@@ -33,8 +33,8 @@ input[type=submit]:hover {
 
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
-
+    background-color: white;
+/*#f2f2f2*/
     text-align: center;
     margin: auto;
     width: 50%;
