@@ -1,131 +1,73 @@
-.container1{
-/*    float: left;
-*/    
-    background-image: url("ADC1.jpeg");
-    background-size: cover;
-    color: white;
-    height: 120%;
+.image1{
 }
+
+.container1{
+    background:black;
+    color: white;
+    padding-right: 0;
+}
+.display-4{
+    padding-top: 20%;
+    padding-left: 5%;
+
+}
+.text1{
+    padding-top: 5%;
+}
+
+.head2{
+    padding-top: 5%;  
+
+}
+.head3{
+    padding-top: 5%; 
+    padding-left: 5%;
+}
+.text1{
+    padding-top: 5%;
+    padding-left: 5%;
+}
+.head4{
+    padding-top: 5%;
+    padding-left: 5%;
+}
+.container2{
+    padding-left: 0;
+   /* background-image: url("ADC2.jpg");
+    text-align: right;
+    color: black;*/
+}
+.container3{
+     color: black;
+     background: white;
+}
+/*.container4{
+    background-image: url("ADC2.jpg");
+         color: black;
+     text-align: right;
+}*/
+.c5Title{
+    text-align: center;
+    color: black;
+}
+.teamImage{
+}
+/*.container5{
+}*/
 .lead{
     background: transparent;
     color: white;
 }
 
-#view{
-    height: 40px;
+.jumbotron{
+  padding: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  height: 100%;
 }
-
-.button-css{
-    background-color: white;
-    color: black;
-    font-size: 24px;
-    padding: 14px 40px;
-    border-radius: 12px;
-
+.teamImage{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
-.button-css:hover {
-    background-color: #555555;
-    color: white;
-}
-.buttonHolder{ 
-    text-align: center; 
-}
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-    text-align: center; 
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    text-align: center; 
-}
-input {
-    margin-bottom:5px;
-}
-
-/* The Close Button */
-.close {
-    /* Position it in the top right corner outside of the modal */
-    position: absolute;
-    right: 25px;
-    top: 0; 
-    color:white;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-
-div{
-    text-align: center;
-}
-
