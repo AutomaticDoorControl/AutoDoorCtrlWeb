@@ -9,24 +9,45 @@
 .display-4{
     padding-top: 20%;
     padding-left: 5%;
+    font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;/*Apple font*/
 
 }
 .text1{
     padding-top: 5%;
+    padding-left: 5%;
+    font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
+    font-size: 30px;
 }
 
 .head2{
     padding-top: 5%;  
 
+    font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;/*Apple font*/
+    color: black;
+
+}
+.text2{
+   color: black;
+    font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
+    
+}
+.text3{
+   color: black;
+    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+
+}
+.text4{
+    color: black;
+    padding-top: 5%; 
+    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
 }
 .head3{
     padding-top: 5%; 
     padding-left: 5%;
 }
-.text1{
-    padding-top: 5%;
-    padding-left: 5%;
-}
+
 .head4{
     padding-top: 5%;
     padding-left: 5%;
@@ -37,15 +58,8 @@
     text-align: right;
     color: black;*/
 }
-.container3{
-     color: black;
-     background: white;
-}
-/*.container4{
-    background-image: url("ADC2.jpg");
-         color: black;
-     text-align: right;
-}*/
+
+
 .c5Title{
     text-align: center;
     color: black;

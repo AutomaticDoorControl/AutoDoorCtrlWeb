@@ -22,14 +22,7 @@ body{
 	float: center;
 
 }
-#Footer {
-  /*fix the footer*/
-/*  position: absolute;
-  bottom: 0;*/
-  height: [footer-height];  
-  width:100%;
-  text-align: center;   
- }
+
 p{
 	color: black;
 	background-color: white;

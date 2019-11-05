@@ -4,6 +4,13 @@
 }
 .nav-link{
     color:black;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+ul li a:hover {
+  color: blue;
 }
 
 span.psw {
@@ -32,7 +39,7 @@ span.psw {
     background-color: #fefefe;
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 15%; /* Could be more or less, depending on screen size */
     text-align: center; 
 }
 input {

@@ -33,20 +33,24 @@
 <div id="adminLogin" class="modal" *ngIf="!loggedIn">
 	<span onclick="document.getElementById('adminLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
 	<!-- Modal Content -->
-	<form class="modal-content animate">
+	<div class="form-group mx-sm-3 mb-2">
+		<form class="modal-content animate">
 		<h2> Administrator </h2>
-		<div class="container">
+		<div class="modal-body">
 			<div>
-				<input #usernameA type="text" placeholder="Enter Username" name="uname" required>
+				<input class="form-control form-control-sm" #usernameA type="text" placeholder="Enter Username" name="uname" required>
+
 			</div>
 			<div>
-				<input #passwordA type="password" placeholder="Enter Password" name="psw" required>
+				<input class="form-control form-control-sm" #passwordA type="password" placeholder="Enter Password" name="psw" required>
 			</div>
 		</div>
-		<div class="container" style="background-color:#f1f1f1">
-			<button type="button" (click)="adminLogin(usernameA.value,passwordA.value)">Login</button>
+		<div class="modal-footer" style="background-color:white">
+			<button class="btn btn-primary"  type="button" (click)="adminLogin(usernameA.value,passwordA.value)">Login</button>
 		</div>
 	</form>
+	</div>
+	
 </div>
 
 
@@ -63,10 +67,9 @@
 
 			</div>
 		</div>
-		<div class="container" style="background-color:#f1f1f1">
+		<div class="container" style="background-color:white">
 
-			<button type="button"  (click)="studentLogin(studentL.value)">Login</button>
-
+			<button class="btn btn-primary"  (click)="studentLogin(studentL.value)">Login</button>
 		</div>
 	</form>
 </div>
@@ -84,9 +87,9 @@
 
 			</div>
 		</div>
-		<div class="container" style="background-color:#f1f1f1">
+		<div class="container" style="background-color:white">
 
-			<button type="button" (click)="studentRegister(studentR.value)">Submit Request</button>
+			<button class="btn btn-primary" type="button" (click)="studentRegister(studentR.value)">Submit Request</button>
 
 		</div>
 	</form>
@@ -109,8 +112,8 @@
 				<input #newPass type="password" placeholder="Enter Password" name="psw" required>
 			</div>
 		</div>
-		<div class="container" style="background-color:#f1f1f1">
-			<button type="button" (click)="changePassword(userChange.value, oldPass.value, newPass.value)">Change Password</button>
+		<div class="container" style="background-color:white">
+			<button class="btn btn-primary" type="button" (click)="changePassword(userChange.value, oldPass.value, newPass.value)">Change Password</button>
 		</div>
 	</form>
 </div>
