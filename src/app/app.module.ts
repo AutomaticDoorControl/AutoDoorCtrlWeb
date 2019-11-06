@@ -20,6 +20,8 @@ import { ListComplaintsComponent } from './list-complaints/list-complaints.compo
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthInterceptorService } from './authinterceptor.service';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { AuthInterceptorService } from './authinterceptor.service';
     SubmitComplaintComponent,
     ListComplaintsComponent,
     LandingPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminSidebarComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

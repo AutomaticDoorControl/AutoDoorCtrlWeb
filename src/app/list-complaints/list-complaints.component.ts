@@ -18,6 +18,7 @@ export class ListComplaintsComponent implements OnInit {
   constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
 
   Complaints:any[];
+  buttons = ["Download"];
 
   /*On load function calls*/  
   ngOnInit() {
@@ -29,10 +30,9 @@ export class ListComplaintsComponent implements OnInit {
     this.studentService.listComplaints().subscribe(
       data =>{
         this.Complaints = data;
-        console.log("listed all complaints");
       },
       err =>{
-        localStorage.removeItem("admin");
+        this.admin.logout();
 	this.router.navigate(['login']);
       })
   }
@@ -54,6 +54,11 @@ export class ListComplaintsComponent implements OnInit {
   // logs admin out of admin pages
   logout():void{
     this.admin.logout();
+  }
+
+  buttonClick(button):void {
+    if(button == this.buttons[0])
+      this.downloadCSV();
   }
 
 }

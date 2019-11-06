@@ -1,36 +1,25 @@
+<!-- Navbar -->
 <app-navbar></app-navbar>
 <div class="main">
-  <div class="w3-main" style="margin-left:250px">
-      <!-- Sidebar -->
-         <div class="sidenav">
-            <h4>Menu</h4>
-            <a (click)="this.router.navigate(['request-students'])">Student Requests</a>
-            <a (click)="this.router.navigate(['active-students'])">Active students</a>
-            <a href="/list-complaints">ADA Concern Areas</a>
-            <div>
-               <button (click)="downloadCSV()"> Download </button>
-            </div>             
-            </div>
-         <!-- Information Table  -->
-         <div class="w3-row w3-padding-64">
-            <h3>Problem Campus Location</h3>
-             <div class="CenterPage">
-   
-             <table id="customers">
-                 <tr>
-                   <th>Location</th>
-                   <th>Message</th>
-                 </tr>
-                 <tr *ngFor="let msg of Complaints">
-                   <td>{{msg.location}}</td>
-                   <td>{{msg.message}}</td>
-                 </tr>
-               </table>
-               
-         
-         
-             </div>
-         </div>    
-     </div>
-   </div>
-       
+	<div class="w3-main" style="margin-left:250px">
+		<!-- Sidebar -->
+		<app-admin-sidebar [buttons]="buttons" (clicker)="buttonClick($event)"></app-admin-sidebar>
+		<!-- Information Table  -->
+		<div class="w3-row w3-padding-64">
+			<h3>Problem Campus Location</h3>
+			<div class="CenterPage">
+
+				<table id="customers">
+					<tr>
+						<th>Location</th>
+						<th>Message</th>
+					</tr>
+					<tr *ngFor="let msg of Complaints">
+						<td>{{msg.location}}</td>
+						<td>{{msg.message}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

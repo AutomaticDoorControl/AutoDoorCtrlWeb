@@ -38,7 +38,9 @@ export class AdminService {
 					return false;
 				}
 			},
-			err => {console.log("error on the server")}
+			err => {
+				console.log("Server Error: ", err);
+			}
 		);
 		return false;
 	}
@@ -46,9 +48,7 @@ export class AdminService {
 	// deletes admin from local storage
 	logout():void {
 		localStorage.removeItem("admin");
-		console.log("admin is empty")
 		this.router.navigate(['login']);
-
 	}
 
 	// checks if the admin can access route locked pages
@@ -58,7 +58,6 @@ export class AdminService {
 			return false
 		}
 		else{
-			console.log("current admin: ",localStorage.getItem("admin"));
 			return true;
 		}
 	}

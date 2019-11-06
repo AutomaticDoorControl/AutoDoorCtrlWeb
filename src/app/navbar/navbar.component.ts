@@ -43,8 +43,8 @@ export class NavbarComponent implements OnInit {
   }
 
   // allows students to login via login service
-  studentLogin(username):void{
-    this.loginService.login(username);
+  studentLogin(username, password):void{
+    this.loginService.login(username, password);
   }
 
   // allows admin to login using admin service

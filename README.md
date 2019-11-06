@@ -1,4 +1,5 @@
-# AutoDoorCtrlWeb
+[![Build Status](https://travis-ci.com/AutomaticDoorControl/AutoDoorCtrlWeb.svg?branch=master)](https://travis-ci.com/AutomaticDoorControl/AutoDoorCtrlWeb)
+# AutoDoorCtrlWeb 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 

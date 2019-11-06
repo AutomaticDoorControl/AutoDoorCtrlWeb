@@ -62,14 +62,15 @@
 		<h2> Student </h2>
 		<div class="container">
 			<div >
-
 				<input #studentL type="text" placeholder="Enter RCS id" name="uname" required>
-
+			</div>
+			<div>
+				<input #studentpass type="password" placeholder="Enter Password" name="upass" required>
 			</div>
 		</div>
 		<div class="container" style="background-color:white">
 
-			<button class="btn btn-primary"  (click)="studentLogin(studentL.value)">Login</button>
+			<button class="btn btn-primary"  (click)="studentLogin(studentL.value, studentpass.value)">Login</button>
 		</div>
 	</form>
 </div>

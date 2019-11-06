@@ -21,9 +21,9 @@ export class LoginService implements CanActivate {
 	user: any[];
 
 	// Checks if the user is in the db
-	login(username): boolean {
+	login(username, password): boolean {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
-		let body = JSON.stringify({RCSid:username});
+      		let body = JSON.stringify({RCSid:username, password:password});
 		console.log('this is username in service',body)
 		this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
 			data =>{
@@ -37,16 +37,16 @@ export class LoginService implements CanActivate {
 					return false;
 				}
 			},
-			err => {console.log("error on the server")}
+			err => {
+				console.error("Server error: ", err);
+			}
 		);
 		return false;
 	}
 	// deletes user from local storage
-	logout():void{
+	logout():void {
 		localStorage.removeItem("user");
-		console.log("user is empty")
 		this.router.navigate(['login']);
-
 	}
 
 	// checks if the student can access pages restricted to logged in users 

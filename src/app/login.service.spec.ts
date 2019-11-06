@@ -54,7 +54,7 @@ describe('LoginService', () => {
 	it('#login should set localStorage with good credentials', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.removeItem("user")
-		service.login('test');
+		service.login('test', 'test');
 		let req = httpMock.expectOne(apiServer + '/api/login');
 		req.flush({SESSIONID:'testJWT'});
 		expect(localStorage.getItem("user")).toEqual('testJWT');
@@ -65,7 +65,7 @@ describe('LoginService', () => {
 	it('#login should not set localStorage with bad credentials', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.setItem("user", "removeme");
-		service.login('test');
+    		service.login('test', 'test');
 		let req = httpMock.expectOne(apiServer + '/api/login');
 		req.flush({SESSIONID:''});
 		expect(localStorage.getItem("user")).toEqual(null);
@@ -77,11 +77,11 @@ describe('LoginService', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		let router = TestBed.get(Router);
 		let navigateSpy = spyOn(router, 'navigate');
-		service.login('test');
+		service.login('test', 'testpass');
 		let req = httpMock.expectOne(apiServer + '/api/login');
 		req.flush({SESSIONID:'jwtTest'});
 		expect(req.request.method).toBe('POST');
-		expect(req.request.body).toBe('{"RCSid":"test"}');
+    		expect(req.request.body).toBe('{"RCSid":"test","password":"testpass"}');
 		expect(navigateSpy).toHaveBeenCalledWith(['button']);
 		httpMock.verify();
 	});
