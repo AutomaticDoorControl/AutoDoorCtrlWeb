@@ -20,6 +20,9 @@
         <li class="nav-item text-sm-center" [hidden]="loggedIn">
           <a class="nav-link" onclick="document.getElementById('adminLogin').style.display='block'; return false" href='#'>Admin Login</a>
         </li>
+	<li class="nav-item text-sm-center" [hidden]="!loggedIn">
+		<a class="nav-link" onclick="document.getElementById('passwordChange').style.display='block'; return false" href='#'>Change Password</a>
+	</li>
         <li class="nav-item" [hidden]="!loggedIn">
           <a class="nav-link" placement="right" href="#" (click)="logout();">Logout</a>
         </li> 
