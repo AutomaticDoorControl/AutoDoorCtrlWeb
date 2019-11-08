@@ -28,7 +28,7 @@
 					<tr *ngFor="let student of Students">
 						<td>{{student.RCSid}}</td>
 						<td>{{student.Status}}</td>
-						<td><button (click)="addStudent(student.RCSid)">add</button></td>
+						<td><button type="button" class="btn btn-success" (click)="addStudent(student.RCSid)">add</button></td>
 					</tr>
 				</table>
 			</div>
