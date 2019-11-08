@@ -8,26 +8,37 @@
 
 body{
 	padding: 1rem;
+	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 }
 .nav-item{
   justify-content: center;
+  font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 }
 
 .text-title,.text{
 	background-color: black;
 	color: white;
+	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 	
 }
 .team{
 	float: center;
+	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 
 }
 
 p{
 	color: black;
 	background-color: white;
+	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 }
 img{
 	float: right;
 
+}
+.page-footer{
+	/* position: absolute; */
+	padding-top: 20%;
+ 	bottom: 0;
+ 	width: 100%;
 }
