@@ -1,51 +1,48 @@
 <nav class="navbar nav-fill w-100">
-	<a class="navbar-brand" href="#">
-	<img src="/assets/ADCLogoRed.png" alt="Logo" style="width:6rem;">
+	<a class="navbar-brand" href="#" routerLink="/login" routerLinkActive="active">
+		<img src="/assets/ADCLogoRed.png" alt="Automatic Door Control" style="width:6rem;">
 	</a>
-	
-    <div class="container d-flex justify-content-center" >
-      <ul class="nav nav-pills nav-fill justify-content" id="navbarResponsive"> 
-      <li class="nav-item text-sm-center">    
-        <a class="navbar-brand" routerLink="/login"></a>
-      </li>     
-        <li class="nav-item text-sm-center" [hidden]="loggedIn">
-          <a class="nav-link" onclick="document.getElementById('studentRequest').style.display='block'; return false" href='#'>Register</a>
-        </li>
-        <li class="nav-item text-sm-center">
-          <a class="nav-link" routerLink="/submit-complaint" routerLinkActive="active">Contact Us</a>
-        </li>
-        <li class="nav-item text-sm-center" [hidden]="loggedIn">
-          <a class="nav-link" onclick="document.getElementById('studentLogin').style.display='block'; return false" href='#'>Login</a>
-        </li>
-        <li class="nav-item text-sm-center" [hidden]="loggedIn">
-          <a class="nav-link" onclick="document.getElementById('adminLogin').style.display='block'; return false" href='#'>Admin Login</a>
-        </li>
-	<li class="nav-item text-sm-center" [hidden]="!loggedIn">
-		<a class="nav-link" onclick="document.getElementById('passwordChange').style.display='block'; return false" href='#'>Change Password</a>
-	</li>
-        <li class="nav-item" [hidden]="!loggedIn">
-          <a class="nav-link" placement="right" href="#" (click)="logout();">Logout</a>
-        </li> 
-      </ul>
-    </div>
+
+	<div class="container d-flex justify-content-center" >
+		<ul class="nav nav-pills nav-fill justify-content" id="navbarResponsive"> 
+			<li class="nav-item text-sm-center" [hidden]="loggedIn">
+				<a class="nav-link" onclick="document.getElementById('studentRequest').style.display='block'; return false" href='#'>Register</a>
+			</li>
+			<li class="nav-item text-sm-center">
+				<a class="nav-link" routerLink="/submit-complaint" routerLinkActive="active">Contact Us</a>
+			</li>
+			<li class="nav-item text-sm-center" [hidden]="loggedIn">
+				<a class="nav-link" onclick="document.getElementById('studentLogin').style.display='block'; return false" href='#'>Login</a>
+			</li>
+			<li class="nav-item text-sm-center" [hidden]="loggedIn">
+				<a class="nav-link" onclick="document.getElementById('adminLogin').style.display='block'; return false" href='#'>Admin Login</a>
+			</li>
+			<li class="nav-item text-sm-center" [hidden]="!loggedIn">
+				<a class="nav-link" onclick="document.getElementById('passwordChange').style.display='block'; return false" href='#'>Change Password</a>
+			</li>
+			<li class="nav-item" [hidden]="!loggedIn">
+				<a class="nav-link" placement="right" href="#" (click)="logout();">Logout</a>
+			</li> 
+		</ul>
+	</div>
 
 </nav>
 
 
 <!-- ADMIN LOGIN FORM -->
 <div id="adminLogin" class="modal" *ngIf="!loggedIn">
-	<span onclick="document.getElementById('adminLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<button onclick="document.getElementById('adminLogin').style.display='none'" class="close" title="Close Modal">&times;</button>
 	<!-- Modal Content -->
 	<div class="form-group mx-sm-3 mb-2">
 		<form class="modal-content animate">
 		<h2> Administrator </h2>
 		<div class="modal-body">
 			<div>
-				<input class="form-control form-control-sm" #usernameA type="text" placeholder="Enter Username" name="uname" required>
+				<input class="form-control form-control-sm" #usernameA type="text" placeholder="Enter Username" name="uname" aria-label="Admin Username" required>
 
 			</div>
 			<div>
-				<input class="form-control form-control-sm" #passwordA type="password" placeholder="Enter Password" name="psw" required>
+				<input class="form-control form-control-sm" #passwordA type="password" placeholder="Enter Password" name="psw" aria-label="Admin Password" required>
 			</div>
 		</div>
 		<div class="modal-footer" style="background-color:white">
@@ -59,16 +56,16 @@
 
 <!-- Student LOGIN FORM -->
 <div id="studentLogin" class="modal" *ngIf="!loggedIn">
-	<span onclick="document.getElementById('studentLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<button onclick="document.getElementById('studentLogin').style.display='none'" class="close" title="Close Modal">&times;</button>
 	<!-- Modal Content -->
 	<form class="modal-content animate">
 		<h2> Student </h2>
 		<div class="container">
 			<div >
-				<input #studentL type="text" placeholder="Enter RCS id" name="uname" required>
+				<input #studentL type="text" placeholder="Enter RCS id" name="uname" aria-label="RCS ID" equired>
 			</div>
 			<div>
-				<input #studentpass type="password" placeholder="Enter Password" name="upass" required>
+				<input #studentpass type="password" placeholder="Enter Password" name="upass" aria-label="Student Password" required>
 			</div>
 		</div>
 		<div class="container" style="background-color:white">
@@ -80,14 +77,14 @@
 
 <!-- Student Register LOGIN FORM -->
 <div id="studentRequest" class="modal" *ngIf="!loggedIn">
-	<span onclick="document.getElementById('studentRequest').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<button onclick="document.getElementById('studentRequest').style.display='none'" class="close" title="Close Modal">&times;</button>
 	<!-- Modal Content -->
 	<form class="modal-content animate">
 		<h2> Register </h2>
 		<div class="container">
 			<div >
 
-				<input #studentR type="text" placeholder="Enter RCS id" name="uname" required>
+				<input #studentR type="text" placeholder="Enter RCS id" name="uname" aria-label="Registration RCSId" required>
 
 			</div>
 		</div>
@@ -101,19 +98,19 @@
 
 <!-- PASSWORD CHANGE FORM -->
 <div id="passwordChange" class="modal" *ngIf="loggedIn">
-	<span onclick="document.getElementById('passwordChange').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<button onclick="document.getElementById('passwordChange').style.display='none'" class="close" title="Close Modal">&times;</button>
 	<!-- Modal Content -->
 	<form class="modal-content animate">
 		<h2> Change Password </h2>
 		<div class="container">
 			<div>
-				<input #userChange type="text" placeholder="Enter Username" name="uname" required>
+				<input #userChange type="text" placeholder="Enter Username" name="uname" aria-label="Current Username" required>
 			</div>
 			<div>
-				<input #oldPass type="password" placeholder="Enter Old Password" name="psw" required>
+				<input #oldPass type="password" placeholder="Enter Old Password" name="psw" aria-label="Current Password" required>
 			</div>
 			<div>
-				<input #newPass type="password" placeholder="Enter Password" name="psw" required>
+				<input #newPass type="password" placeholder="Enter Password" name="psw" aria-label="New Password" required>
 			</div>
 		</div>
 		<div class="container" style="background-color:white">
