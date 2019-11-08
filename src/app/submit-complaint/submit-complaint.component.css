@@ -1,7 +1,15 @@
 * {
     box-sizing: border-box;
 }
-
+h2{
+   padding-top: 1%;
+   font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+}
+p{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+}
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
