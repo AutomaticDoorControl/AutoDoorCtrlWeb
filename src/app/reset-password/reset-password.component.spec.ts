@@ -23,7 +23,8 @@ describe('ResetPasswordComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         ResetPasswordComponent,
-	SidebarMock
+	SidebarMock,
+	Component({selector: 'app-navbar', template: ''})(class _ {})
       ],
       providers: [ {provide: StudentService, useValue: StudentMock} ]
     })
