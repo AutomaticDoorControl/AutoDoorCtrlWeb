@@ -1,5 +1,5 @@
 <nav class="navbar nav-fill w-100">
-	<a class="navbar-brand" href="#">
+	<a class="navbar-brand" routerLink="/login">
 		<img src="/assets/ADCLogoRed.png" alt="Logo" style="width:6rem;">
 	</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,9 +7,6 @@
 	</button>
 	<div class="container d-flex justify-content-center " >
 		<ul class="nav nav-pills nav-fill justify-content"  id="navbarResponsive"> 
-			<li class="nav-item text-sm-center">    
-				<a class="navbar-brand" routerLink="/login"></a>
-			</li>     
 			<li class="nav-item text-sm-center" [hidden]="loggedIn">
 				<a class="nav-link" onclick="document.getElementById('studentRequest').style.display='block'; return false" href='#'>Register</a>
 			</li>
