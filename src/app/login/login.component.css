@@ -8,7 +8,9 @@
 .display-4{
     padding-top: 20%;
     padding-left: 5%;
-    font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;/*Apple font*/
+    /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
+    font-family: "Mohave", sans-serif;
+    font-size: 50px;
 
 }
 .text1{
@@ -20,25 +22,39 @@
 
 .head2{
     padding-top: 5%;  
-
-    font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;/*Apple font*/
+    font-family: "Mohave", sans-serif;
+    /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
     color: black;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 1%;
 
 }
 .text2{
    color: black;
+   padding-bottom: 1%;
+   
     font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
     
 }
 .text3{
-   color: black;
+    color: black;
+    
     font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
     font-size: 20px;
 
 }
+.head{
+    padding-top: 10%;
+    padding-bottom: 1%;
+    font-family: "Mohave", sans-serif;
+    color: black;
+}
+
 .text4{
     color: black;
     padding-top: 5%; 
+    padding-left: 5%;
     font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
     font-size: 20px;
 }
@@ -53,15 +69,19 @@
 }
 .container2{
     padding-left: 0;
-   /* background-image: url("ADC2.jpg");
-    text-align: right;
-    color: black;*/
+    padding-right: 0%;
+}
+.card-img{
+    padding-left: 0;
+    
 }
 
-
 .c5Title{
+    padding-top: 5%;
+    padding-bottom: 5%;
     text-align: center;
     color: black;
+    font-family: "Mohave", sans-serif;
 }
 
 .lead{
@@ -69,15 +89,9 @@
     color: white;
 }
 
-.jumbotron{
-  padding: 0;
-  margin-bottom: 0;
-  border-radius: 0;
-  height: 100%;
-}
 .teamImage{
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }

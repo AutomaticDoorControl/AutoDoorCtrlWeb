@@ -40,5 +40,6 @@ img{
 	/* position: absolute; */
 	padding-top: 20%;
  	bottom: 0;
- 	width: 100%;
+	 width: 100%;
+	 font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 }
