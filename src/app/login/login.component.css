@@ -1,12 +1,11 @@
-
-
 .container1{
     background:black;
     color: white;
     padding-right: 0;
 }
 .display-4{
-    padding-top: 20%;
+    padding-top: 10%;
+    padding-bottom: 1%;
     padding-left: 5%;
     /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
     font-family: "mohaveregular", sans-serif;
@@ -30,18 +29,18 @@
 }
 
 .head2{
-    padding-top: 5%;  
+    padding-top: 10%;  
     font-family: "mohaveregular", sans-serif;
     /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
     color: black;
     padding-left: 5%;
-    padding-top: 10%;
     padding-bottom: 1%;
+    
 
 }
 .text2{
    color: black;
-   padding-bottom: 1%;
+   padding-bottom: 3%;
    
     font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
     
@@ -55,9 +54,16 @@
 }
 .head{
     padding-top: 10%;
-    padding-bottom: 1%;
+    padding-bottom: 3%;
     font-family: "mohaveregular", sans-serif;
     color: black;
+}
+.head2-1{
+    padding-top: 5%;  
+    font-family: "mohaveregular", sans-serif;
+    color: black;
+    padding-left: 5%;
+    padding-bottom: 3%;
 }
 
 .text4{
