@@ -1,12 +1,20 @@
+.navbar{
+    color:black;
+}
+.nav-item{
+    color: black;
+}
 .container {
-    padding: 16px;
-    text-align: center; 
+    /* padding: 16px; */
+    text-align: right; 
+    float:right;
 }
 .nav-link{
     color:black;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 20px;
     font-weight: bold;
+    float:right;
 
 }
 ul li a:hover {

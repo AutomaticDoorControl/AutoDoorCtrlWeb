@@ -9,10 +9,19 @@
     padding-top: 20%;
     padding-left: 5%;
     /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
-    font-family: "Mohave", sans-serif;
+    font-family: "mohaveregular", sans-serif;
     font-size: 50px;
 
 }
+@font-face {
+    font-family: 'mohaveregular';
+    src: url('mohave-regular-webfont.woff2') format('woff2'),
+         url('mohave-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .text1{
     padding-top: 5%;
     padding-left: 5%;
@@ -22,7 +31,7 @@
 
 .head2{
     padding-top: 5%;  
-    font-family: "Mohave", sans-serif;
+    font-family: "mohaveregular", sans-serif;
     /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
     color: black;
     padding-left: 5%;
@@ -47,7 +56,7 @@
 .head{
     padding-top: 10%;
     padding-bottom: 1%;
-    font-family: "Mohave", sans-serif;
+    font-family: "mohaveregular", sans-serif;
     color: black;
 }
 
@@ -81,7 +90,7 @@
     padding-bottom: 5%;
     text-align: center;
     color: black;
-    font-family: "Mohave", sans-serif;
+    font-family: "mohaveregular", sans-serif;
 }
 
 .lead{
