@@ -5,7 +5,6 @@
     color: black;
 }
 .container {
-    /* padding: 16px; */
     text-align: right; 
     float:right;
 }
@@ -15,7 +14,6 @@
     font-size: 20px;
     font-weight: bold;
     float:right;
-
 }
 .navbar-toggler{
     border-color: rgb(255,102,203);
@@ -31,8 +29,6 @@ span.psw {
     float: right;
     padding-top: 16px;
 }
-
-
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

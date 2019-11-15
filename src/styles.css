@@ -14,17 +14,14 @@ body{
   justify-content: center;
   font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 }
-
 .text-title,.text{
 	background-color: black;
 	color: white;
-	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
-	
+	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;	
 }
 .team{
 	float: center;
 	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
-
 }
 
 p{
@@ -34,12 +31,10 @@ p{
 }
 img{
 	float: right;
-
 }
-.page-footer{
-	/* position: absolute; */
+.page-footer{	
 	padding-top: 20%;
  	bottom: 0;
-	 width: 100%;
-	 font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+	width: 100%;
+	font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
 }

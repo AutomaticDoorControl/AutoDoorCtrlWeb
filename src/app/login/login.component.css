@@ -1,33 +1,35 @@
-.container1{
-    background:black;
-    color: white;
-    padding-right: 0;
-}
-.display-4{
-    padding-top: 10%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
-    font-family: "mohaveregular", sans-serif;
-    font-size: 50px;
-
-}
+/* embeded Mohave font */
 @font-face {
     font-family: 'mohaveregular';
     src: url('mohave-regular-webfont.woff2') format('woff2'),
          url('mohave-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
+.display-4{
+    padding-top: 10%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    font-family: "mohaveregular", sans-serif;
+    font-size: 50px;
+}
+.container1{
+    background:black;
+    color: white;
+    padding-right: 0;
+}
+.head{
+    padding-top: 10%;
+    padding-bottom: 3%;
+    font-family: "mohaveregular", sans-serif;
+    color: black;
+}
 .text1{
     padding-top: 5%;
     padding-left: 5%;
     font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
     font-size: 30px;
 }
-
 .head2{
     padding-top: 10%;  
     font-family: "mohaveregular", sans-serif;
@@ -35,28 +37,12 @@
     color: black;
     padding-left: 5%;
     padding-bottom: 1%;
-    
-
 }
 .text2{
    color: black;
-   padding-bottom: 3%;
-   
-    font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
+   padding-bottom: 3%; 
+   font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
     
-}
-.text3{
-    color: black;
-    
-    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
-    font-size: 20px;
-
-}
-.head{
-    padding-top: 10%;
-    padding-bottom: 3%;
-    font-family: "mohaveregular", sans-serif;
-    color: black;
 }
 .head2-1{
     padding-top: 5%;  
@@ -65,7 +51,11 @@
     padding-left: 5%;
     padding-bottom: 3%;
 }
-
+.text3{
+    color: black;    
+    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+}
 .text4{
     color: black;
     padding-top: 5%; 
@@ -87,10 +77,8 @@
     padding-right: 0%;
 }
 .card-img{
-    padding-left: 0;
-    
+    padding-left: 0;    
 }
-
 .c5Title{
     padding-top: 5%;
     padding-bottom: 5%;
@@ -98,12 +86,10 @@
     color: black;
     font-family: "mohaveregular", sans-serif;
 }
-
 .lead{
     background: transparent;
     color: white;
 }
-
 .teamImage{
     display: block;
     margin-left: auto;
