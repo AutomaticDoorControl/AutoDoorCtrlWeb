@@ -1,14 +1,4 @@
-<!--Navbar (different for logged in and not logged in users by way of *ngif="isLI") -->
-  <div class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a *ngIf="isLI" (click)="this.router.navigate(['button'])"class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Back to Button</a>
-    <a *ngIf="!isLI" (click)="this.router.navigate(['login'])"class="w3-bar-item w3-button w3-hide-small w3-hover-white">Back</a>
-    <!--<a *ngIf="!isLI" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id03').style.display='block'">Register</a>-->
-    <a *ngIf="!isLI" href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-    <!--<a *ngIf="!isLI" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'">Admin</a>-->
-    
-  </div>
-</div>
+
 <!--Submit form-->
 <div class="w3-row w3-padding-64">
   <h2>Where Could RPI do better?</h2>
@@ -18,26 +8,30 @@
     <form>
       <div class="row">
         <div class="col-25">
-          <label for="fname">Location</label>
+<!--           <label for="fname">Location</label>
+ -->          <label for="defaultFormSubjectModalEx">Location</label>
         </div>
         <div class="col-75">
-          <input #loc placeholder="Location...">
+          <input #loc placeholder="Location..." type="text" id="defaultFormSubjectModalEx" class="form-control form-control-sm">
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="subject">Subject</label>
+<!--           <label for="subject">Subject</label>
+ -->           <label for="defaultFormMessageModalEx">Your Message</label>
         </div>
         <div class="col-75">
-          <textarea #mes placeholder="Message..." style="height:200px"></textarea>
+<!--           <textarea class="md-textarea form-control" #mes placeholder="Message..." style="height:200px"></textarea>
+ -->          <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control" #mes placeholder="Message..."></textarea>
+
         </div>
       </div>
       <div class="row">
-	      <button type="button" (click)="submit(loc.value,mes.value,isLI)">Submit</button>
+	      <button  class="btn btn-info btn-lg btn-block" type="button" value="Submit" (click)="submit(loc.value,mes.value,isLI)">Submit</button>
       </div>
     </form>
   </div>
-  <p>For other inquiries or suggestions please visit out rcos page <a href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" target="_blank">here</a></p>
+  <p>For other inquiries or suggestions please visit our <a href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" target="_blank">RCOS page</a></p>
 </div>
 
 

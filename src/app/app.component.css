@@ -1,0 +1,68 @@
+bodyrouter-outlet{
+  background-color: white;
+}
+.site-heading { 
+  margin-top: 5rem;
+  margin-bottom: 0rem;
+  line-height: 1;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 4rem;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.navbar a{
+  display: inline;
+  color: black;
+  transition: all 0.2s;
+
+}
+
+.navbar a:hover {
+
+  background-color: #a4d4ff;
+  color: #0085A1;
+}
+
+li.nav-item{
+  padding-left: 5rem; 
+}
+body{
+  font-size: 20px;
+  color: black;
+  
+  margin-bottom: 0;
+}
+#sticky-footer{
+  flex-shrink: none;
+}
+
+/*footer {
+  padding: 50px;
+  text-decoration: underline;
+  color: black;
+  background-color: white;
+}
+
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+  
+}
+
+footer .copyright {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
+
+}*/
+p{
+  background-color: white;
+}

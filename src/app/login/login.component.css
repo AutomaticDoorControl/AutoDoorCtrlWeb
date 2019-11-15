@@ -1,114 +1,98 @@
-.button-css{
-    background-color: white;
-    color: black;
-    font-size: 24px;
-    padding: 14px 40px;
-    border-radius: 12px;
-
+/* embeded Mohave font */
+@font-face {
+    font-family: 'mohaveregular';
+    src: url('mohave-regular-webfont.woff2') format('woff2'),
+         url('mohave-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-.button-css:hover {
-    background-color: #555555;
+.display-4{
+    padding-top: 10%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    font-family: "mohaveregular", sans-serif;
+    font-size: 50px;
+}
+.container1{
+    background:black;
+    color: white;
+    padding-right: 0;
+}
+.head{
+    padding-top: 10%;
+    padding-bottom: 3%;
+    font-family: "mohaveregular", sans-serif;
+    color: black;
+}
+.text1{
+    padding-top: 5%;
+    padding-left: 5%;
+    font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
+    font-size: 30px;
+}
+.head2{
+    padding-top: 10%;  
+    font-family: "mohaveregular", sans-serif;
+    /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
+    color: black;
+    padding-left: 5%;
+    padding-bottom: 1%;
+}
+.text2{
+   color: black;
+   padding-bottom: 3%; 
+   font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
+    
+}
+.head2-1{
+    padding-top: 5%;  
+    font-family: "mohaveregular", sans-serif;
+    color: black;
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+.text3{
+    color: black;    
+    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+}
+.text4{
+    color: black;
+    padding-top: 5%; 
+    padding-left: 5%;
+    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+}
+.head3{
+    padding-top: 5%; 
+    padding-left: 5%;
+}
+
+.head4{
+    padding-top: 5%;
+    padding-left: 5%;
+}
+.container2{
+    padding-left: 0;
+    padding-right: 0%;
+}
+.card-img{
+    padding-left: 0;    
+}
+.c5Title{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color: black;
+    font-family: "mohaveregular", sans-serif;
+}
+.lead{
+    background: transparent;
     color: white;
 }
-.buttonHolder{ 
-    text-align: center; 
+.teamImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-    text-align: center; 
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    text-align: center; 
-}
-input {
-    margin-bottom:5px;
-}
-
-/* The Close Button */
-.close {
-    /* Position it in the top right corner outside of the modal */
-    position: absolute;
-    right: 25px;
-    top: 0; 
-    color:white;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-
-div{
-    text-align: center;
-}
-

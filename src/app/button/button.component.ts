@@ -16,7 +16,7 @@ export class ButtonComponent implements OnInit {
   sure to change this once you are able to connect to the hardware (or earlier too)
   
   */
-  constructor(public loginService:LoginService, public router:Router) { }
+  constructor(public loginService:LoginService, private router:Router) { }
 
   /*On load function calls*/  
   ngOnInit() {

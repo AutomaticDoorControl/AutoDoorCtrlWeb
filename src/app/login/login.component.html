@@ -1,98 +1,109 @@
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-      
-      <a class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id03').style.display='block'">Register</a>
-      <a href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-      <a (click)="this.router.navigate(['submit-complaint'])" class="w3-bar-item w3-button w3-hide-small w3-hover-white" >Contact us</a>
-      <a class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="document.getElementById('id01').style.display='block'">Admin</a>
-    </div>
-  </div>
+<app-navbar></app-navbar>
 
-<!-- Main Page Content-->
-<div class="w3-row w3-padding-64">
-  <h1> Automatic Door Control </h1>
-  <h3> Welcome! </h3>
- 
-  <div>
-      <button onclick="document.getElementById('id02').style.display='block'" class="button-css" >Login</button>
-  </div>
-
-
-
-
-  
-</div> 
-<!-- End of Main Page Content-->
-
-
-<!-- ADMIN LOGIN FORM -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Administrator </h2>
-    <div class="container">
-      <div >
-          
-          <input #usernameA type="text" placeholder="Enter Username" name="uname" required>
-
-      </div>
-      <div>
-          
-          <input #passwordA type="password" placeholder="Enter Password" name="psw" required>
-
-      </div>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-
-        <button type="submit" (click)="Adminlogin(usernameA.value,passwordA.value)">Login</button>
-      
-    </div>
-  </form>
+<div class="row row-eq-height">
+	<div class=" container-fluid col-6 container1">
+		<div class="row justify-content-md-center">
+		    <div class="col ">
+		    	<h1 class="display-4">Automatic Door Control (ADC)</h1>
+		    </div>
+		    <div class=" col-md-auto">
+				<div class="text1">
+					Aims to develop a mobile application and hardware to remotely open automatic doors on campus within a specific range, to improve on campus accessibility for disabled students.
+				</div>
+		    </div>
+  		</div>
+	</div>
+	<div class="container-fluid col-6 container2">
+		<img class="card-img float-right " src="../assets/ADC01.jpg" alt="ADC0">
+	</div>
 </div>
 
-
-<!-- Student LOGIN FORM -->
-<div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Student </h2>
-    <div class="container">
-      <div >
-          <input #studentl type="text" placeholder="enter rcs id" name="uname" required>
-      </div>
-      <div >
-          <input #studentpass type="password" placeholder="Enter Password" name="upass" required>
-      </div>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-      
-      <button type="submit"  (click)="Studentlogin(studentl.value, studentpass.value)">Login</button>
-      
-    </div>
-  </form>
+<div class="row row-eq-height">
+	<div class="container-fluid  col-6 container2">
+		<img class="card-img float-left " src="../assets/ADC2.jpg" alt="ADC2">
+	</div>
+	<div class="container-fluid  col-6 container3">
+		<div class="row head">			
+			<h1>ABOUT US</h1>
+		</div>
+		<div class="row text2">
+			<h2>The story behind ADC:</h2> 
+		</div>			  
+		<div class="row text3">
+			<p>Mallory has a disability that requires her to use an assistive device to get around,<br>and she was very frustrated with the poor placement of the automatic door control<br> buttons in public spaces.Being an applied mathematician, she tend to see things <br> in terms of models, and she noticed the poor button placement is dangerous for <br> the user who has to back up while people are walking through.
+			<br><br>
+			She pitched ADC to RCOS and got a team together in Spring 2019. </p>
+		</div>	  
+	</div>
 </div>
 
-<!-- Student Register LOGIN FORM -->
-<div id="id03" class="modal">
-  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <h2> Register </h2>
-    <div class="container">
-      <div >
-          
-          <input #studentR type="text" placeholder="Enter RCS id" name="uname" required>
+<div class="row row-eq-height">
+	<div class="container-fluid col-6">
+		<h1 class="head2">TIMELINE</h1>
+		<div class="text4">
+			<p>January 2018: ADC was founded by Mallory Gaspard in RPI<br><br>
 
-      </div>
+			Fall 2018: ADC launched its first iOS prototype <br><br>
+
+			February 2019:  Mallory was announced as a finalist for Red Hat’s Woman of the Year <br><br>
+
+			Spring 2019: Class of 1958 award and RPI E-ship’s Change the World Challenge</p>
+			<br>
+			<br>
+		</div>
+
+	</div>
+	<div class="container-fluid  col-6 container2">
+		<img class="card-img float-right" src="../assets/ADC3.jpg" alt="ADC3">
     </div>
-    <div class="container" style="background-color:#f1f1f1">
-      
-      <button type="submit" routerLink="/button" (click)="Studentregister(studentR.value)">Submit Request</button>
-      
-    </div>
-  </form>
+</div>
+
+<div class="row row-eq-height">
+	<div class="container-fluid  col-6 container2">
+		<img class="card-img float-left" src="../assets/ADC4.jpg" alt="ADC4">
+	</div>
+	<div class="container-fluid  col-6">
+		<h1 class="head2-1">GOALS</h1>
+		<div class="text3">
+			<ul>iOS verion in app store</ul>
+			<ul>Android version in app store</ul>
+			<ul>Website</ul>
+	   </div>
+	</div>
+</div>
+
+<div class="row justify-content-md-center">
+	<div class="col-md-auto">
+		<h1 class="c5Title">TEAM</h1>
+		<div class="row">
+			<div class="col">
+				<img class="card-img" src="../assets/team0.JPG" alt="Jing Wei Li">
+			</div>
+			<div class="col">
+				<img class="card-img" src="../assets/team1.JPG" alt="Alex Pinkowski">
+			</div>
+			<div class="col">
+				<img class="card-img" src="../assets/team2.JPG" alt="Jelly Wang">
+			</div>
+			<div class="col">
+				<img class="card-img" src="../assets/team3.JPG" alt="Brandon Sakai">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<img class="card-img" src="../assets/team4.JPG" alt="John Kongtcheu">
+
+			</div>
+			<div class="col">
+				<img class="card-img" src="../assets/teamO0.JPG" alt="Mallory Gaspard">
+			</div>
+			<div class="col">
+				<img class="card-img" src="../assets/teamO1.JPG" alt="John Hulton">
+
+			</div>
+			<div class="col">
+				<img class="card-img" src="../assets/teamO2.JPG" alt="Erin Jordan">
+			</div>
+		</div>
+	</div>
 </div>

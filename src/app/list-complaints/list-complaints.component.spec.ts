@@ -31,6 +31,7 @@ describe('ListComplaintsComponent', () => {
       ],
       declarations: [
         ListComplaintsComponent,
+	Component({selector: 'app-navbar', template: ''})(class _ {}),
 	SidebarMock
       ],
       providers: [ AdminService, {provide: StudentService, useValue: StudentMock} ]

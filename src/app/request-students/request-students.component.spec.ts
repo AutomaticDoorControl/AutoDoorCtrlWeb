@@ -33,7 +33,8 @@ describe('RequestStudentsComponent', () => {
       ],
       declarations: [
         RequestStudentsComponent,
-	SidebarMock
+	SidebarMock,
+	Component({selector: 'app-navbar', template: ''})(class _ {})
       ],
       providers: [ AdminService, {provide: StudentService, useValue: StudentMock} ]
     })

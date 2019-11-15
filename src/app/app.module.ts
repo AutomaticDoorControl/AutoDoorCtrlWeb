@@ -17,6 +17,7 @@ import { LoginService } from './login.service';
 import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { AuthInterceptorService } from './authinterceptor.service';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
@@ -32,6 +33,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     MessagesComponent,
     SubmitComplaintComponent,
     ListComplaintsComponent,
+    NavbarComponent,
     AdminSidebarComponent,
     ResetPasswordComponent
   ],

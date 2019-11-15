@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
 import { RouterTestingModule} from '@angular/router/testing';
 
@@ -11,7 +12,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent
-      ],
+      ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

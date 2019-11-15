@@ -15,7 +15,7 @@ import { convertArrayToCSV } from 'convert-array-to-csv';
 export class ListComplaintsComponent implements OnInit {
 
   // constructors needed to use the different services 
-  constructor(private admin:AdminService, private studentService:StudentService, public router:Router) { }
+  constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
 
   Complaints:any[];
   buttons = ["Download"];
