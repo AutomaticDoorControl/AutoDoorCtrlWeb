@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'list-complaints', component:ListComplaintsComponent,canActivate:[AdminService]},
   { path: 'reset-password', component:ResetPasswordComponent,canActivate:[AdminService]},
   { path: 'submit-complaint', component:SubmitComplaintComponent},
+  { path: '**', redirectTo: 'login'}	
 ];
 
 
