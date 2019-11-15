@@ -11,8 +11,6 @@ import { ListComplaintsComponent } from './list-complaints/list-complaints.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { AdminService } from './admin.service';
-import { LandingPageComponent } from './landing-page/landing-page.component'
-
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -23,7 +21,6 @@ const routes: Routes = [
   { path: 'list-complaints', component:ListComplaintsComponent,canActivate:[AdminService]},
   { path: 'reset-password', component:ResetPasswordComponent,canActivate:[AdminService]},
   { path: 'submit-complaint', component:SubmitComplaintComponent},
-  { path: 'landing-page', component: LandingPageComponent}
 ];
 
 
