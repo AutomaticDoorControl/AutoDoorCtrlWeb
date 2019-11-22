@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Observable';
 import { AdminService } from '../admin.service';
 import { StudentService } from '../student.service';
 import { AdminSidebarComponent } from '../admin-sidebar/admin-sidebar.component';
+import { DownloadCSVService } from '../download-csv.service';
 
 import { RequestStudentsComponent } from './request-students.component';
 
@@ -92,5 +93,22 @@ describe('RequestStudentsComponent', () => {
 		);
 		component.getStudents();
 		expect(AdminMock.logout).toHaveBeenCalled();
+	});
+
+
+	it('should trigger download when button is clicked', () => {
+		spyOn(DownloadCSVService, 'downloadCSV');
+		component.buttonClick("Download");
+		expect(DownloadCSVService.downloadCSV).toHaveBeenCalledWith([
+			{"RCSid":"userOne","Status":"Request"},
+			{"RCSid":"userTwo","Status":"Request"},
+			{"RCSid":"userThree","Status":"Request"},
+			{"RCSid":"userFour","Status":"Request"}],
+			'Requests.csv');
+	});
+
+	it('should trigger add all when button is clicked', () => {
+		component.buttonClick('Add All');
+		expect(StudentMock.addAll).toHaveBeenCalled();
 	});
 });

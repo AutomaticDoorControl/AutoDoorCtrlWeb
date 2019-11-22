@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { AdminService } from '../admin.service';
 import { StudentService } from '../student.service';
+import { DownloadCSVService } from '../download-csv.service';
 import { ListComplaintsComponent } from './list-complaints.component';
 
 describe('ListComplaintsComponent', () => {
@@ -78,5 +79,16 @@ describe('ListComplaintsComponent', () => {
 		);
 		component.getComplaints();
 		expect(AdminMock.logout).toHaveBeenCalled();
+	});
+
+	it('should trigger download when button is clicked', () => {
+		spyOn(DownloadCSVService, 'downloadCSV');
+		component.buttonClick("Download");
+		expect(DownloadCSVService.downloadCSV).toHaveBeenCalledWith([
+			{"location":"locOne","message":"messOne"},
+			{"location":"locTwo","message":"messTwo"},
+			{"location":"locThree","message":"messThree"},
+			{"location":"locFour","message":"messFour"}],
+			'Complaints.csv');
 	});
 });
