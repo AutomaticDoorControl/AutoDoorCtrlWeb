@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {StudentService} from '../student.service';
-import {AdminService} from '../admin.service';
-
-import { convertArrayToCSV } from 'convert-array-to-csv';
+import { StudentService } from '../student.service';
+import { AdminService } from '../admin.service';
+import { DownloadCSVService } from '../download-csv.service';
 
 
 @Component({
@@ -26,7 +25,7 @@ export class ListComplaintsComponent implements OnInit {
 	}
 
 	//loads complaints onto page using student service
-	getComplaints():void{
+	getComplaints():void {
 		this.studentService.listComplaints().subscribe(
 			data => {
 				this.Complaints = data;
@@ -38,21 +37,12 @@ export class ListComplaintsComponent implements OnInit {
 	}
 
 	//download list of complaints to csv
-	downloadCSV():void{
-		let csv = convertArrayToCSV(this.Complaints);
-		let blob = new Blob([csv], {type: 'text/csv;charset=utf8;'});
-		let uri = 'data:attachment/csv;charset=utf-8,' + encodeURI(csv);
-		let link = document.createElement('a');
-		link.href = URL.createObjectURL(blob);
-		link.setAttribute('visibility', 'hidden');
-		link.download = 'Complaints.csv';
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
+	downloadCSV():void {
+		DownloadCSVService.downloadCSV(this.Complaints, 'Complaints.csv');
 	}
 
 	// logs admin out of admin pages
-	logout():void{
+	logout():void {
 		this.admin.logout();
 	}
 

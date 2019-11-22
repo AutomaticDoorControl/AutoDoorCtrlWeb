@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {StudentService} from '../student.service'; 
-import {AdminService} from '../admin.service';
-
-import { convertArrayToCSV } from 'convert-array-to-csv';
+import { StudentService } from '../student.service'; 
+import { AdminService } from '../admin.service';
+import { DownloadCSVService } from '../download-csv.service';
 
 @Component({
 	selector: 'app-request-students',
@@ -48,18 +47,9 @@ export class RequestStudentsComponent implements OnInit {
 		this.studentService.addAll();
 	}
 
-	//downloads student list in csv gfile
+	//downloads student list in csv file
 	downloadCSV():void {
-		let csv = convertArrayToCSV(this.Students);
-		let blob = new Blob([csv], {type: 'text/csv;charset=utf8;'});
-		let uri = 'data:attachment/csv;charset=utf-8,' + encodeURI(csv);
-		let link = document.createElement('a');
-		link.href = URL.createObjectURL(blob);
-		link.setAttribute('visibility', 'hidden');
-		link.download = 'Requests.csv';
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
+		DownloadCSVService.downloadCSV(this.Students, 'Requests.csv');
 	}
 
 	// allows admin to logout using log out service 
