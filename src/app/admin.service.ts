@@ -33,8 +33,7 @@ export class AdminService {
 					return true;
 				}
 				else{
-					localStorage.removeItem("admin");
-					return false;
+					this.logout();
 				}
 			},
 			err => {
