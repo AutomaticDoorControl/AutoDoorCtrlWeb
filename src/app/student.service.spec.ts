@@ -86,8 +86,8 @@ describe('StudentService', () => {
 	it('should get addAll', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		service.addAll();
-		req.flush("");
 		let req = httpMock.expectOne(apiServer + '/api/addAll');
+		req.flush("");
 		expect(req.request.method).toBe('GET')
 		httpMock.verify();
 	}); 
