@@ -56,7 +56,7 @@ export class AdminService {
 			this.router.navigate(['login']);
 			return false
 		}
-		else{
+		else {
 			return true;
 		}
 	}

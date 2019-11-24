@@ -48,6 +48,7 @@ describe('AdminService', () => {
 		req.flush({SESSIONID:'JWTtest'});
 		expect(req.request.method).toBe('POST');
 		expect(localStorage.getItem("admin")).not.toEqual(null);
+		expect(service.loggedIn()).toBeTruthy();
 		httpMock.verify();
 	});
 
@@ -59,6 +60,7 @@ describe('AdminService', () => {
 		req.flush({SESSIONID:''});
 		expect(req.request.method).toBe('POST');
 		expect(localStorage.getItem("admin")).toEqual(null);
+		expect(service.loggedIn()).not.toBeTruthy();
 		httpMock.verify();
 	});
 
@@ -71,4 +73,5 @@ describe('AdminService', () => {
 		expect(req.request.body).toBe('{"username":"testUser","password":"testOld","newPassword":"testNew"}');
 		httpMock.verify();
 	});
+
 });
