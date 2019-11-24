@@ -21,3 +21,6 @@ install:
 
 script:
   - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+
+after_script:
+  - coveralls < ./coverage/auto-door-ctrl-web/lcov.info
