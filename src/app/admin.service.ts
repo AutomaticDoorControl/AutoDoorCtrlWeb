@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
-import {Http, Response, Headers, } from "@angular/http";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Http, Response, Headers } from "@angular/http";
 import { Router, CanActivate } from '@angular/router';
-import { MessageService } from './message.service';
 import { apiServer } from './globals';
 /*
 this service takes care of Administrator logins. Due to issues with the administration about privacy laws
