@@ -24,7 +24,6 @@ export class AdminService {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
 
 		let body = JSON.stringify({username:username, password:password});
-		console.log('this is username in service',body)
 		this.http.post<any>(apiServer + "/api/admin/login", body, {headers: headers}).subscribe(
 			data =>{
 				if(data.SESSIONID != ""){
@@ -37,7 +36,7 @@ export class AdminService {
 				}
 			},
 			err => {
-				console.log("Server Error: ", err);
+				console.error("Server Error: ", err);
 			}
 		);
 		return false;
@@ -70,7 +69,7 @@ export class AdminService {
 		this.http.post<any>(apiServer + "/api/admin/change-password", body, {headers: headers}).subscribe(
 			data => {},
 			err => {
-				console.log("Server Error: ", err);
+				console.error("Server Error: ", err);
 			}
 		);
 	}
