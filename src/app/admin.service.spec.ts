@@ -3,7 +3,6 @@ import { TestBed, inject } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { MessageService } from './message.service';
 import { apiServer } from './globals';
 
 import { AdminService } from './admin.service';
@@ -49,6 +48,7 @@ describe('AdminService', () => {
 		req.flush({SESSIONID:'JWTtest'});
 		expect(req.request.method).toBe('POST');
 		expect(localStorage.getItem("admin")).not.toEqual(null);
+		expect(service.loggedIn()).toBeTruthy();
 		httpMock.verify();
 	});
 
@@ -60,6 +60,7 @@ describe('AdminService', () => {
 		req.flush({SESSIONID:''});
 		expect(req.request.method).toBe('POST');
 		expect(localStorage.getItem("admin")).toEqual(null);
+		expect(service.loggedIn()).not.toBeTruthy();
 		httpMock.verify();
 	});
 
@@ -72,4 +73,5 @@ describe('AdminService', () => {
 		expect(req.request.body).toBe('{"username":"testUser","password":"testOld","newPassword":"testNew"}');
 		httpMock.verify();
 	});
+
 });

@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
-import {Http, Response, Headers, } from "@angular/http";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Http, Response, Headers } from "@angular/http";
 import { Router, CanActivate } from '@angular/router';
-import { MessageService } from './message.service';
 import { apiServer } from './globals';
 /*
 this service takes care of Administrator logins. Due to issues with the administration about privacy laws
@@ -25,7 +24,6 @@ export class AdminService {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
 
 		let body = JSON.stringify({username:username, password:password});
-		console.log('this is username in service',body)
 		this.http.post<any>(apiServer + "/api/admin/login", body, {headers: headers}).subscribe(
 			data =>{
 				if(data.SESSIONID != ""){
@@ -34,12 +32,11 @@ export class AdminService {
 					return true;
 				}
 				else{
-					localStorage.removeItem("admin");
-					return false;
+					this.logout();
 				}
 			},
 			err => {
-				console.log("Server Error: ", err);
+				console.error("Server Error: ", err);
 			}
 		);
 		return false;
@@ -57,7 +54,7 @@ export class AdminService {
 			this.router.navigate(['login']);
 			return false
 		}
-		else{
+		else {
 			return true;
 		}
 	}
@@ -72,7 +69,7 @@ export class AdminService {
 		this.http.post<any>(apiServer + "/api/admin/change-password", body, {headers: headers}).subscribe(
 			data => {},
 			err => {
-				console.log("Server Error: ", err);
+				console.error("Server Error: ", err);
 			}
 		);
 	}

@@ -11,8 +11,6 @@ import { ButtonComponent } from './button/button.component';
 import { ActiveStudentsComponent } from './active-students/active-students.component';
 import { RequestStudentsComponent } from './request-students/request-students.component';
 import { StudentService } from './student.service';
-import { MessageService } from './message.service';
-import { MessagesComponent } from './messages/messages.component';
 import { LoginService } from './login.service';
 import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
@@ -30,7 +28,6 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     ButtonComponent,
     ActiveStudentsComponent,
     RequestStudentsComponent,
-    MessagesComponent,
     SubmitComplaintComponent,
     ListComplaintsComponent,
     NavbarComponent,
@@ -45,7 +42,6 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
   ],
   providers: [
     StudentService,
-    MessageService,
     LoginService,
     AdminService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }

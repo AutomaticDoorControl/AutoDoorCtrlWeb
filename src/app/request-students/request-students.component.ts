@@ -1,72 +1,71 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {StudentService} from '../student.service'; 
-import {AdminService} from '../admin.service';
-
-import { convertArrayToCSV } from 'convert-array-to-csv';
+import { StudentService } from '../student.service'; 
+import { AdminService } from '../admin.service';
+import { DownloadCSVService } from '../download-csv.service';
 
 @Component({
-  selector: 'app-request-students',
-  templateUrl: './request-students.component.html',
-  styleUrls: ['./request-students.component.css']
+	selector: 'app-request-students',
+	templateUrl: './request-students.component.html',
+	styleUrls: ['./request-students.component.css']
 })
 export class RequestStudentsComponent implements OnInit {
 
-  Students: any[];
-  buttons = ["Add All", "Download"];
-  
-  // constructors needed to use the different services 
-  constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
+	Students: any[];
+	buttons = ["Add All", "Download"];
 
-  /*On load function calls*/
-  ngOnInit() {
-    this.getStudents();
-  }
+	// constructors needed to use the different services 
+	constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
 
-  // loads students info into table using student service
-  getStudents():void{
-    this.studentService.getRequest()
-    .subscribe(
-      List => this.Students = List,
-      err => {localStorage.removeItem("admin"); this.router.navigate(['login']);}
-    );
-  }
+	/*On load function calls*/
+	ngOnInit() {
+		this.getStudents();
+	}
 
-  // adds student to the active students list using student service 
-  addStudent(username):void{
-    this.studentService.addOne(username);
-  }
+	// loads students info into table using student service
+	getStudents():void {
+		this.studentService.getRequest()
+		.subscribe(
+			List => {
+				this.Students = List
+			},
+			err => {
+				this.logout();
+				this.router.navigate(['login']);
+			}
+		);
+	}
 
-  // adds all students to the active students list using student service 
-  addAll():void{
-    this.studentService.addAll();
-  }
+	// adds student to the active students list using student service 
+	addStudent(username):void {
+		this.studentService.addOne(username);
+	}
 
-  //downloads student list in csv gfile
-  downloadCSV():void{
-    let csv = convertArrayToCSV(this.Students);
-    let blob = new Blob([csv], {type: 'text/csv;charset=utf8;'});
-    let uri = 'data:attachment/csv;charset=utf-8,' + encodeURI(csv);
-    let link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.setAttribute('visibility', 'hidden');
-    link.download = 'Requests.csv';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-  
-  // allows admin to logout using log out service 
-  logout():void{
-    this.admin.logout();
-  }
+	// adds all students to the active students list using student service 
+	addAll():void {
+		this.studentService.addAll();
+	}
 
-  buttonClick(button):void {
-    if(button == this.buttons[0])
-      this.addAll();
-    else if(button == this.buttons[1])
-      this.downloadCSV();
-  }
+	//downloads student list in csv file
+	downloadCSV():void {
+		DownloadCSVService.downloadCSV(this.Students, 'Requests.csv');
+	}
+
+	// allows admin to logout using log out service 
+	logout():void {
+		this.admin.logout();
+	}
+
+	buttonClick(button):void {
+		if(button == this.buttons[0])
+		{
+			this.addAll();
+		}
+		else if(button == this.buttons[1])
+		{
+			this.downloadCSV();
+		}
+	}
 
 }
