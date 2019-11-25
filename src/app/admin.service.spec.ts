@@ -77,11 +77,11 @@ describe('AdminService', () => {
 	it('should force logouts on failed login', () => {
 		spyOn(service, 'logout');
 		let httpMock = TestBed.get(HttpTestingController);
-		service.changePassword('testUser', 'testOld', 'testNew');
-		let req = httpMock.expectOne(apiServer + '/api/admin/change-password');
+		service.login('testUser', 'passwd');
+		let req = httpMock.expectOne(apiServer + '/api/admin/login');
 		req.error("oh no");
 		expect(req.request.method).toBe('POST');
-		expect(req.request.body).toBe('{"username":"testUser","password":"testOld","newPassword":"testNew"}');
+		expect(req.request.body).toBe('{"username":"testUser","password":"passwd"}');
 		httpMock.verify();
 		expect(service.logout).toHaveBeenCalled();
 	});

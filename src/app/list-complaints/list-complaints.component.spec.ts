@@ -55,6 +55,8 @@ describe('ListComplaintsComponent', () => {
 		fixture = TestBed.createComponent(ListComplaintsComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
+		let CSVSpy = spyOn(DownloadCSVService, 'downloadCSV');
+		CSVSpy.calls.reset();
 	});
 
 	it('should create', () => {
@@ -82,7 +84,6 @@ describe('ListComplaintsComponent', () => {
 	});
 
 	it('should trigger download when button is clicked', () => {
-		spyOn(DownloadCSVService, 'downloadCSV');
 		component.buttonClick("Download");
 		expect(DownloadCSVService.downloadCSV).toHaveBeenCalledWith([
 			{"location":"locOne","message":"messOne"},
@@ -90,5 +91,10 @@ describe('ListComplaintsComponent', () => {
 			{"location":"locThree","message":"messThree"},
 			{"location":"locFour","message":"messFour"}],
 			'Complaints.csv');
+	});
+
+	it('should not trigger download when bad button is clicked', () => {
+		component.buttonClick("no such button");
+		expect(DownloadCSVService.downloadCSV).not.toHaveBeenCalled();
 	});
 });

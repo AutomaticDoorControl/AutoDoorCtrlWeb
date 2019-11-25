@@ -56,6 +56,8 @@ describe('RequestStudentsComponent', () => {
 		fixture = TestBed.createComponent(RequestStudentsComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
+		let CSVSpy = spyOn(DownloadCSVService, 'downloadCSV');
+		CSVSpy.calls.reset();
 	});
 
 	it('should create', () => {
@@ -97,7 +99,7 @@ describe('RequestStudentsComponent', () => {
 
 
 	it('should trigger download when button is clicked', () => {
-		spyOn(DownloadCSVService, 'downloadCSV');
+		StudentMock.addAll.calls.reset();
 		component.buttonClick("Download");
 		expect(DownloadCSVService.downloadCSV).toHaveBeenCalledWith([
 			{"RCSid":"userOne","Status":"Request"},
@@ -105,10 +107,20 @@ describe('RequestStudentsComponent', () => {
 			{"RCSid":"userThree","Status":"Request"},
 			{"RCSid":"userFour","Status":"Request"}],
 			'Requests.csv');
+		expect(StudentMock.addAll).not.toHaveBeenCalled();
 	});
 
 	it('should trigger add all when button is clicked', () => {
+		StudentMock.addAll.calls.reset();
 		component.buttonClick('Add All');
 		expect(StudentMock.addAll).toHaveBeenCalled();
+		expect(DownloadCSVService.downloadCSV).not.toHaveBeenCalled();
+	});
+
+	it('should trigger no functions with an unassigned button', () => {
+		StudentMock.addAll.calls.reset();
+		component.buttonClick('no such button');
+		expect(StudentMock.addAll).not.toHaveBeenCalled();
+		expect(DownloadCSVService.downloadCSV).not.toHaveBeenCalled();
 	});
 });
