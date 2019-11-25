@@ -23,4 +23,4 @@ script:
   - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox --code-coverage
 
 after_script:
-  - coveralls < ./coverage/lcov.info
+  - coveralls < ./coverage/auto-door-ctrl-web/lcov.info
