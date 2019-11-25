@@ -9,4 +9,20 @@ describe('DownloadCSVService', () => {
 		const service: DownloadCSVService = TestBed.get(DownloadCSVService);
 		expect(service).toBeTruthy();
 	});
+
+	it('should generate the CSV', () => {
+		//Thanks to https://stackoverflow.com/a/51852908
+		let aSpy = jasmine.createSpyObj('a', ['click', 'setAttribute']);
+		spyOn(document, 'createElement').and.returnValue(aSpy);
+		spyOn(document.body, 'appendChild');
+		spyOn(document.body, 'removeChild');
+		let csv = [{RCSid:'one',Status:'good'},
+			{RCSid:'two',Status:'not so good'}];
+		DownloadCSVService.downloadCSV(csv, 'output.csv');
+		expect(aSpy.href).toBe('data:text/csv;charset=utf-8,RCSid,Status%0Aone,good%0Atwo,%22not%20so%20good%22%0A');
+		expect(aSpy.download).toBe('output.csv');
+		expect(aSpy.click).toHaveBeenCalled();
+		expect(document.body.appendChild).toHaveBeenCalledWith(aSpy);
+		expect(document.body.removeChild).toHaveBeenCalledWith(aSpy);
+	});
 });
