@@ -25,9 +25,13 @@ export class NavbarComponent implements OnInit {
 
 	logout():void {
 		if(this.loggedInAdmin)
-		this.adminLogout();
+		{
+			this.adminLogout();
+		}
 		else if(this.loggedInStudent)
-		this.studentLogout();
+		{
+			this.studentLogout();
+		}
 		this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
 	}
 
@@ -59,8 +63,12 @@ export class NavbarComponent implements OnInit {
 
 	changePassword(username, oldPass, newPass):void {
 		if(this.loggedInAdmin)
-		this.adminService.changePassword(username, oldPass, newPass);
+		{
+			this.adminService.changePassword(username, oldPass, newPass);
+		}
 		else if(this.loggedInStudent)
-		this.loginService.changePassword(username, oldPass, newPass);
+		{
+			this.loginService.changePassword(username, oldPass, newPass);
+		}
 	}
 }
