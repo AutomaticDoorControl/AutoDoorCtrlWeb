@@ -107,4 +107,19 @@ describe('NavbarComponent', () => {
 		expect(AdminMock.changePassword).not.toHaveBeenCalled();
 		expect(LoginMock.changePassword).not.toHaveBeenCalled();
 	});
+
+	it('should call loginService with login credentials', () => {
+		component.studentLogin('user', 'password');
+		expect(LoginMock.login).toHaveBeenCalledWith('user', 'password');
+	});
+	
+	it('should call adminService with login credentials', () => {
+		component.adminLogin('admin', 'password');
+		expect(AdminMock.login).toHaveBeenCalledWith('admin', 'password');
+	});
+
+	it('should call studentService with request credentials', () => {
+		component.studentRegister('newUser');
+		expect(StudentMock.register).toHaveBeenCalledWith('newUser');
+	});
 });
