@@ -96,4 +96,28 @@ describe('LoginService', () => {
 		expect(req.request.body).toBe('{"RCSid":"testRCS","password":"testOld","newPassword":"testNew"}');
 		httpMock.verify();
 	});
+
+	it('should logout on failed changePassword', () => {
+		spyOn(service, 'logout');
+		let httpMock = TestBed.get(HttpTestingController);
+		service.changePassword('testRCS', 'testOld', 'testNew');
+		let req = httpMock.expectOne(apiServer + '/api/change-password');
+		req.error("oh no");
+		expect(req.request.method).toBe('POST');
+		expect(req.request.body).toBe('{"RCSid":"testRCS","password":"testOld","newPassword":"testNew"}');
+		httpMock.verify();
+		expect(service.logout).toHaveBeenCalled();
+	});
+
+	it('should logout on failed login', () => {
+		spyOn(service, 'logout');
+		let httpMock = TestBed.get(HttpTestingController);
+		localStorage.setItem("user", "removeme");
+    		service.login('test', 'test');
+		let req = httpMock.expectOne(apiServer + '/api/login');
+		req.error("oh no");
+		expect(req.request.method).toBe('POST');
+		httpMock.verify();
+		expect(service.logout).toHaveBeenCalled();
+	});
 });
