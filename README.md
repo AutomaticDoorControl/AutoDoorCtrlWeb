@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/AutomaticDoorControl/AutoDoorCtrlWeb.svg?branch=master)](https://travis-ci.com/AutomaticDoorControl/AutoDoorCtrlWeb) [![Coverage Status](https://coveralls.io/repos/github/AutomaticDoorControl/AutoDoorCtrlWeb/badge.svg?branch=coveralls)](https://coveralls.io/github/AutomaticDoorControl/AutoDoorCtrlWeb?branch=coveralls)
+[![Build Status](https://travis-ci.com/AutomaticDoorControl/AutoDoorCtrlWeb.svg?branch=master)](https://travis-ci.com/AutomaticDoorControl/AutoDoorCtrlWeb) [![Coverage Status](https://coveralls.io/repos/github/AutomaticDoorControl/AutoDoorCtrlWeb/badge.svg?branch=master)](https://coveralls.io/github/AutomaticDoorControl/AutoDoorCtrlWeb?branch=master)
 # AutoDoorCtrlWeb 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
