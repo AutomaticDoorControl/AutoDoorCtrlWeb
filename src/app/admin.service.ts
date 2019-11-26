@@ -37,6 +37,7 @@ export class AdminService {
 			},
 			err => {
 				console.error("Server Error: ", err);
+				this.logout();
 			}
 		);
 		return false;
@@ -70,6 +71,7 @@ export class AdminService {
 			data => {},
 			err => {
 				console.error("Server Error: ", err);
+				this.logout();
 			}
 		);
 	}

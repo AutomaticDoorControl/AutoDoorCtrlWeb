@@ -57,6 +57,7 @@ export class StudentService {
 				this.reload();
 			},
 			err =>{
+				console.error("Server error: ", err);
 				this.adminService.logout();
 			})
 	}
@@ -69,6 +70,7 @@ export class StudentService {
 				this.reload();
 			},
 			err =>{
+				console.error("Server error: ", err);
 				this.adminService.logout();
 			})
 	}
@@ -105,6 +107,7 @@ export class StudentService {
 			},
 			err =>{
 				console.error("Server error: ", err);
+				this.adminService.logout();
 			})
 	}
 

@@ -36,6 +36,7 @@ export class LoginService implements CanActivate {
 			},
 			err => {
 				console.error("Server error: ", err);
+				this.logout();
 			}
 		);
 		return false;
@@ -73,6 +74,7 @@ export class LoginService implements CanActivate {
 			data => { },
 			err => {
 				console.error("Server Error: ", err);
+				this.logout();
 			}
 		);
 	}
