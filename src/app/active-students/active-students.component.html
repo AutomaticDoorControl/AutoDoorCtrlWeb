@@ -8,7 +8,6 @@
 		<div class="w3-row w3-padding-64">
 			<h3>Active Students</h3>
 			<div class="CenterPage">
-
 				<table id="customers">
 					<tr>
 						<th>RCS ID</th>
@@ -16,7 +15,6 @@
 						<th></th>
 					</tr>
 					<tr *ngFor="let student of Students">
-
 						<td>{{student.RCSid}}</td>
 						<td>{{student.Status}}</td>
 						<td><button type="button" class="btn btn-danger" (click)="removeOne(student.RCSid)">remove</button></td>

@@ -4,14 +4,12 @@ button.open{
     font-size: 48px;
     border-radius: 12px;
 }
-
 button.logout{
     background-color: navy;
     color: white;
     font-size: 24px;
     padding: 14px 40px;
-    border-radius: 12px;
-    
+    border-radius: 12px;    
 }
 .buttonHolder{ 
     text-align: center; 

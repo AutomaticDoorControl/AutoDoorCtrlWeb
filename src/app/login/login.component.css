@@ -6,55 +6,56 @@
     font-weight: normal;
     font-style: normal;
 }
-.display-4{
+/*header of the first textbox */
+.container1{
+    background:black;
+    color: white;
+    padding-right: 0;
+}
+ .display-4{     
     padding-top: 10%;
     padding-bottom: 1%;
     padding-left: 5%;
     font-family: "mohaveregular", sans-serif;
     font-size: 50px;
 }
-.container1{
-    background:black;
-    color: white;
-    padding-right: 0;
-}
-.head{
-    padding-top: 10%;
-    padding-bottom: 3%;
-    font-family: "mohaveregular", sans-serif;
-    color: black;
-}
+/* the text under the header fo the first textbox */
 .text1{
     padding-top: 5%;
     padding-left: 5%;
     font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
     font-size: 30px;
 }
-.head2{
+/* the 4 images on the page  */
+.container2{
+    padding-left: 0;
+    padding-right: 0%;
+}
+/* the "About us" */
+.head{
+    padding-top: 10%;
+    padding-bottom: 3%;
+    font-family: "mohaveregular", sans-serif;
+    color: black;
+}
+/* the text after "About us" */
+.text2{
+    color: black;
+    padding-bottom: 3%; 
+    font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;    
+ }
+ .text3{
+     color: black;    
+     font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
+     font-size: 20px;
+ }
+ /* the timeline part */
+ .head2{
     padding-top: 10%;  
     font-family: "mohaveregular", sans-serif;
-    /* font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif; */
     color: black;
     padding-left: 5%;
     padding-bottom: 1%;
-}
-.text2{
-   color: black;
-   padding-bottom: 3%; 
-   font-family: -apple-system-short-body, BlinkMacSystemFont, sans-serif;
-    
-}
-.head2-1{
-    padding-top: 5%;  
-    font-family: "mohaveregular", sans-serif;
-    color: black;
-    padding-left: 5%;
-    padding-bottom: 3%;
-}
-.text3{
-    color: black;    
-    font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
-    font-size: 20px;
 }
 .text4{
     color: black;
@@ -63,22 +64,15 @@
     font-family: -apple-system-caption1, BlinkMacSystemFont, sans-serif;
     font-size: 20px;
 }
-.head3{
-    padding-top: 5%; 
+/* the goals */
+.head2-1{
+    padding-top: 5%;  
+    font-family: "mohaveregular", sans-serif;
+    color: black;
     padding-left: 5%;
+    padding-bottom: 3%;
 }
-
-.head4{
-    padding-top: 5%;
-    padding-left: 5%;
-}
-.container2{
-    padding-left: 0;
-    padding-right: 0%;
-}
-.card-img{
-    padding-left: 0;    
-}
+/* the team image */
 .c5Title{
     padding-top: 5%;
     padding-bottom: 5%;
@@ -86,9 +80,8 @@
     color: black;
     font-family: "mohaveregular", sans-serif;
 }
-.lead{
-    background: transparent;
-    color: white;
+.card-img{
+    padding-left: 0;    
 }
 .teamImage{
     display: block;
@@ -96,7 +89,12 @@
     margin-right: auto;
     width: 50%;
 }
-
+/* override the default bootstrap */
+.lead{
+    background: transparent;
+    color: white;
+}
+/* mobile version, needs more styling */
 @media (max-width:860px){
     .container1{
         display: block;

@@ -22,6 +22,7 @@
     background-color:#4CAF50;
     color: white;
 }
+
 .CenterPage{ 
     text-align: center
 }
@@ -58,9 +59,7 @@
 }
 
 .sidenav div {
-    padding: 6px 8px 6px 16px;
-    
-   
+    padding: 6px 8px 6px 16px;   
 }
 
 .sidenav a:hover {
