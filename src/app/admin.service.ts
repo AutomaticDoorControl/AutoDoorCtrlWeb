@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Http, Response, Headers } from "@angular/http";
 import { Router, CanActivate } from '@angular/router';
 import { apiServer } from './globals';
 /*
