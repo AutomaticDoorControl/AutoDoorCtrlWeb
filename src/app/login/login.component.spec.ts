@@ -11,31 +11,36 @@ import { AdminService } from '../admin.service';
 import { LoginComponent } from './login.component';
 
 describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+	let component: LoginComponent;
+	let fixture: ComponentFixture<LoginComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-	HttpClientTestingModule
-      ],
-      declarations: [
-        LoginComponent,
-	Component({selector: 'app-navbar', template: ''})(class _ {})
-      ],
-      providers: [ LoginService, StudentService, AdminService ]
-    })
-    .compileComponents();
-  }));
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			imports: [
+				RouterTestingModule,
+				HttpClientTestingModule
+			],
+			declarations: [
+				LoginComponent,
+				Component({selector: 'app-navbar', template: ''})(class _ {})
+			],
+			providers: [ LoginService, StudentService, AdminService ]
+		})
+			.compileComponents();
+	}));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(LoginComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
+
+	it('should build the TeamRows array', () => {
+		expect(component.TeamRows[0][0]).toEqual({name: "Jing Wei Li", src: "https://avatars0.githubusercontent.com/u/10605755"});
+		expect(component.TeamRows[1][3]).toEqual({name: "Erin Jordan", src: "https://avatars1.githubusercontent.com/u/9295940"});
+	});
 });
