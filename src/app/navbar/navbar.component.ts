@@ -43,7 +43,6 @@ export class NavbarComponent implements OnInit {
 	adminLogout():void {
 		this.adminService.logout();
 		this.loggedInAdmin = false;
-
 	}
 
 	// allows students to login via login service

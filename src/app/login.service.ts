@@ -26,7 +26,7 @@ export class LoginService implements CanActivate {
 			data =>{
 				if(data.SESSIONID != ""){
 					localStorage.setItem("user", data.SESSIONID);
-					this.router.navigate(['button']);
+					this.reload();
 					return true;
 				}
 				else {
@@ -76,5 +76,9 @@ export class LoginService implements CanActivate {
 				this.logout();
 			}
 		);
+	}
+
+	reload():void {
+		window.location.reload();
 	}
 }

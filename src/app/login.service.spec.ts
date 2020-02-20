@@ -19,6 +19,7 @@ describe('LoginService', () => {
 			providers: [LoginService]
 		});
 		service = TestBed.get(LoginService);
+		spyOn(service, 'reload').and.stub();
 	});
 
 	it('should be created', () => {
@@ -73,7 +74,7 @@ describe('LoginService', () => {
 		httpMock.verify();
 	});
 
-	it('successful login should redirect to /button', () => {
+	it('successful login should reload', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		let router = TestBed.get(Router);
 		let navigateSpy = spyOn(router, 'navigate');
@@ -82,7 +83,8 @@ describe('LoginService', () => {
 		req.flush({SESSIONID:'jwtTest'});
 		expect(req.request.method).toBe('POST');
     		expect(req.request.body).toBe('{"RCSid":"test","password":"testpass"}');
-		expect(navigateSpy).toHaveBeenCalledWith(['button']);
+		expect(navigateSpy).not.toHaveBeenCalled();
+		expect(service.reload).toHaveBeenCalled();
 		httpMock.verify();
 	});
 

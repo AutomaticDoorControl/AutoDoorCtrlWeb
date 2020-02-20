@@ -7,7 +7,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { ButtonComponent } from './button/button.component';
 import { ActiveStudentsComponent } from './active-students/active-students.component';
 import { RequestStudentsComponent } from './request-students/request-students.component';
 import { StudentService } from './student.service';
@@ -25,7 +24,6 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
   declarations: [
     AppComponent,
     LoginComponent,
-    ButtonComponent,
     ActiveStudentsComponent,
     RequestStudentsComponent,
     SubmitComplaintComponent,
