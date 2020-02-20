@@ -19,6 +19,7 @@ describe('LoginService', () => {
 			providers: [LoginService]
 		});
 		service = TestBed.get(LoginService);
+		spyOn(service, 'reload').and.stub();
 	});
 
 	it('should be created', () => {
@@ -94,6 +95,7 @@ describe('LoginService', () => {
 		req.flush([]);
 		expect(req.request.method).toBe('POST');
 		expect(req.request.body).toBe('{"RCSid":"testRCS","password":"testOld","newPassword":"testNew"}');
+		expect(service.reload).toHaveBeenCalled();
 		httpMock.verify();
 	});
 
