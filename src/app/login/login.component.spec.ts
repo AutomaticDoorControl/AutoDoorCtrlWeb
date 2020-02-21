@@ -40,7 +40,7 @@ describe('LoginComponent', () => {
 	});
 
 	it('should build the TeamRows array', () => {
-		expect(component.TeamRows[0][0]).toEqual({name: "Jing Wei Li", src: "https://avatars0.githubusercontent.com/u/10605755"});
-		expect(component.TeamRows[1][3]).toEqual({name: "Erin Jordan", src: "https://avatars1.githubusercontent.com/u/9295940"});
+		expect(component.TeamRows[0][0]).toEqual({name: "Jing Wei Li", src: "ljw980105"});
+		expect(component.TeamRows[1][4]).toEqual({name: "Erin Jordan", src: "erinjordan24"});
 	});
 });
