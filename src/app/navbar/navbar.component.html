@@ -41,23 +41,24 @@
 <div id="adminLogin" class="modal" *ngIf="!loggedIn">
 	<button onclick="document.getElementById('adminLogin').style.display='none'" class="close" title="Close Modal">&times;</button>
 	<!-- Modal Content -->
-	<div class="form-group mx-sm-3 mb-2">
-		<form class="modal-content animate">
-			<h2> Administrator </h2>
-			<div class="modal-body">
-				<div>
-					<input class="form-control form-control-sm" #usernameA type="text" placeholder="Enter Username" name="uname" aria-label="Admin Username" required>
+	<form class="modal-content animate">
+		<h2> Administrator </h2>
+		<div class="modal-body">
+			<div>
+				<input #AdminUsername type="text" placeholder="Enter Username" aria-label="Admin Username" required>
+			</div>
+			<div>
+				<input #AdminPassword type="password" placeholder="Enter Password" aria-label="Admin Password" required>
+			</div>
 
-				</div>
-				<div>
-					<input class="form-control form-control-sm" #passwordA type="password" placeholder="Enter Password" name="psw" aria-label="Admin Password" required>
-				</div>
-			</div>
-			<div class="modal-footer" style="background-color:white">
-				<button class="btn btn-primary"  type="button" (click)="adminLogin(usernameA.value,passwordA.value)">Login</button>
-			</div>
-		</form>
-	</div>	
+		</div>
+		<div class="bad-request" id="adminBadRequest">
+			Incorrect username or password!
+		</div>
+		<div class="modal-footer" style="background-color:white">
+			<button class="btn btn-primary" (click)="adminLogin(AdminUsername.value,AdminPassword.value)">Login</button>
+		</div>
+	</form>
 </div>
 
 
@@ -67,17 +68,19 @@
 	<!-- Modal Content -->
 	<form class="modal-content animate">
 		<h2> Student </h2>
-		<div class="container">
-			<div >
-				<input #studentL type="text" placeholder="Enter RCS id" name="uname" aria-label="RCS ID" equired>
+		<div class="modal-body">
+			<div>
+				<input #StudentUsername type="text" placeholder="Enter RCS id" aria-label="RCS ID" required>
 			</div>
-				<div>
-					<input #studentpass type="password" placeholder="Enter Password" name="upass" aria-label="Student Password" required>
-				</div>
+			<div>
+				<input #StudentPassword type="password" placeholder="Enter Password" aria-label="Student Password" required>
+			</div>
 		</div>
-		<div class="container" style="background-color:white">
-
-			<button class="btn btn-primary"  (click)="studentLogin(studentL.value, studentpass.value)">Login</button>
+		<div class="bad-request" id="studentBadRequest">
+			Incorrect username or password!
+		</div>
+		<div class="modal-footer" style="background-color:white">
+			<button class="btn btn-primary" (click)="studentLogin(StudentUsername.value, StudentPassword.value)">Login</button>
 		</div>
 	</form>
 </div>
@@ -88,13 +91,11 @@
 	<!-- Modal Content -->
 	<form class="modal-content animate">
 		<h2> Register </h2>
-		<div class="container">
-			<div >
-				<input #studentR type="text" placeholder="Enter RCS id" name="uname" aria-label="Registration RCSId" required>
-			</div>
+		<div class="modal-body">
+			<input #RequestUsername type="text" placeholder="Enter RCS id" name="uname" aria-label="Registration RCSId" required>
 		</div>
-		<div class="container" style="background-color:white">
-			<button class="btn btn-primary" type="button" (click)="studentRegister(studentR.value)">Submit Request</button>
+		<div class="modal-footer" style="background-color:white">
+			<button class="btn btn-primary" (click)="studentRegister(RequestUsername.value)">Submit Request</button>
 		</div>
 	</form>
 </div>
@@ -105,19 +106,19 @@
 	<!-- Modal Content -->
 	<form class="modal-content animate">
 		<h2> Change Password </h2>
-		<div class="container">
+		<div class="modal-body">
 			<div>
-				<input #userChange type="text" placeholder="Enter Username" name="uname" aria-label="Current Username" required>
+				<input #userChange type="text" placeholder="Enter Username" aria-label="Current Username" required>
 			</div>
 			<div>
-				<input #oldPass type="password" placeholder="Enter Old Password" name="psw" aria-label="Current Password" required>
+				<input #oldPass type="password" placeholder="Enter Old Password" aria-label="Current Password" required>
 			</div>
 			<div>
-				<input #newPass type="password" placeholder="Enter Password" name="psw" aria-label="New Password" required>
+				<input #newPass type="password" placeholder="Enter Password" aria-label="New Password" required>
 			</div>
 		</div>
-		<div class="container" style="background-color:white">
-			<button class="btn btn-primary" type="button" (click)="changePassword(userChange.value, oldPass.value, newPass.value)">Change Password</button>
+		<div class="modal-footer" style="background-color:white">
+			<button class="btn btn-primary" (click)="changePassword(userChange.value, oldPass.value, newPass.value)">Change Password</button>
 		</div>
 	</form>
 </div>

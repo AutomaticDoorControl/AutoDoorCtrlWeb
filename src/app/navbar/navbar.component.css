@@ -49,7 +49,8 @@ span.psw {
     background-color: #fefefe;
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
-    width: 15%; /* Could be more or less, depending on screen size */
+    width: 30%; /* Could be more or less, depending on screen size */
+    min-width: 250px;
     text-align: center; 
 }
 input {
@@ -98,3 +99,7 @@ div{
     text-align: center;
 }
 
+.bad-request {
+	color: red;
+	visibility: collapse;
+}

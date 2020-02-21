@@ -97,4 +97,26 @@ describe('AdminService', () => {
 		httpMock.verify();
 		expect(service.logout).toHaveBeenCalled();
 	});
+
+	it('should show message on failed login', () => {
+		var mockFun = jasmine.createSpy('callback', mockFun).and.callThrough();
+		let httpMock = TestBed.get(HttpTestingController);
+		service.login('test', 'testpass', mockFun);
+		let req = httpMock.expectOne(apiServer + '/api/admin/login');
+		req.flush({SESSIONID:''});
+		expect(req.request.method).toBe('POST');
+		expect(mockFun).toHaveBeenCalled();
+		httpMock.verify();
+	});
+
+	it('should not show message on succesful login', () => {
+		var mockFun = jasmine.createSpy('callback', mockFun).and.callThrough();
+		let httpMock = TestBed.get(HttpTestingController);
+		service.login('test', 'testpass', mockFun);
+		let req = httpMock.expectOne(apiServer + '/api/admin/login');
+		req.flush({SESSIONID:'jwtTest'});
+		expect(req.request.method).toBe('POST');
+		expect(mockFun).not.toHaveBeenCalled();
+		httpMock.verify();
+	});
 });

@@ -48,12 +48,14 @@ export class NavbarComponent implements OnInit {
 
 	// allows students to login via login service
 	studentLogin(username, password):void {
-		this.loginService.login(username, password);
+		document.getElementById('studentBadRequest').style.visibility = 'collapse';
+		this.loginService.login(username, password, this.showFailedStudentLogin);
 	}
 
 	// allows admin to login using admin service
 	adminLogin(username,password):void {
-		this.adminService.login(username,password);
+		document.getElementById('adminBadRequest').style.visibility = 'collapse';
+		this.adminService.login(username,password, this.showFailedAdminLogin);
 	}
 
 	//allows students to register via student service
@@ -70,5 +72,13 @@ export class NavbarComponent implements OnInit {
 		{
 			this.loginService.changePassword(username, oldPass, newPass);
 		}
+	}
+
+	showFailedStudentLogin():void {
+		document.getElementById('studentBadRequest').style.visibility = 'visible';
+	}
+
+	showFailedAdminLogin():void {
+		document.getElementById('adminBadRequest').style.visibility = 'visible';
 	}
 }

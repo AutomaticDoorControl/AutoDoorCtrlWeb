@@ -19,7 +19,7 @@ export class AdminService {
 	constructor( public router: Router,private http: HttpClient) { }
 
 	// checks to see if admin is in our db to be logged in
-	login(username,password): boolean {
+	login(username, password, failCallback?): boolean {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
 
 		let body = JSON.stringify({username:username, password:password});
@@ -32,6 +32,10 @@ export class AdminService {
 				}
 				else{
 					this.logout();
+					if(failCallback)
+					{
+						failCallback();
+					}
 				}
 			},
 			err => {
