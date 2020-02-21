@@ -23,6 +23,7 @@ export class AdminService {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
 
 		let body = JSON.stringify({username:username, password:password});
+		document.getElementById("adminBadRequest").style.visibility = "collapse";
 		this.http.post<any>(apiServer + "/api/admin/login", body, {headers: headers}).subscribe(
 			data =>{
 				if(data.SESSIONID != ""){
@@ -32,6 +33,7 @@ export class AdminService {
 				}
 				else{
 					this.logout();
+					document.getElementById("adminBadRequest").style.visibility = "visible";
 				}
 			},
 			err => {
