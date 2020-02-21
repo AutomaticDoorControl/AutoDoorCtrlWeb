@@ -12,6 +12,7 @@ describe('NavbarComponent', () => {
 	let StudentMock = jasmine.createSpyObj('StudentService', ['register']);
 	let LoginMock = jasmine.createSpyObj('LoginService', ['loggedIn', 'login', 'logout', 'changePassword']);
 	let AdminMock = jasmine.createSpyObj('AdminService', ['loggedIn', 'login', 'logout', 'changePassword']);
+	var dummyElement;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
@@ -28,9 +29,9 @@ describe('NavbarComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(NavbarComponent);
 		component = fixture.componentInstance;
-		spyOn(component, 'showFailedAdminLogin').and.stub();
-		spyOn(component, 'showFailedStudentLogin').and.stub();
 		fixture.detectChanges();
+		dummyElement = document.createElement('div');
+		document.getElementById = jasmine.createSpy('HTML Element').and.returnValue(dummyElement);
 	});
 
 	afterEach(() => {
@@ -123,5 +124,25 @@ describe('NavbarComponent', () => {
 	it('should call studentService with request credentials', () => {
 		component.studentRegister('newUser');
 		expect(StudentMock.register).toHaveBeenCalledWith('newUser');
+	});
+
+	it('should disable message on admin login', () => {
+		component.adminLogin('admin', 'password');
+		expect(dummyElement.style.visibility).toBe('collapse');
+	});
+
+	it('should disable message on student login', () => {
+		component.studentLogin('student', 'password');
+		expect(dummyElement.style.visibility).toBe('collapse');
+	});
+
+	it('should show message on failed admin login', () => {
+		component.showFailedAdminLogin();
+		expect(dummyElement.style.visibility).toBe('visible');
+	});
+
+	it('should show message on failed student login', () => {
+		component.showFailedStudentLogin();
+		expect(dummyElement.style.visibility).toBe('visible');
 	});
 });
