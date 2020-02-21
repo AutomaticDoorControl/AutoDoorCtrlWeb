@@ -62,8 +62,8 @@
 	<div class="col-md-auto">
 		<h1 class="c5Title">TEAM</h1>
 		<div class="row team" *ngFor="let teamRow of TeamRows">
-			<div class="col" *ngFor="let member of teamRow">
-				<img class="card-img" src="{{member.src}}" alt="{{member.name}}">
+			<div class="col-2" *ngFor="let member of teamRow">
+				<a href="https://github.com/{{member.src}}"><img class="card-img team-member" src="https://github.com/{{member.src}}.png" alt="{{member.name}}"></a>
 			</div>
 		</div>
 	</div>

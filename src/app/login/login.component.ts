@@ -17,15 +17,16 @@ export class LoginComponent implements OnInit {
 
 	TeamRows: any[];
 	TeamMembers: Array<object> = [
-		{name: "Jing Wei Li", src: "https://avatars0.githubusercontent.com/u/10605755"},
-		{name: "Alex Pinkowski", src: "https://avatars3.githubusercontent.com/u/48626981"},
-		{name: "Jelly Wang", src: "https://avatars3.githubusercontent.com/u/30369722"},
-		{name: "Noah Kosobucki", src: "https://avatars3.githubusercontent.com/u/60408939"},
-		{name: "Brandon Sakai", src: "https://avatars0.githubusercontent.com/u/22205119"},
-		{name: "Mallory Gaspard", src: "https://avatars2.githubusercontent.com/u/59492782"},
-		{name: "John Kongtcheu", src: "https://avatars0.githubusercontent.com/u/20214982"},
-		{name: "John Hulton", src: "https://avatars1.githubusercontent.com/u/11095297"},
-		{name: "Erin Jordan", src: "https://avatars1.githubusercontent.com/u/9295940"}
+		{name: "Jing Wei Li", src: "ljw980105"},
+		{name: "Alex Pinkowski", src: "pinkoa2"},
+		{name: "Jelly Wang", src: "jellywang7"},
+		{name: "Noah Kosobucki", src: "kosobn"},
+		{name: "Brandon Sakai", src: "bsakai2000"},
+		{name: "Mallory Gaspard", src: "malloryegaspard"},
+		{name: "Mallory Gaspard", src: "mgaspard"},
+		{name: "John Kongtcheu", src: "John42506176Linux"},
+		{name: "John Hulton", src: "jchulton"},
+		{name: "Erin Jordan", src: "erinjordan24"}
 	];
 	// constructors needed to use the different services 
 	constructor() {

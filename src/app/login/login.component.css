@@ -103,3 +103,9 @@ div.row.team{
 	margin-right: auto;
 	min-width: 300px;
 }
+
+.team-member{
+	border-width: medium;
+	border-style: solid;
+	border-color: white;
+}
