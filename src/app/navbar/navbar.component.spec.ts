@@ -28,6 +28,8 @@ describe('NavbarComponent', () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(NavbarComponent);
 		component = fixture.componentInstance;
+		spyOn(component, 'showFailedAdminLogin').and.stub();
+		spyOn(component, 'showFailedStudentLogin').and.stub();
 		fixture.detectChanges();
 	});
 
@@ -110,12 +112,12 @@ describe('NavbarComponent', () => {
 
 	it('should call loginService with login credentials', () => {
 		component.studentLogin('user', 'password');
-		expect(LoginMock.login).toHaveBeenCalledWith('user', 'password');
+		expect(LoginMock.login).toHaveBeenCalledWith('user', 'password', component.showFailedStudentLogin);
 	});
 	
 	it('should call adminService with login credentials', () => {
 		component.adminLogin('admin', 'password');
-		expect(AdminMock.login).toHaveBeenCalledWith('admin', 'password');
+		expect(AdminMock.login).toHaveBeenCalledWith('admin', 'password', component.showFailedAdminLogin);
 	});
 
 	it('should call studentService with request credentials', () => {

@@ -19,11 +19,10 @@ export class AdminService {
 	constructor( public router: Router,private http: HttpClient) { }
 
 	// checks to see if admin is in our db to be logged in
-	login(username,password): boolean {
+	login(username, password, failCallback?): boolean {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
 
 		let body = JSON.stringify({username:username, password:password});
-		document.getElementById("adminBadRequest").style.visibility = "collapse";
 		this.http.post<any>(apiServer + "/api/admin/login", body, {headers: headers}).subscribe(
 			data =>{
 				if(data.SESSIONID != ""){
@@ -33,7 +32,10 @@ export class AdminService {
 				}
 				else{
 					this.logout();
-					document.getElementById("adminBadRequest").style.visibility = "visible";
+					if(failCallback)
+					{
+						failCallback();
+					}
 				}
 			},
 			err => {

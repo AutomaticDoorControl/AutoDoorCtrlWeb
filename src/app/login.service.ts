@@ -19,10 +19,9 @@ export class LoginService implements CanActivate {
 	user: any[];
 
 	// Checks if the user is in the db
-	login(username, password): boolean {
+	login(username, password, failCallback?): boolean {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
       		let body = JSON.stringify({RCSid:username, password:password});
-		document.getElementById("studentBadRequest").style.visibility = "collapse";
 		this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
 			data =>{
 				if(data.SESSIONID != ""){
@@ -32,7 +31,10 @@ export class LoginService implements CanActivate {
 				}
 				else {
 					this.logout();
-					document.getElementById("studentBadRequest").style.visibility = "visible";
+					if(failCallback)
+					{
+						failCallback();
+					}
 				}
 			},
 			err => {
