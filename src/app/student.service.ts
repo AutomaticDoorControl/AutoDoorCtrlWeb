@@ -85,13 +85,7 @@ export class StudentService {
 		let body = JSON.stringify({Location:location, Message:message});
 		this.http.post<any>(apiServer + "/api/submit-complaint",body,{headers: headers}).subscribe(
 			data =>{
-				if(isLI){
-					this.router.navigate(['button']);
-				}
-				else{
-					this.router.navigate(['login']);
-				}
-
+				this.router.navigate(['login']);
 			},
 			err =>{
 				console.error("Server error: ", err);

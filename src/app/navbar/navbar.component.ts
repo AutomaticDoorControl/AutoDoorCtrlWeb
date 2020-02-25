@@ -18,6 +18,10 @@ export class NavbarComponent implements OnInit {
 	loggedInAdmin:boolean = false;
 
 	ngOnInit() {
+		this.checkLoggedIn();
+	}
+
+	checkLoggedIn():void {
 		this.loggedInStudent = this.loginService.loggedIn(); 
 		this.loggedInAdmin = this.adminService.loggedIn();
 		this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
@@ -32,30 +36,27 @@ export class NavbarComponent implements OnInit {
 		{
 			this.studentLogout();
 		}
-		this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
+		this.checkLoggedIn();
 	}
 
 	studentLogout():void {
 		this.loginService.logout();
-		this.loggedInStudent = false;
 	}
 
 	adminLogout():void {
 		this.adminService.logout();
-		this.loggedInAdmin = false;
-
 	}
 
 	// allows students to login via login service
 	studentLogin(username, password):void {
 		document.getElementById('studentBadRequest').style.visibility = 'collapse';
-		this.loginService.login(username, password, this.showFailedStudentLogin);
+		this.loginService.login(username, password, this.showFailedStudentLogin, this);
 	}
 
 	// allows admin to login using admin service
 	adminLogin(username,password):void {
 		document.getElementById('adminBadRequest').style.visibility = 'collapse';
-		this.adminService.login(username,password, this.showFailedAdminLogin);
+		this.adminService.login(username, password, this.showFailedAdminLogin);
 	}
 
 	//allows students to register via student service

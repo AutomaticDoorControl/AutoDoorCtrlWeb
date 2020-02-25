@@ -19,18 +19,22 @@ export class LoginService implements CanActivate {
 	user: any[];
 
 	// Checks if the user is in the db
-	login(username, password, failCallback?): boolean {
+	login(username, password, failCallback?, navbar?): boolean {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
       		let body = JSON.stringify({RCSid:username, password:password});
 		this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
 			data =>{
-				if(data.SESSIONID != ""){
+				if(data.SESSIONID != "") {
 					localStorage.setItem("user", data.SESSIONID);
-					this.router.navigate(['button']);
+					// If we got sent a navbar, update it
+					if(navbar) {
+						navbar.checkLoggedIn();
+					}
 					return true;
 				}
 				else {
 					this.logout();
+					// If we got a failCallback, call it to notify the user
 					if(failCallback)
 					{
 						failCallback();
