@@ -16,21 +16,24 @@ export class LoginService implements CanActivate {
 	// constructors needed 
 	constructor(public router: Router,private http: HttpClient) { }
 
-	user: any[];
-
 	// Checks if the user is in the db
 	login(username, password, failCallback?): boolean {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
-      		let body = JSON.stringify({RCSid:username, password:password});
+      		let body = JSON.stringify({rcsid:username, password:password});
 		this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
 			data =>{
 				if(data.SESSIONID != ""){
 					localStorage.setItem("user", data.SESSIONID);
-					this.router.navigate(['button']);
+					localStorage.setItem("isAdmin", data.admin);
+					if(data.admin == 1)
+					{
+						this.router.navigate(['active-students']);
+					}
 					return true;
 				}
 				else {
-					this.logout();
+					localStorage.removeItem("user");
+					localStorage.removeItem("isAdmin");
 					if(failCallback)
 					{
 						failCallback();
@@ -39,45 +42,53 @@ export class LoginService implements CanActivate {
 			},
 			err => {
 				console.error("Server error: ", err);
-				this.logout();
+				localStorage.removeItem("user");
+				localStorage.removeItem("isAdmin");
 			}
 		);
 		return false;
 	}
 	// deletes user from local storage
 	logout():void {
-		localStorage.removeItem("user");
-		this.router.navigate(['login']);
+		this.http.get<any>(apiServer + "/api/logout").subscribe(
+			data =>{
+				localStorage.removeItem("user");
+				localStorage.removeItem("isAdmin");
+				this.router.navigate(['login']);
+			},
+			err =>{
+				console.error("Server error: ", err);
+				localStorage.removeItem("user");
+				localStorage.removeItem("isAdmin");
+				this.router.navigate(['login']);
+			});
 	}
 
 	// checks if the student can access pages restricted to logged in users 
 	canActivate():boolean {
-		if (localStorage.getItem("user") === null){
+		if (localStorage.getItem("isAdmin") !== "1"){
 			this.router.navigate(['login']);
 			return false
 		}
-		else{
-			return true;
-		}
+		return true;
 	}
+
 	//checks if student is logged in
 	loggedIn():boolean{
-		if (localStorage.getItem("user") === null){
-			return false
-		}
-		else{
-			return true;
-		}
+		return localStorage.getItem("user") !== null;
+	}
+
+	loggedInAdmin():boolean{
+		return localStorage.getItem("isAdmin") == "1";
 	}
 
 	changePassword(RCSid, oldPass, newPass):void {
 		const headers = new HttpHeaders().set('Content-Type', 'application/json');
-		let body = JSON.stringify({RCSid:RCSid, password:oldPass, newPassword:newPass});
-		this.http.post<any>(apiServer + "/api/change-password", body, {headers: headers}).subscribe(
+		let body = JSON.stringify({rcsid:RCSid, password:oldPass, newpass:newPass});
+		this.http.post<any>(apiServer + "/api/change_password", body, {headers: headers}).subscribe(
 			data => { },
 			err => {
 				console.error("Server Error: ", err);
-				this.logout();
 			}
 		);
 	}

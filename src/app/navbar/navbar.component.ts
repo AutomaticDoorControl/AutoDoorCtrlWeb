@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { LoginService } from '../login.service';
-import { AdminService } from '../admin.service';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -11,51 +10,29 @@ import { StudentService } from '../student.service';
 })
 export class NavbarComponent implements OnInit {
 
-	constructor(private loginService: LoginService, private adminService: AdminService, private studentService: StudentService) { }
+	constructor(private loginService: LoginService, private studentService: StudentService) { }
 
 	loggedIn:boolean = false;
-	loggedInStudent:boolean = false;
 	loggedInAdmin:boolean = false;
 
 	ngOnInit() {
-		this.loggedInStudent = this.loginService.loggedIn(); 
-		this.loggedInAdmin = this.adminService.loggedIn();
-		this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
+		this.checkLoggedIn();
+	}
+
+	checkLoggedIn():void {
+		this.loggedIn = this.loginService.loggedIn(); 
+		this.loggedInAdmin = this.loginService.loggedInAdmin();
 	}
 
 	logout():void {
-		if(this.loggedInAdmin)
-		{
-			this.adminLogout();
-		}
-		else if(this.loggedInStudent)
-		{
-			this.studentLogout();
-		}
-		this.loggedIn = this.loggedInStudent || this.loggedInAdmin;
-	}
-
-	studentLogout():void {
 		this.loginService.logout();
-		this.loggedInStudent = false;
-	}
-
-	adminLogout():void {
-		this.adminService.logout();
-		this.loggedInAdmin = false;
-
+		this.checkLoggedIn();
 	}
 
 	// allows students to login via login service
-	studentLogin(username, password):void {
-		document.getElementById('studentBadRequest').style.visibility = 'collapse';
-		this.loginService.login(username, password, this.showFailedStudentLogin);
-	}
-
-	// allows admin to login using admin service
-	adminLogin(username,password):void {
-		document.getElementById('adminBadRequest').style.visibility = 'collapse';
-		this.adminService.login(username,password, this.showFailedAdminLogin);
+	login(username, password):void {
+		document.getElementById('badLogin').style.visibility = 'collapse';
+		this.loginService.login(username, password, this.showFailedLogin);
 	}
 
 	//allows students to register via student service
@@ -64,21 +41,10 @@ export class NavbarComponent implements OnInit {
 	}
 
 	changePassword(username, oldPass, newPass):void {
-		if(this.loggedInAdmin)
-		{
-			this.adminService.changePassword(username, oldPass, newPass);
-		}
-		else if(this.loggedInStudent)
-		{
-			this.loginService.changePassword(username, oldPass, newPass);
-		}
+		this.loginService.changePassword(username, oldPass, newPass);
 	}
 
-	showFailedStudentLogin():void {
-		document.getElementById('studentBadRequest').style.visibility = 'visible';
-	}
-
-	showFailedAdminLogin():void {
-		document.getElementById('adminBadRequest').style.visibility = 'visible';
+	showFailedLogin():void {
+		document.getElementById('badLogin').style.visibility = 'visible';
 	}
 }

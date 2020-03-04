@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import {StudentService} from '../student.service'; 
-import {AdminService} from '../admin.service';
+import { LoginService } from '../login.service';
+import { StudentService } from '../student.service'; 
 
 @Component({
 	selector: 'app-active-students',
@@ -14,7 +14,7 @@ export class ActiveStudentsComponent implements OnInit {
 	Students: any[];
 
 	// constructors needed to use the different services
-	constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
+	constructor(private loginService:LoginService, private studentService:StudentService, private router:Router) { }
 
 	/*On load function calls*/
 	ngOnInit() {
@@ -27,9 +27,11 @@ export class ActiveStudentsComponent implements OnInit {
 		.subscribe(
 			List => {
 				this.Students = List;
+			console.log(localStorage.getItem('user'));
 			},
 			err => {
-				this.logout();
+				console.log("Server error: ", err);
+				this.loginService.logout();
 				this.router.navigate(['login']);
 			}
 		);
@@ -39,12 +41,4 @@ export class ActiveStudentsComponent implements OnInit {
 	removeOne(username):void {
 		this.studentService.remove(username);
 	}
-
-	// logs the admin out using admin service
-	logout():void {
-		this.admin.logout();
-	}
-
-
-
 }

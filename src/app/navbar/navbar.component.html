@@ -19,10 +19,7 @@
 				<a class="nav-link" routerLink="/submit-complaint" routerLinkActive="active">Contact Us</a>
 			</li>
 			<li class="nav-item" [hidden]="loggedIn">
-				<a class="nav-link" onclick="document.getElementById('studentLogin').style.display='block'; return false" href='#'>Login</a>
-			</li>
-			<li class="nav-item" [hidden]="loggedIn">
-				<a class="nav-link" onclick="document.getElementById('adminLogin').style.display='block'; return false" href='#'>Admin Login</a>
+				<a class="nav-link" onclick="document.getElementById('loginForm').style.display='block'; return false" href='#'>Login</a>
 			</li>
 			<li class="nav-item" [hidden]="!loggedInAdmin">
 				<a class="nav-link" routerLink="/active-students" routerLinkActive="active">Admin Panel</a>
@@ -37,50 +34,25 @@
 	</div>
 </nav>
 
-<!-- ADMIN LOGIN FORM -->
-<div id="adminLogin" class="modal" *ngIf="!loggedIn">
-	<button onclick="document.getElementById('adminLogin').style.display='none'" class="close" title="Close Modal">&times;</button>
-	<!-- Modal Content -->
-	<form class="modal-content animate">
-		<h2> Administrator </h2>
-		<div class="modal-body">
-			<div>
-				<input #AdminUsername type="text" placeholder="Enter Username" aria-label="Admin Username" required>
-			</div>
-			<div>
-				<input #AdminPassword type="password" placeholder="Enter Password" aria-label="Admin Password" required>
-			</div>
-
-		</div>
-		<div class="bad-request" id="adminBadRequest">
-			Incorrect username or password!
-		</div>
-		<div class="modal-footer" style="background-color:white">
-			<button class="btn btn-primary" (click)="adminLogin(AdminUsername.value,AdminPassword.value)">Login</button>
-		</div>
-	</form>
-</div>
-
-
-<!-- Student LOGIN FORM -->
-<div id="studentLogin" class="modal" *ngIf="!loggedIn">
-	<button onclick="document.getElementById('studentLogin').style.display='none'" class="close" title="Close Modal">&times;</button>
+<!-- LOGIN FORM -->
+<div id="loginForm" class="modal" *ngIf="!loggedIn">
+	<button onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</button>
 	<!-- Modal Content -->
 	<form class="modal-content animate">
 		<h2> Student </h2>
 		<div class="modal-body">
 			<div>
-				<input #StudentUsername type="text" placeholder="Enter RCS id" aria-label="RCS ID" required>
+				<input #Username type="text" placeholder="Enter RCS ID" aria-label="RCS ID" required>
 			</div>
 			<div>
-				<input #StudentPassword type="password" placeholder="Enter Password" aria-label="Student Password" required>
+				<input #Password type="password" placeholder="Enter Password" aria-label="Password" required>
 			</div>
 		</div>
-		<div class="bad-request" id="studentBadRequest">
+		<div class="bad-request" id="badLogin">
 			Incorrect username or password!
 		</div>
 		<div class="modal-footer" style="background-color:white">
-			<button class="btn btn-primary" (click)="studentLogin(StudentUsername.value, StudentPassword.value)">Login</button>
+			<button class="btn btn-primary" (click)="login(Username.value, Password.value)">Login</button>
 		</div>
 	</form>
 </div>

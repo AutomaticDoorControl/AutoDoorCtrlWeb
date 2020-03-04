@@ -6,7 +6,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 
 import { StudentService } from '../student.service';
-import { AdminService } from '../admin.service';
 import { LoginService } from '../login.service';
 import { apiServer } from '../globals';
 
@@ -28,8 +27,7 @@ describe('SubmitComplaintComponent', () => {
 			],
 			providers: [
 				StudentService,
-				LoginService,
-				AdminService
+				LoginService
 			]
 		})
 			.compileComponents();
@@ -49,36 +47,26 @@ describe('SubmitComplaintComponent', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		let router = TestBed.get(Router);
 		let navigateSpy = spyOn(router, 'navigate');
-		component.isLI = false;
-		component.submit("locationTest", "messageTest", component.isLI);
-		let req = httpMock.expectOne(apiServer + '/api/submit-complaint');
+		component.submit("locationTest", "messageTest");
+		let req = httpMock.expectOne(apiServer + '/api/submit_complaint');
 		req.flush([]);
 		expect(req.request.method).toBe('POST');
-		expect(req.request.body).toBe('{"Location":"locationTest","Message":"messageTest"}');
+		expect(req.request.body).toBe('{"location":"locationTest","message":"messageTest"}');
 		expect(navigateSpy).toHaveBeenCalledWith(['login']);
 		httpMock.verify();
 	});
 
-	it('should redirect to /button while logged in', () => {
+	it('should redirect to /login while logged in', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		let router = TestBed.get(Router);
 		let navigateSpy = spyOn(router, 'navigate');
-		component.isLI = true;
-		component.submit("locationTest", "messageTest", component.isLI);
-		let req = httpMock.expectOne(apiServer + '/api/submit-complaint');
+		component.submit("locationTest", "messageTest");
+		let req = httpMock.expectOne(apiServer + '/api/submit_complaint');
 		req.flush([]);
 		expect(req.request.method).toBe('POST');
-		expect(req.request.body).toBe('{"Location":"locationTest","Message":"messageTest"}');
-		expect(navigateSpy).toHaveBeenCalledWith(['button']);
+		expect(req.request.body).toBe('{"location":"locationTest","message":"messageTest"}');
+		expect(navigateSpy).toHaveBeenCalledWith(['login']);
 		httpMock.verify();
-	});
-
-	it('#isLoggedIn should match loginService.loggedIn', () => {
-		let loginMock = spyOn(TestBed.get(LoginService), 'loggedIn');
-		loginMock.and.callFake(() => {return false;});
-		expect(component.isLoggedIn()).toBe(false);
-		loginMock.and.callFake(() => {return true;});
-		expect(component.isLoggedIn()).toBe(true);
 	});
 
 	it('information in textboxes should match request sent', () => {
@@ -89,15 +77,14 @@ describe('SubmitComplaintComponent', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		let router = TestBed.get(Router);
 		let navigateSpy = spyOn(router, 'navigate');
-		component.isLI = true;
 		locationInput.value = "locationTest";
 		messageInput.value = "messageTest";
 		submitButton.click();
-		let req = httpMock.expectOne(apiServer + '/api/submit-complaint');
+		let req = httpMock.expectOne(apiServer + '/api/submit_complaint');
 		req.flush([]);
 		expect(req.request.method).toBe('POST');
-		expect(req.request.body).toBe('{"Location":"locationTest","Message":"messageTest"}');
-		expect(navigateSpy).toHaveBeenCalledWith(['button']);
+		expect(req.request.body).toBe('{"location":"locationTest","message":"messageTest"}');
+		expect(navigateSpy).toHaveBeenCalledWith(['login']);
 		httpMock.verify();
 	});
 });

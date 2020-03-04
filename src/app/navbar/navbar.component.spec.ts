@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminService } from '../admin.service';
 import { StudentService } from '../student.service';
 import { LoginService } from '../login.service';
 
@@ -10,8 +9,7 @@ describe('NavbarComponent', () => {
 	let component: NavbarComponent;
 	let fixture: ComponentFixture<NavbarComponent>;
 	let StudentMock = jasmine.createSpyObj('StudentService', ['register']);
-	let LoginMock = jasmine.createSpyObj('LoginService', ['loggedIn', 'login', 'logout', 'changePassword']);
-	let AdminMock = jasmine.createSpyObj('AdminService', ['loggedIn', 'login', 'logout', 'changePassword']);
+	let LoginMock = jasmine.createSpyObj('LoginService', ['loggedIn', 'loggedInAdmin', 'login', 'logout', 'changePassword']);
 	var dummyElement;
 
 	beforeEach(async(() => {
@@ -19,8 +17,7 @@ describe('NavbarComponent', () => {
 			declarations: [ NavbarComponent ],
 			providers: [
 				{provide:StudentService, useValue:StudentMock},
-				{provide:LoginService, useValue:LoginMock},
-				{provide:AdminService, useValue:AdminMock}
+				{provide:LoginService, useValue:LoginMock}
 			]
 		})
 			.compileComponents();
@@ -35,9 +32,7 @@ describe('NavbarComponent', () => {
 	});
 
 	afterEach(() => {
-		AdminMock.logout.calls.reset();
 		LoginMock.logout.calls.reset();
-		AdminMock.changePassword.calls.reset();
 		LoginMock.changePassword.calls.reset();
 	});
 
@@ -45,104 +40,83 @@ describe('NavbarComponent', () => {
 		expect(component).toBeTruthy();
 	});
 
-	it('should logout as admin when logged in as admin', () => {
-		AdminMock.loggedIn.and.returnValue(true);
+	it('should logout when logged in as admin', () => {
+		LoginMock.loggedInAdmin.and.returnValue(true);
 		LoginMock.loggedIn.and.returnValue(false);
 		fixture = TestBed.createComponent(NavbarComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 		component.logout();
-		expect(AdminMock.logout).toHaveBeenCalled();
-		expect(LoginMock.logout).not.toHaveBeenCalled();
-	});
-
-	it('should logout as student when logged in as student', () => {
-		AdminMock.loggedIn.and.returnValue(false);
-		LoginMock.loggedIn.and.returnValue(true);
-		fixture = TestBed.createComponent(NavbarComponent);
-		component = fixture.componentInstance;
-		fixture.detectChanges();
-		component.logout();
-		expect(AdminMock.logout).not.toHaveBeenCalled();
 		expect(LoginMock.logout).toHaveBeenCalled();
 	});
 
-	it('should not logout when not logged in', () => {
-		AdminMock.loggedIn.and.returnValue(false);
+	it('should logout as student when logged in as student', () => {
+		LoginMock.loggedInAdmin.and.returnValue(false);
+		LoginMock.loggedIn.and.returnValue(true);
+		fixture = TestBed.createComponent(NavbarComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+		component.logout();
+		expect(LoginMock.logout).toHaveBeenCalled();
+	});
+
+	it('should logout when not logged in', () => {
+		LoginMock.loggedInAdmin.and.returnValue(false);
 		LoginMock.loggedIn.and.returnValue(false);
 		fixture = TestBed.createComponent(NavbarComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 		component.logout();
-		expect(AdminMock.logout).not.toHaveBeenCalled();
-		expect(LoginMock.logout).not.toHaveBeenCalled();
+		expect(LoginMock.logout).toHaveBeenCalled();
 	});
 
-	it('should change admin password when logged in as admin', () => {
-		AdminMock.loggedIn.and.returnValue(true);
+	it('should change password when logged in as admin', () => {
+		LoginMock.loggedInAdmin.and.returnValue(false);
 		LoginMock.loggedIn.and.returnValue(false);
 		fixture = TestBed.createComponent(NavbarComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 		component.changePassword('testUser', 'testPass', 'testNewPass');
-		expect(AdminMock.changePassword).toHaveBeenCalled();
-		expect(LoginMock.changePassword).not.toHaveBeenCalled();
+		expect(LoginMock.changePassword).toHaveBeenCalled();
 	});
 
-	it('should change student password when logged in as student', () => {
-		AdminMock.loggedIn.and.returnValue(false);
+	it('should change password when logged in as student', () => {
+		LoginMock.loggedInAdmin.and.returnValue(false);
 		LoginMock.loggedIn.and.returnValue(true);
 		fixture = TestBed.createComponent(NavbarComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 		component.changePassword('testUser', 'testPass', 'testNewPass');
-		expect(AdminMock.changePassword).not.toHaveBeenCalled();
 		expect(LoginMock.changePassword).toHaveBeenCalled();
 	});
 
-	it('should not change password when not logged in', () => {
-		AdminMock.loggedIn.and.returnValue(false);
+	it('should change password when not logged in', () => {
+		LoginMock.loggedInAdmin.and.returnValue(false);
 		LoginMock.loggedIn.and.returnValue(false);
 		fixture = TestBed.createComponent(NavbarComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 		component.changePassword('testUser', 'testPass', 'testNewPass');
-		expect(AdminMock.changePassword).not.toHaveBeenCalled();
-		expect(LoginMock.changePassword).not.toHaveBeenCalled();
+		expect(LoginMock.changePassword).toHaveBeenCalled();
 	});
 
 	it('should call loginService with login credentials', () => {
-		component.studentLogin('user', 'password');
-		expect(LoginMock.login).toHaveBeenCalledWith('user', 'password', component.showFailedStudentLogin);
+		component.login('user', 'password');
+		expect(LoginMock.login).toHaveBeenCalledWith('user', 'password', component.showFailedLogin);
 	});
 	
-	it('should call adminService with login credentials', () => {
-		component.adminLogin('admin', 'password');
-		expect(AdminMock.login).toHaveBeenCalledWith('admin', 'password', component.showFailedAdminLogin);
-	});
-
 	it('should call studentService with request credentials', () => {
 		component.studentRegister('newUser');
 		expect(StudentMock.register).toHaveBeenCalledWith('newUser');
 	});
 
-	it('should disable message on admin login', () => {
-		component.adminLogin('admin', 'password');
-		expect(dummyElement.style.visibility).toBe('collapse');
-	});
-
 	it('should disable message on student login', () => {
-		component.studentLogin('student', 'password');
+		component.login('student', 'password');
 		expect(dummyElement.style.visibility).toBe('collapse');
 	});
 
-	it('should show message on failed admin login', () => {
-		component.showFailedAdminLogin();
-		expect(dummyElement.style.visibility).toBe('visible');
-	});
-
-	it('should show message on failed student login', () => {
-		component.showFailedStudentLogin();
+	it('should show message on failed login', () => {
+		component.showFailedLogin();
 		expect(dummyElement.style.visibility).toBe('visible');
 	});
 });
