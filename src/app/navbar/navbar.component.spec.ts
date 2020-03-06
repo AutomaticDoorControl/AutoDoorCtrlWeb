@@ -102,7 +102,7 @@ describe('NavbarComponent', () => {
 
 	it('should call loginService with login credentials', () => {
 		component.login('user', 'password');
-		expect(LoginMock.login).toHaveBeenCalledWith('user', 'password', component.showFailedLogin);
+		expect(LoginMock.login).toHaveBeenCalledWith('user', 'password', component.showFailedLogin, component);
 	});
 	
 	it('should call studentService with request credentials', () => {

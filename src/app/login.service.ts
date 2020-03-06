@@ -17,17 +17,21 @@ export class LoginService implements CanActivate {
 	constructor(public router: Router,private http: HttpClient) { }
 
 	// Checks if the user is in the db
-	login(username, password, failCallback?): boolean {
+	login(username, password, failCallback?, navbar?): boolean {
 		const headers = new HttpHeaders().set( 'Content-Type', 'application/json');
       		let body = JSON.stringify({rcsid:username, password:password});
 		this.http.post<any>(apiServer + "/api/login",body,{headers: headers}).subscribe(
 			data =>{
-				if(data.SESSIONID != ""){
+				if(data.SESSIONID != "") {
 					localStorage.setItem("user", data.SESSIONID);
 					localStorage.setItem("isAdmin", data.admin);
 					if(data.admin == 1)
 					{
 						this.router.navigate(['active-students']);
+					}
+					// If we got sent a navbar, update it
+					else if(navbar) {
+						navbar.checkLoggedIn();
 					}
 					return true;
 				}
@@ -86,10 +90,16 @@ export class LoginService implements CanActivate {
 		const headers = new HttpHeaders().set('Content-Type', 'application/json');
 		let body = JSON.stringify({rcsid:RCSid, password:oldPass, newpass:newPass});
 		this.http.post<any>(apiServer + "/api/change_password", body, {headers: headers}).subscribe(
-			data => { },
+			data => {
+				this.reload();
+			},
 			err => {
 				console.error("Server Error: ", err);
 			}
 		);
+	}
+
+	reload():void {
+		window.location.reload();
 	}
 }

@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit {
 	// allows students to login via login service
 	login(username, password):void {
 		document.getElementById('badLogin').style.visibility = 'collapse';
-		this.loginService.login(username, password, this.showFailedLogin);
+		this.loginService.login(username, password, this.showFailedLogin, this);
 	}
 
 	//allows students to register via student service
