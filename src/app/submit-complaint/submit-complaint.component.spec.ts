@@ -59,7 +59,7 @@ describe('SubmitComplaintComponent', () => {
 		httpMock.verify();
 	});
 
-	it('should redirect to /button while logged in', () => {
+	it('should redirect to /login while logged in', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		let router = TestBed.get(Router);
 		let navigateSpy = spyOn(router, 'navigate');
@@ -69,7 +69,7 @@ describe('SubmitComplaintComponent', () => {
 		req.flush([]);
 		expect(req.request.method).toBe('POST');
 		expect(req.request.body).toBe('{"Location":"locationTest","Message":"messageTest"}');
-		expect(navigateSpy).toHaveBeenCalledWith(['button']);
+		expect(navigateSpy).toHaveBeenCalledWith(['login']);
 		httpMock.verify();
 	});
 
@@ -97,7 +97,7 @@ describe('SubmitComplaintComponent', () => {
 		req.flush([]);
 		expect(req.request.method).toBe('POST');
 		expect(req.request.body).toBe('{"Location":"locationTest","Message":"messageTest"}');
-		expect(navigateSpy).toHaveBeenCalledWith(['button']);
+		expect(navigateSpy).toHaveBeenCalledWith(['login']);
 		httpMock.verify();
 	});
 });

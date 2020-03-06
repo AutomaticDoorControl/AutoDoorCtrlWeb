@@ -10,6 +10,8 @@ import { LoginService } from './login.service';
 
 describe('LoginService', () => {
 	let service: LoginService;
+	let NavbarMock = jasmine.createSpyObj('Navbar', ['checkLoggedIn']);
+
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			imports: [
@@ -73,16 +75,14 @@ describe('LoginService', () => {
 		httpMock.verify();
 	});
 
-	it('successful login should redirect to /button', () => {
+	it('successful login should set navbar login status', () => {
 		let httpMock = TestBed.get(HttpTestingController);
 		let router = TestBed.get(Router);
-		let navigateSpy = spyOn(router, 'navigate');
 		service.login('test', 'testpass');
 		let req = httpMock.expectOne(apiServer + '/api/login');
 		req.flush({SESSIONID:'jwtTest'});
 		expect(req.request.method).toBe('POST');
     		expect(req.request.body).toBe('{"RCSid":"test","password":"testpass"}');
-		expect(navigateSpy).toHaveBeenCalledWith(['button']);
 		httpMock.verify();
 	});
 
