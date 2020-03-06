@@ -96,3 +96,16 @@
     margin-right: auto;
     width: 50%;
 }
+
+div.row.team{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 500px;
+}
+
+.team-member{
+	border-width: medium;
+	border-style: solid;
+	border-color: white;
+}
