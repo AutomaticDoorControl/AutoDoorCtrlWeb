@@ -78,11 +78,17 @@ export class LoginService implements CanActivate {
 		const headers = new HttpHeaders().set('Content-Type', 'application/json');
 		let body = JSON.stringify({RCSid:RCSid, password:oldPass, newPassword:newPass});
 		this.http.post<any>(apiServer + "/api/change-password", body, {headers: headers}).subscribe(
-			data => { },
+			data => {
+				this.reload();
+			},
 			err => {
 				console.error("Server Error: ", err);
 				this.logout();
 			}
 		);
+	}
+
+	reload():void {
+		window.location.reload();
 	}
 }
