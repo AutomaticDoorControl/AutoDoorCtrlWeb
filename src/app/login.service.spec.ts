@@ -195,4 +195,16 @@ describe('LoginService', () => {
 		localStorage.removeItem("user");
 		expect(service.loggedIn()).toBe(false);
 	});
+
+	it('should call checkLoggedIn if navbar is provided', () => {
+		var mockFun = jasmine.createSpy('callback', mockFun).and.callThrough();
+		let httpMock = TestBed.get(HttpTestingController);
+		service.login('test', 'testpass', mockFun, NavbarMock);
+		let req = httpMock.expectOne(apiServer + '/api/login');
+		req.flush({SESSIONID:'jwtTest', admin: 0});
+		expect(req.request.method).toBe('POST');
+		expect(mockFun).not.toHaveBeenCalled();
+		expect(NavbarMock.checkLoggedIn).toHaveBeenCalled();
+		httpMock.verify();
+	});
 });
