@@ -47,4 +47,8 @@ export class NavbarComponent implements OnInit {
 	showFailedLogin():void {
 		document.getElementById('badLogin').style.visibility = 'visible';
 	}
+
+	jasmineToString(): string {
+		return "Navbar";
+	}
 }
