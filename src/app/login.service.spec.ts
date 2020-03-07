@@ -186,4 +186,13 @@ describe('LoginService', () => {
 		httpMock.verify();
 	});
 		
+	it('should be marked as logged in if token is set', () => {
+		localStorage.setItem("user", "fakeToken");
+		expect(service.loggedIn()).toBe(true);
+	});
+		
+	it('should not be marked as logged in if token is not set', () => {
+		localStorage.removeItem("user");
+		expect(service.loggedIn()).toBe(false);
+	});
 });

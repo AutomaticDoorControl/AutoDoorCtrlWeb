@@ -34,7 +34,6 @@ describe('NavbarComponent', () => {
 	afterEach(() => {
 		LoginMock.logout.calls.reset();
 		LoginMock.changePassword.calls.reset();
-		AdminMock.login.calls.reset();
 		LoginMock.login.calls.reset();
 	});
 
