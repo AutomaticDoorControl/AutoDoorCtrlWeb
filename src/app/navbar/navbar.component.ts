@@ -82,4 +82,8 @@ export class NavbarComponent implements OnInit {
 	showFailedAdminLogin():void {
 		document.getElementById('adminBadRequest').style.visibility = 'visible';
 	}
+
+	jasmineToString(): string {
+		return "Navbar";
+	}
 }

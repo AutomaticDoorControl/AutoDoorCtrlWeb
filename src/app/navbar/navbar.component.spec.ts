@@ -39,6 +39,8 @@ describe('NavbarComponent', () => {
 		LoginMock.logout.calls.reset();
 		AdminMock.changePassword.calls.reset();
 		LoginMock.changePassword.calls.reset();
+		AdminMock.login.calls.reset();
+		LoginMock.login.calls.reset();
 	});
 
 	it('should create', () => {
