@@ -5,7 +5,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs/Observable';
 
-import { AdminService } from '../admin.service';
+import { LoginService } from '../login.service';
 import { StudentService } from '../student.service';
 import { DownloadCSVService } from '../download-csv.service';
 import { ListComplaintsComponent } from './list-complaints.component';
@@ -23,7 +23,7 @@ describe('ListComplaintsComponent', () => {
 	let component: ListComplaintsComponent;
 	let fixture: ComponentFixture<ListComplaintsComponent>;
 	let StudentMock = jasmine.createSpyObj('StudentService', ['listComplaints']);
-	let AdminMock = jasmine.createSpyObj('AdminService', ['logout']);
+	let LoginMock = jasmine.createSpyObj('LoginService', ['logout']);
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
@@ -36,7 +36,7 @@ describe('ListComplaintsComponent', () => {
 				Component({selector: 'app-navbar', template: ''})(class _ {}),
 				SidebarMock
 			],
-			providers: [ {provide: AdminService, useValue: AdminMock}, {provide: StudentService, useValue: StudentMock} ]
+			providers: [ {provide: LoginService, useValue: LoginMock}, {provide: StudentService, useValue: StudentMock} ]
 		})
 			.compileComponents();
 		StudentMock.listComplaints.and.returnValue(
@@ -80,7 +80,7 @@ describe('ListComplaintsComponent', () => {
 			})
 		);
 		component.getComplaints();
-		expect(AdminMock.logout).toHaveBeenCalled();
+		expect(LoginMock.logout).toHaveBeenCalled();
 	});
 
 	it('should trigger download when button is clicked', () => {

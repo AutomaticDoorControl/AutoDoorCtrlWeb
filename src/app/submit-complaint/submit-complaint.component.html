@@ -1,37 +1,37 @@
 
 <!--Submit form-->
 <div class="w3-row w3-padding-64">
-  <h2>Where Could RPI do better?</h2>
-  <p>Please let us know about areas on campus that are in need of improved/added disability access</p>
+	<h2>Where Could RPI do better?</h2>
+	<p>Please let us know about areas on campus that are in need of improved/added disability access</p>
 
-  <div class="container">
-    <form>
-      <div class="row">
-        <div class="col-25">
-<!--           <label for="fname">Location</label>
- -->          <label for="defaultFormSubjectModalEx">Location</label>
-        </div>
-        <div class="col-75">
-          <input #loc placeholder="Location..." type="text" id="defaultFormSubjectModalEx" class="form-control form-control-sm">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-<!--           <label for="subject">Subject</label>
- -->           <label for="defaultFormMessageModalEx">Your Message</label>
-        </div>
-        <div class="col-75">
-<!--           <textarea class="md-textarea form-control" #mes placeholder="Message..." style="height:200px"></textarea>
- -->          <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control" #mes placeholder="Message..."></textarea>
+	<div class="container">
+		<form>
+			<div class="row">
+				<div class="col-25">
+					<!--           <label for="fname">Location</label>
+					-->          <label for="defaultFormSubjectModalEx">Location</label>
+				</div>
+				<div class="col-75">
+					<input #loc placeholder="Location..." type="text" id="defaultFormSubjectModalEx" class="form-control form-control-sm">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<!--           <label for="subject">Subject</label>
+					-->           <label for="defaultFormMessageModalEx">Your Message</label>
+				</div>
+				<div class="col-75">
+					<!--           <textarea class="md-textarea form-control" #mes placeholder="Message..." style="height:200px"></textarea>
+					-->          <textarea type="text" id="defaultFormMessageModalEx" class="md-textarea form-control" #mes placeholder="Message..."></textarea>
 
-        </div>
-      </div>
-      <div class="row">
-	      <button  class="btn btn-info btn-lg btn-block" type="button" value="Submit" (click)="submit(loc.value,mes.value,isLI)">Submit</button>
-      </div>
-    </form>
-  </div>
-  <p>For other inquiries or suggestions please visit our <a href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" target="_blank">RCOS page</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<button  class="btn btn-info btn-lg btn-block" type="button" value="Submit" (click)="submit(loc.value,mes.value)">Submit</button>
+			</div>
+		</form>
+	</div>
+	<p>For other inquiries or suggestions please visit our <a href="https://rcos.io/projects/automaticdoorcontrol/automaticdoorcontrol/profile" target="_blank">RCOS page</a></p>
 </div>
 
 

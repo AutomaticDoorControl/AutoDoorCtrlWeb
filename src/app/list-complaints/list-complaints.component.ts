@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { StudentService } from '../student.service';
-import { AdminService } from '../admin.service';
+import { LoginService } from '../login.service';
 import { DownloadCSVService } from '../download-csv.service';
 
 
@@ -14,7 +14,7 @@ import { DownloadCSVService } from '../download-csv.service';
 export class ListComplaintsComponent implements OnInit {
 
 	// constructors needed to use the different services 
-	constructor(private admin:AdminService, private studentService:StudentService, private router:Router) { }
+	constructor(private loginService:LoginService, private studentService:StudentService, private router:Router) { }
 
 	Complaints:any[];
 	buttons = ["Download"];
@@ -31,7 +31,7 @@ export class ListComplaintsComponent implements OnInit {
 				this.Complaints = data;
 			},
 			err => {
-				this.logout();
+				this.loginService.logout();
 				this.router.navigate(['login']);
 			})
 	}
@@ -39,11 +39,6 @@ export class ListComplaintsComponent implements OnInit {
 	//download list of complaints to csv
 	downloadCSV():void {
 		DownloadCSVService.downloadCSV(this.Complaints, 'Complaints.csv');
-	}
-
-	// logs admin out of admin pages
-	logout():void {
-		this.admin.logout();
 	}
 
 	buttonClick(button):void {

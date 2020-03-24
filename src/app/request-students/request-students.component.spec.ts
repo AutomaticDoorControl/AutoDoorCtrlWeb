@@ -5,7 +5,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs/Observable';
 
-import { AdminService } from '../admin.service';
+import { LoginService } from '../login.service';
 import { StudentService } from '../student.service';
 import { AdminSidebarComponent } from '../admin-sidebar/admin-sidebar.component';
 import { DownloadCSVService } from '../download-csv.service';
@@ -25,7 +25,7 @@ describe('RequestStudentsComponent', () => {
 	let component: RequestStudentsComponent;
 	let fixture: ComponentFixture<RequestStudentsComponent>;
 	let StudentMock = jasmine.createSpyObj('StudentService', ['getRequest', 'addOne', 'addAll', 'logout']);
-	let AdminMock = jasmine.createSpyObj('AdminService', ['logout']);
+	let LoginMock = jasmine.createSpyObj('LoginService', ['logout']);
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
@@ -38,16 +38,16 @@ describe('RequestStudentsComponent', () => {
 				SidebarMock,
 				Component({selector: 'app-navbar', template: ''})(class _ {})
 			],
-			providers: [ {provide: AdminService, useValue: AdminMock}, {provide: StudentService, useValue: StudentMock} ]
+			providers: [ {provide: LoginService, useValue: LoginMock}, {provide: StudentService, useValue: StudentMock} ]
 		})
 			.compileComponents();
 		StudentMock.getRequest.and.returnValue(
 			new Observable( (observer) => {
 				observer.next(
-					[{"RCSid":"userOne","Status":"Request"},
-					{"RCSid":"userTwo","Status":"Request"},
-					{"RCSid":"userThree","Status":"Request"},
-					{"RCSid":"userFour","Status":"Request"}]
+					[{"rcsid":"userOne"},
+					{"rcsid":"userTwo"},
+					{"rcsid":"userThree"},
+					{"rcsid":"userFour"}]
 				)
 			}));
 	}));
@@ -81,10 +81,6 @@ describe('RequestStudentsComponent', () => {
 		expect(table.children[2].children[0].innerHTML).toBe('userTwo');
 		expect(table.children[3].children[0].innerHTML).toBe('userThree');
 		expect(table.children[4].children[0].innerHTML).toBe('userFour');
-		for(var i = 1; i < 4; ++i)
-		{
-			expect(table.children[i].children[1].innerHTML).toBe('Request');
-		}
 	});
 
 	it('should logout on failed request', () => {
@@ -94,7 +90,7 @@ describe('RequestStudentsComponent', () => {
 			})
 		);
 		component.getStudents();
-		expect(AdminMock.logout).toHaveBeenCalled();
+		expect(LoginMock.logout).toHaveBeenCalled();
 	});
 
 
@@ -102,10 +98,10 @@ describe('RequestStudentsComponent', () => {
 		StudentMock.addAll.calls.reset();
 		component.buttonClick("Download");
 		expect(DownloadCSVService.downloadCSV).toHaveBeenCalledWith([
-			{"RCSid":"userOne","Status":"Request"},
-			{"RCSid":"userTwo","Status":"Request"},
-			{"RCSid":"userThree","Status":"Request"},
-			{"RCSid":"userFour","Status":"Request"}],
+			{"rcsid":"userOne"},
+			{"rcsid":"userTwo"},
+			{"rcsid":"userThree"},
+			{"rcsid":"userFour"}],
 			'Requests.csv');
 		expect(StudentMock.addAll).not.toHaveBeenCalled();
 	});

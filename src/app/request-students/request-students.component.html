@@ -22,13 +22,11 @@
 				<table id="customers">
 					<tr>
 						<th>RCS ID</th>
-						<th>Status</th>
 						<th></th>
 					</tr>
 					<tr *ngFor="let student of Students">
-						<td>{{student.RCSid}}</td>
-						<td>{{student.Status}}</td>
-						<td><button type="button" class="btn btn-success" (click)="addStudent(student.RCSid)">add</button></td>
+						<td>{{student.rcsid}}</td>
+						<td><button type="button" class="btn btn-success" (click)="addStudent(student.rcsid)">add</button></td>
 					</tr>
 				</table>
 			</div>

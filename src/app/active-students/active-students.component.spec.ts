@@ -5,7 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Observable } from 'rxjs/Observable';
 
-import { AdminService } from '../admin.service';
+import { LoginService } from '../login.service';
 import { StudentService } from '../student.service';
 import { ActiveStudentsComponent } from './active-students.component';
 import { apiServer } from '../globals';
@@ -22,8 +22,8 @@ describe('ActiveStudentsComponent', () => {
 
 	let component: ActiveStudentsComponent;
 	let fixture: ComponentFixture<ActiveStudentsComponent>;
-	let StudentMock = jasmine.createSpyObj('StudentService', ['getStudents', 'getActive', 'remove', 'logout']);
-	let AdminMock = jasmine.createSpyObj('AdminService', ['logout']);
+	let StudentMock = jasmine.createSpyObj('StudentService', ['getStudents', 'getActive', 'remove']);
+	let LoginMock = jasmine.createSpyObj('LoginService', ['logout']);
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
@@ -36,16 +36,16 @@ describe('ActiveStudentsComponent', () => {
 				SidebarMock,
 				Component({selector: 'app-navbar', template: ''})(class _ {})
 			],
-			providers: [ {provide: AdminService, useValue: AdminMock}, {provide: StudentService, useValue: StudentMock} ]
+			providers: [ {provide: StudentService, useValue: StudentMock}, {provide: LoginService, useValue: LoginMock} ]
 		})
 			.compileComponents();
 		StudentMock.getActive.and.returnValue(
 			new Observable( (observer) => {
 				observer.next(
-					[{"RCSid":"userOne","Status":"Active"},
-					{"RCSid":"userTwo","Status":"Active"},
-					{"RCSid":"userThree","Status":"Active"},
-					{"RCSid":"userFour","Status":"Active"}]
+					[{"rcsid":"userOne"},
+					{"rcsid":"userTwo"},
+					{"rcsid":"userThree"},
+					{"rcsid":"userFour"}]
 				)
 			}));
 	}));
@@ -77,10 +77,6 @@ describe('ActiveStudentsComponent', () => {
 		expect(table.children[2].children[0].innerHTML).toBe('userTwo');
 		expect(table.children[3].children[0].innerHTML).toBe('userThree');
 		expect(table.children[4].children[0].innerHTML).toBe('userFour');
-		for(var i = 1; i < 4; ++i)
-		{
-			expect(table.children[i].children[1].innerHTML).toBe('Active');
-		}
 	});
 
 	it('should logout on failed request', () => {
@@ -90,6 +86,6 @@ describe('ActiveStudentsComponent', () => {
 			})
 		);
 		component.getStudents();
-		expect(AdminMock.logout).toHaveBeenCalled();
+		expect(LoginMock.logout).toHaveBeenCalled();
 	});
 });

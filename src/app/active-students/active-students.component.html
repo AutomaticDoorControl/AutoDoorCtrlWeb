@@ -12,14 +12,12 @@
 				<table id="customers">
 					<tr>
 						<th>RCS ID</th>
-						<th>Status</th>
 						<th></th>
 					</tr>
 					<tr *ngFor="let student of Students">
 
-						<td>{{student.RCSid}}</td>
-						<td>{{student.Status}}</td>
-						<td><button type="button" class="btn btn-danger" (click)="removeOne(student.RCSid)">remove</button></td>
+						<td>{{student.rcsid}}</td>
+						<td><button type="button" class="btn btn-danger" (click)="removeOne(student.rcsid)">remove</button></td>
 					</tr>
 				</table>
 			</div>

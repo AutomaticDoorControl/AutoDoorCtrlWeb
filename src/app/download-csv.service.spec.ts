@@ -16,10 +16,10 @@ describe('DownloadCSVService', () => {
 		spyOn(document, 'createElement').and.returnValue(aSpy);
 		spyOn(document.body, 'appendChild');
 		spyOn(document.body, 'removeChild');
-		let csv = [{RCSid:'one',Status:'good'},
-			{RCSid:'two',Status:'not so good'}];
+		let csv = [{rcsid:'one'},
+			{rcsid:'two'}];
 		DownloadCSVService.downloadCSV(csv, 'output.csv');
-		expect(aSpy.href).toBe('data:text/csv;charset=utf-8,RCSid,Status%0Aone,good%0Atwo,%22not%20so%20good%22%0A');
+		expect(aSpy.href).toBe('data:text/csv;charset=utf-8,rcsid%0Aone%0Atwo%0A');
 		expect(aSpy.download).toBe('output.csv');
 		expect(aSpy.click).toHaveBeenCalled();
 		expect(document.body.appendChild).toHaveBeenCalledWith(aSpy);

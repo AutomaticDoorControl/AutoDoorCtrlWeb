@@ -10,9 +10,9 @@ export class AuthInterceptorService implements HttpInterceptor {
 
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 		//checks for the existence of SESSIONID in localStorage
-		if (req.url.indexOf(apiServer + "/api/") == 0 && localStorage.getItem("admin") !== null) {
+		if (req.url.indexOf(apiServer + "/api/") == 0 && localStorage.getItem("user") !== null) {
 			//retrieve token from localStorage
-			var idToken = localStorage.getItem("admin");
+			var idToken = localStorage.getItem("user");
 			//add the token to request headers and let the request go through
 			const cloned = req.clone({
 				headers: req.headers.set("Authorization",

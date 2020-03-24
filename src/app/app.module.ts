@@ -11,7 +11,6 @@ import { ActiveStudentsComponent } from './active-students/active-students.compo
 import { RequestStudentsComponent } from './request-students/request-students.component';
 import { StudentService } from './student.service';
 import { LoginService } from './login.service';
-import { AdminService } from './admin.service';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -41,7 +40,6 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
   providers: [
     StudentService,
     LoginService,
-    AdminService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]

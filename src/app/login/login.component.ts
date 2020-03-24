@@ -4,9 +4,6 @@ import { Router } from '@angular/router';
 
 import { LoginService } from '../login.service';
 import {StudentService} from '../student.service';
-import {AdminService} from '../admin.service';
-
-
 
 @Component({
 	selector: 'app-login',
