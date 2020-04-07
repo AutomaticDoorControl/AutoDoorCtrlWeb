@@ -17,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AuthInterceptorService } from './authinterceptor.service';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     ListComplaintsComponent,
     NavbarComponent,
     AdminSidebarComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,

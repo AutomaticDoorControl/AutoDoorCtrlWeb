@@ -1,0 +1,705 @@
+[1m[33mWARNING: This is a simple server for use in testing or debugging Angular applications[39m[22m
+[1m[33mlocally. It hasn't been reviewed for security issues.[39m[22m
+[1m[33m[39m[22m
+[1m[33mBinding this server to an open connection can result in compromising your application or[39m[22m
+[1m[33mcomputer. Using a different host than the one passed to the "--host" flag might result in[39m[22m
+[1m[33mwebsocket connection issues. You might need to use "--disableHostCheck" if that's the[39m[22m
+[1m[33mcase.[39m[22m
+<s> [webpack.Progress] 0% compiling
+<s> [webpack.Progress] 10% building 0/0 modules 0 active 
+<s> [webpack.Progress] 10% building 0/1 modules 1 active multi /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/index.js?http://0.0.0.0:0/sockjs-node&sockPath=/sockjs-node /home/bsakai/AutoDoorCtrlWeb/src/main.ts
+<s> [webpack.Progress] 10% building 1/1 modules 0 active 
+<s> [webpack.Progress] 10% building 1/1 modules 0 active 
+<s> [webpack.Progress] 10% building 1/2 modules 1 active multi /home/bsakai/AutoDoorCtrlWeb/src/polyfills.ts
+<s> [webpack.Progress] 10% building 2/2 modules 0 active 
+<s> [webpack.Progress] 10% building 2/2 modules 0 active 
+<s> [webpack.Progress] 10% building 2/3 modules 1 active multi /home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 10% building 3/3 modules 0 active 
+<s> [webpack.Progress] 10% building 3/4 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/index.js?http://0.0.0.0:0/sockjs-node&sockPath=/sockjs-node
+<s> [webpack.Progress] 10% building 4/4 modules 0 active 
+<s> [webpack.Progress] 10% building 4/5 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/style-loader/dist/index.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 10% building 5/5 modules 0 active 
+<s> [webpack.Progress] 10% building 5/6 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 10% building 5/7 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/socket.js
+<s> [webpack.Progress] 10% building 6/7 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 10% building 6/8 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/overlay.js
+<s> [webpack.Progress] 10% building 7/8 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 10% building 7/9 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/utils/log.js
+<s> [webpack.Progress] 10% building 8/9 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 10% building 8/10 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/utils/sendMessage.js
+<s> [webpack.Progress] 11% building 9/10 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 11% building 9/11 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/utils/reloadApp.js
+<s> [webpack.Progress] 11% building 10/11 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 11% building 10/12 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/utils/createSocketUrl.js
+<s> [webpack.Progress] 11% building 11/12 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 11% building 11/13 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+<s> [webpack.Progress] 11% building 12/13 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 11% building 12/14 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack/hot sync nonrecursive /^\.\/log$/
+<s> [webpack.Progress] 11% building 13/14 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 11% building 13/15 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@ngtools/webpack/src/index.js!/home/bsakai/AutoDoorCtrlWeb/src/main.ts
+<s> [webpack.Progress] 11% building 13/16 modules 3 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@ngtools/webpack/src/index.js!/home/bsakai/AutoDoorCtrlWeb/src/polyfills.ts
+<s> [webpack.Progress] 11% building 14/16 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@ngtools/webpack/src/index.js!/home/bsakai/AutoDoorCtrlWeb/src/polyfills.ts
+<s> [webpack.Progress] 11% building 15/16 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 30% building 15/16 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 30% building 15/17 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/clients/SockJSClient.js
+<s> [webpack.Progress] 30% building 16/17 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 30% building 16/18 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/utils/getCurrentScriptSource.js
+<s> [webpack.Progress] 30% building 17/18 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 30% building 17/19 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack/hot/log.js
+<s> [webpack.Progress] 30% building 18/19 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 30% building 18/20 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack-dev-server/client/clients/BaseClient.js
+<s> [webpack.Progress] 30% building 19/20 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 30% building 19/21 modules 2 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack/hot/emitter.js
+<s> [webpack.Progress] 30% building 20/21 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!/home/bsakai/AutoDoorCtrlWeb/node_modules/postcss-loader/src/index.js??embedded!/home/bsakai/AutoDoorCtrlWeb/src/styles.css
+<s> [webpack.Progress] 30% building 21/21 modules 0 active 
+<s> [webpack.Progress] 50% building 21/21 modules 0 active 
+<s> [webpack.Progress] 50% building 21/22 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/strip-ansi/index.js
+<s> [webpack.Progress] 50% building 22/22 modules 0 active 
+<s> [webpack.Progress] 50% building 22/23 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/ansi-html/index.js
+<s> [webpack.Progress] 50% building 23/23 modules 0 active 
+<s> [webpack.Progress] 50% building 23/24 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/url/url.js
+<s> [webpack.Progress] 50% building 24/24 modules 0 active 
+<s> [webpack.Progress] 50% building 24/25 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/loglevel/lib/loglevel.js
+<s> [webpack.Progress] 50% building 25/25 modules 0 active 
+<s> [webpack.Progress] 50% building 25/26 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/html-entities/index.js
+<s> [webpack.Progress] 50% building 26/26 modules 0 active 
+<s> [webpack.Progress] 50% building 26/27 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/querystring/index.js
+<s> [webpack.Progress] 50% building 27/27 modules 0 active 
+<s> [webpack.Progress] 50% building 27/28 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/html-entities/lib/xml-entities.js
+<s> [webpack.Progress] 50% building 28/28 modules 0 active 
+<s> [webpack.Progress] 50% building 28/29 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/html-entities/lib/html4-entities.js
+<s> [webpack.Progress] 50% building 29/29 modules 0 active 
+<s> [webpack.Progress] 50% building 29/30 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/html-entities/lib/html5-entities.js
+<s> [webpack.Progress] 50% building 30/30 modules 0 active 
+<s> [webpack.Progress] 50% building 30/31 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/url/util.js
+<s> [webpack.Progress] 50% building 31/31 modules 0 active 
+<s> [webpack.Progress] 50% building 31/32 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/sockjs-client/dist/sockjs.js
+<s> [webpack.Progress] 50% building 32/32 modules 0 active 
+<s> [webpack.Progress] 50% building 32/33 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/querystring/decode.js
+<s> [webpack.Progress] 50% building 33/33 modules 0 active 
+<s> [webpack.Progress] 50% building 33/34 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/querystring/encode.js
+<s> [webpack.Progress] 50% building 34/34 modules 0 active 
+<s> [webpack.Progress] 50% building 34/35 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/events/events.js
+<s> [webpack.Progress] 50% building 35/35 modules 0 active 
+<s> [webpack.Progress] 50% building 35/36 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/url/node_modules/punycode/punycode.js
+<s> [webpack.Progress] 50% building 36/36 modules 0 active 
+<s> [webpack.Progress] 50% building 36/37 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/ansi-regex/index.js
+<s> [webpack.Progress] 50% building 37/37 modules 0 active 
+<s> [webpack.Progress] 50% building 37/38 modules 1 active /home/bsakai/AutoDoorCtrlWeb/node_modules/webpack/buildin/module.js
+<s> [webpack.Progress] 50% building 38/38 modules 0 active 
+<s> [webpack.Progress] 70% building 38/38 modules 0 active 
+<s> [webpack.Progress] 70% finish module graph
+<s> [webpack.Progress] 70% finish module graph angular-compiler
+<s> [webpack.Progress] 70% finish module graph FlagDependencyExportsPlugin
+<s> [webpack.Progress] 70% sealing
+<s> [webpack.Progress] 70% sealing WarnCaseSensitiveModulesPlugin
+<s> [webpack.Progress] 72% basic dependencies optimization
+<s> [webpack.Progress] 72% dependencies optimization
+<s> [webpack.Progress] 73% advanced dependencies optimization
+<s> [webpack.Progress] 73% after dependencies optimization
+<s> [webpack.Progress] 71% chunk graph
+<s> [webpack.Progress] 71% after chunk graph
+<s> [webpack.Progress] 71% after chunk graph WebAssemblyModulesPlugin
+<s> [webpack.Progress] 74% optimizing
+<s> [webpack.Progress] 74% basic module optimization
+<s> [webpack.Progress] 75% module optimization
+<s> [webpack.Progress] 75% module optimization CircularDependencyPlugin
+<s> [webpack.Progress] 75% advanced module optimization
+<s> [webpack.Progress] 76% after module optimization
+<s> [webpack.Progress] 76% basic chunk optimization
+<s> [webpack.Progress] 76% basic chunk optimization EnsureChunkConditionsPlugin
+<s> [webpack.Progress] 76% basic chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 76% basic chunk optimization MergeDuplicateChunksPlugin
+<s> [webpack.Progress] 77% chunk optimization
+<s> [webpack.Progress] 77% advanced chunk optimization
+<s> [webpack.Progress] 77% advanced chunk optimization SplitChunksPlugin
+<s> [webpack.Progress] 77% advanced chunk optimization RuntimeChunkPlugin
+<s> [webpack.Progress] 77% advanced chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 77% after chunk optimization
+<s> [webpack.Progress] 78% module and chunk tree optimization
+<s> [webpack.Progress] 78% after module and chunk tree optimization
+<s> [webpack.Progress] 79% basic chunk modules optimization
+<s> [webpack.Progress] 80% chunk modules optimization
+<s> [webpack.Progress] 80% advanced chunk modules optimization
+<s> [webpack.Progress] 81% after chunk modules optimization
+<s> [webpack.Progress] 81% module reviving
+<s> [webpack.Progress] 81% module reviving RecordIdsPlugin
+<s> [webpack.Progress] 82% module order optimization
+<s> [webpack.Progress] 82% advanced module order optimization
+<s> [webpack.Progress] 83% before module ids
+<s> [webpack.Progress] 83% before module ids NamedModulesPlugin
+<s> [webpack.Progress] 83% module ids
+<s> [webpack.Progress] 84% module id optimization
+<s> [webpack.Progress] 84% module id optimization
+<s> [webpack.Progress] 85% chunk reviving
+<s> [webpack.Progress] 85% chunk reviving RecordIdsPlugin
+<s> [webpack.Progress] 85% chunk order optimization
+<s> [webpack.Progress] 85% chunk order optimization OccurrenceOrderChunkIdsPlugin
+<s> [webpack.Progress] 86% before chunk ids
+<s> [webpack.Progress] 86% before chunk ids NamedChunksPlugin
+<s> [webpack.Progress] 86% chunk id optimization
+<s> [webpack.Progress] 87% after chunk id optimization
+<s> [webpack.Progress] 88% hashing
+<s> [webpack.Progress] 88% after hashing
+<s> [webpack.Progress] 89% module assets processing
+<s> [webpack.Progress] 90% chunk assets processing
+<s> [webpack.Progress] 90% additional chunk assets processing
+<s> [webpack.Progress] 92% additional asset processing
+<s> [webpack.Progress] 92% chunk asset optimization
+<s> [webpack.Progress] 93% after chunk asset optimization
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin main.js generate SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin polyfills.js generate SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin runtime.js generate SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin styles.js generate SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin vendor.js generate SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin resolve sources
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin main.js attach SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin polyfills.js attach SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin runtime.js attach SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin styles.js attach SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin vendor.js attach SourceMap
+<s> [webpack.Progress] 93% after chunk asset optimization SourceMapDevToolPlugin
+<s> [webpack.Progress] 93% after chunk asset optimization AnyComponentStyleBudgetChecker
+<s> [webpack.Progress] 93% asset optimization
+<s> [webpack.Progress] 94% after asset optimization
+<s> [webpack.Progress] 94% after seal
+<s> [webpack.Progress] 100% 
+
+[1m[31m[0m[39m[22m
+[1m[31m[1m[31mERROR in Errors parsing template: Unexpected closing tag "bdt". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("TION BE SHARED WITH ANYONE?</a>[39m[22m
+[1m[31m			<bdt class="block-component"><span data-custom-class="body_text">[ERROR ->]</bdt>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@179:68, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			<bdt class="block-component"><span data-custom-class="body_text"></bdt>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		[ERROR ->]</span>[39m[22m
+[1m[31m		<span style="font-size: 15px; color: rgb(89, 89, 89);">[39m[22m
+[1m[31m			<bdt class="block-component"></b"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@181:2, Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m	[ERROR ->]</p>[39m[22m
+[1m[31m	<p style="font-size:15px;">[39m[22m
+[1m[31m		<a data-custom-class="link" href="#cookies"><span style="font-siz"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@185:1, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m		<bdt class="block-component"></bdt>[39m[22m
+[1m[31m		<bdt class="block-component"></bdt>[39m[22m
+[1m[31m		[ERROR ->]</span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m	<p style="font-size:15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@199:2, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[39m[22m[1m[31m ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		[ERROR ->]</span>[39m[22m
+[1m[31m		<bdt class="block-component"><span data-custom-class="body_text"></span></bdt>[39m[22m
+[1m[31m		</span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@351:2, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		<bdt class="block-component"><span data-custom-class="body_text"></span></bdt>[39m[22m
+[1m[31m		[ERROR ->]</span></span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m	<p style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@353:2, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("		</span>[39m[22m
+[1m[31m		<bdt class="block-component"><span data-custom-class="body_text"></span></bdt>[39m[22m
+[1m[31m		</span>[ERROR ->]</span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m	<p style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@353:9, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("					<bdt class="statement-end-if-in-editor">[39m[22m
+[1m[31m										<bdt class="block-component"></bdt>[39m[22m
+[1m[31m								[ERROR ->]</span>[39m[22m
+[1m[31m							</span>[39m[22m
+[1m[31m						</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@578:8, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m										<bdt class="block-component"></bdt>[39m[22m
+[1m[31m								</span>[39m[22m
+[1m[31m							[ERROR ->]</span>[39m[22m
+[1m[31m						</span>[39m[22m
+[1m[31m						<bdt class="forloop-component"></bdt><span style="color: rgb(89, 89, 89);"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@579:7, Unexpected closing tag[39m[22m[1m[31m "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m								</span>[39m[22m
+[1m[31m							</span>[39m[22m
+[1m[31m						[ERROR ->]</span>[39m[22m
+[1m[31m						<bdt class="forloop-component"></bdt><span style="color: rgb(89, 89, 89);"><span style="): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@580:6, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("a-custom-class="body_text"><bdt class="statement-end-if-in-editor"></bdt></span></span></span>[39m[22m
+[1m[31m					[ERROR ->]</span>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@582:5, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("ss="body_text"><bdt class="statement-end-if-in-editor"></bdt></span></span></span>[39m[22m
+[1m[31m					</span>[39m[22m
+[1m[31m				[ERROR ->]</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@583:4, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m					</span>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			[ERROR ->]</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@584:3, Unexpected closing tag "li". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		[ERROR ->]</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m	<p style="font-size: 15px;"><span style="color: rgb(89, 89, 89); font-size: 15px;"><spa"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@[39m[22m[1m[31m585:2, Unexpected closing tag "ul". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	[ERROR ->]</ul>[39m[22m
+[1m[31m	<p style="font-size: 15px;"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@586:1, Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("in-editor"><bdt class="block-component"></bdt></bdt></span></span></span></span></bdt></span></span>[ERROR ->]</p>[39m[22m
+[1m[31m	<p style="font-size: 15px; line-height: 1.5;"><br></p>[39m[22m
+[1m[31m	<p id="infouse" style="font-size: 15px;"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@587:340, Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m	[ERROR ->]</p>[39m[22m
+[1m[31m	<p style="font-size:15px;">[39m[22m
+[1m[31m		<span style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@613:1, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@635:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span></span></span></span></span></span></span></span></span></span>[39m[22m[1m[31m</span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:10, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:17, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:24, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:31, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/ht[39m[22m[1m[31mml5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:38, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:45, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:52, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:59, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span>[39m[22m[1m[31m</span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:66, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:73, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("	</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:80, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (">[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:87, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span>[39m[22m[1m[31m</span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:94, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("		</span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:101, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:108, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:115, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></sp[39m[22m[1m[31man></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:122, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:129, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:136, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:143, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span>[39m[22m[1m[31m</span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:150, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:157, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:164, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:171, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></s[39m[22m[1m[31mpan></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:178, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:185, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:192, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:199, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"):[39m[22m[1m[31m /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:206, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:213, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span><sp"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:220, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span><span styl"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:227, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span><span style="font"): /home/bsakai/AutoDoorCt[39m[22m[1m[31mrlWeb/src/app/privacy/privacy.component.html@655:234, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span><span style="font-size: "): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:241, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span><span style="font-size: 15px;">"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:248, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span><span style="font-size: 15px;"><span s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:255, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span><span style="font-size: 15px;"><span style="c"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/pr[39m[22m[1m[31mivacy.component.html@655:262, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span><span style="font-size: 15px;"><span style="color: r"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:269, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span><span style="font-size: 15px;"><span style="color: rgb(89, "): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:276, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89)"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:283, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><spa"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655[39m[22m[1m[31m:290, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span style"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:297, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span style="font-"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:304, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span style="font-size: 1"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:311, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("an>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;[ERROR ->]</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:1315, Unexpected closing tag "span".[39m[22m[1m[31m It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("an>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;[ERROR ->]</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:1328, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("an>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;[ERROR ->]</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:1341, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("an>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;[ERROR ->]</span>&nbsp;</span>&nbsp;</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:1354, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("an>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;[ERROR ->]</span>&nbsp;</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:1367, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("an>&nbsp;</span>&nbsp;</span>&[39m[22m[1m[31mnbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;</span>&nbsp;[ERROR ->]</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@655:1380, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:10, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:17, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component[39m[22m[1m[31m.html@823:24, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:31, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:38, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:45, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("	</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span "): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:52, Unexpected closing tag "span". It may happen wh[39m[22m[1m[31men the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (">[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style=""): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:59, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("dt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="color: "): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:66, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("s="block-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89,"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:73, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("k-component"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:80, Unexpected closing tag "span". It may happen when the tag has already been [39m[22m[1m[31mclosed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("nent"></bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m		"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:87, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("/bdt>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m				<span"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:94, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("		</span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m				<span style="): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:101, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m				<span style="font-s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:108, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For[39m[22m[1m[31m more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m				<span style="font-size: 15"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:115, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m				<span style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:122, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m				<span style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:129, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span>[39m[22m
+[1m[31m			<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m				<span style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@823:136, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/synta[39m[22m[1m[31mx.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:10, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:17, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:24, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.com[39m[22m[1m[31mponent.html@865:31, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:38, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:45, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:52, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:59, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see ht[39m[22m[1m[31mtps://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:66, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:73, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("	</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:80, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (">[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:87, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#clo[39m[22m[1m[31msing-elements-that-have-implied-end-tags ("span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:94, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("		</span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:101, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:108, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:115, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-i[39m[22m[1m[31mmplied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:122, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:129, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:136, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:143, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></sp[39m[22m[1m[31man></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:150, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:157, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:164, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:171, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span>[39m[22m[1m[31m</span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:178, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:185, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:192, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:199, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></s[39m[22m[1m[31mpan></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:206, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:213, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:220, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:227, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span[39m[22m[1m[31m></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:234, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:241, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span "): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:248, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style=""): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:255, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[E[39m[22m[1m[31mRROR ->]</span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="font-si"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:262, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="font-size: 15p"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:269, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m		"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:276, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:283, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></[39m[22m[1m[31mspan></span></span></span></span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:290, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="color:"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:297, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="color: rgb(89"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:304, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="color: rgb(89, 89, 8"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:311, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span>[39m[22m
+[1m[31m			<span style="fo[39m[22m[1m[31mnt-size: 15px;">[39m[22m
+[1m[31m				<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:318, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:325, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@865:332, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:10, Unexpected closing tag "span". It may happen whe[39m[22m[1m[31mn the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span></s"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:17, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:24, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:31, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:38, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span>[39m[22m[1m[31m[ERROR ->]</span></span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:45, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:52, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:59, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:66, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:73, U[39m[22m[1m[31mnexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("	</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:80, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (">[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:87, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("span>[39m[22m
+[1m[31m			</span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:94, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("		</span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span></span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:101, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></s[39m[22m[1m[31mpan></span></span></span></span></span></span></span></span>[ERROR ->]</span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:108, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("n></span></span></span></span></span></span></span></span></span></span></span></span></span></span>[ERROR ->]</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@947:115, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span>[39m[22m
+[1m[31m			<span style="font-size: 15px;">[39m[22m
+[1m[31m				<span style="color: rgb(89, 89, 89);">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1002:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span></span><br><br>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1010:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span>[ERROR ->]</span><br><br>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m		<li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1010:10, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bd[39m[22m[1m[31mt>[39m[22m
+[1m[31m			</span></span></span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1046:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			[ERROR ->]</span></span></span>[39m[22m
+[1m[31m			<span data-custom-class="body_text">[39m[22m
+[1m[31m				<bdt class="block-component"></bdt>"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1048:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span>[ERROR ->]</span></span>[39m[22m
+[1m[31m			<span data-custom-class="body_text">[39m[22m
+[1m[31m				<bdt class="block-component"></bdt>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1048:10, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			<bdt class="block-component"></bdt>[39m[22m
+[1m[31m			</span></span>[ERROR ->]</span>[39m[22m
+[1m[31m			<span data-custom-class="body_text">[39m[22m
+[1m[31m				<bdt class="block-component"></bdt>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1048:17, Unexpected closing tag "bdt". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				<bdt class="block-component">[39m[22m
+[1m[31m					<span data-custom-class="body_text">[39m[22m
+[1m[31m				[ERROR ->]</bdt>[39m[22m
+[1m[31m				<bdt class="statement-end-if-in-editor"></bdt></span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1056:4, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. F[39m[22m[1m[31mor more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</bdt>[39m[22m
+[1m[31m				<bdt class="statement-end-if-in-editor"></bdt></span>[39m[22m
+[1m[31m			[ERROR ->]</span>[39m[22m
+[1m[31m			</span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1058:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				<bdt class="statement-end-if-in-editor"></bdt></span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			[ERROR ->]</span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1059:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				<bdt class="statement-end-if-in-editor"></bdt></span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span>[ERROR ->]</span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1059:10, Unexpected closing tag "li". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m			</span></span>[39m[22m
+[1m[31m		[ERROR ->]</li>[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m	<div>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1060:2, Unexpected closing tag "ul". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span></span>[39m[22m
+[1m[31m		</li>[39m[22m
+[1m[31m	[ERROR ->]</ul>[39m[22m
+[1m[31m	<div>[39m[22m
+[1m[31m		<bdt class="block-component"><span data-custom-class="body_text"></bdt>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1061:1, Unexpected closing tag "bdt". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing[39m[22m[1m[31m-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m	</ul>[39m[22m
+[1m[31m	<div>[39m[22m
+[1m[31m		<bdt class="block-component"><span data-custom-class="body_text">[ERROR ->]</bdt>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		<span style="color: rgb(89, 89, 89); font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1063:67, Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m	[ERROR ->]</div>[39m[22m
+[1m[31m	<p style="font-size:15px;"><br></p>[39m[22m
+[1m[31m	<div><span id="cookies" style="color: rgb(0, 0, 0);"><st"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1076:1, Unexpected closing tag "bdt". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m								<bdt class="block-component">[39m[22m
+[1m[31m									<span data-custom-class="body_text">[39m[22m
+[1m[31m								[ERROR ->]</bdt>[39m[22m
+[1m[31m								<bdt class="block-component"></span></bdt>[39m[22m
+[1m[31m							</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1103:8, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m									<span data-custom-class="body_text">[39m[22m
+[1m[31m								</bdt>[39m[22m
+[1m[31m								<bdt class="block-component">[ERROR ->]</span></bdt>[39m[22m
+[1m[31m							</span>[39m[22m
+[1m[31m						</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1104:37, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m								<bdt class="block-component"></span></bdt>[39m[22m
+[1m[31m							</span>[39m[22m
+[1m[31m						[ERROR ->]</span>[39m[22m
+[1m[31m					</span>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1106:6, Unexpect[39m[22m[1m[31med closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m							</span>[39m[22m
+[1m[31m						</span>[39m[22m
+[1m[31m					[ERROR ->]</span>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1107:5, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m						</span>[39m[22m
+[1m[31m					</span>[39m[22m
+[1m[31m				[ERROR ->]</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1108:4, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m					</span>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			[ERROR ->]</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		</span></span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1109:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		[ERROR ->]</span>[39m[22m
+[1m[31m		</span></span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1110:2, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		[ERROR ->]</span></span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m	<p style="font-size: 15px; line-height: 1.5;"><span style="color: rgb(89, 89, 8"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1111:2, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-th[39m[22m[1m[31mat-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		</span>[ERROR ->]</span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m	<p style="font-size: 15px; line-height: 1.5;"><span style="color: rgb(89, 89, 89);"><b"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1111:9, Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		</span></span>[39m[22m
+[1m[31m	[ERROR ->]</p>[39m[22m
+[1m[31m	<p style="font-size: 15px; line-height: 1.5;"><span style="color: rgb(89, 89, 89);"><br></span>"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1112:1, Unexpected closing tag "bdt". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m					</em>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m				<bdt class="block-component"><span data-custom-class="body_text">[ERROR ->]</bdt>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1242:69, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				<bdt class="block-component"><span data-custom-class="body_text"></bdt>[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			[ERROR ->]</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		</span></span>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1244:3, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m				</span>[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		[ERROR ->]</span>[39m[22m
+[1m[31m		</span></span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1245:2, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/synta[39m[22m[1m[31mx.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		[ERROR ->]</span></span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m	<p style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1246:2, Unexpected closing tag "span". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		</span>[ERROR ->]</span>[39m[22m
+[1m[31m	</p>[39m[22m
+[1m[31m	<p style="font-size: 15px;">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1246:9, Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m		</span></span>[39m[22m
+[1m[31m	[ERROR ->]</p>[39m[22m
+[1m[31m	<p style="font-size: 15px;">[39m[22m
+[1m[31m		<span style="font-size: 15px;"><span style="color: rgb(89, 89, 8"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1247:1, Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m	[ERROR ->]</p>[39m[22m
+[1m[31m	<p style="font-size: 15px; line-height: 1.5;"><br></p>[39m[22m
+[1m[31m	<p id="DNT" style="font-size:15px;"><sp"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1386:1, Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m			</span>[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m	[ERROR ->]</div>[39m[22m
+[1m[31m	<div>[39m[22m
+[1m[31m		<span data-custom-class="body_text">[39m[22m
+[1m[31m"): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1506:1, Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags ("[39m[22m
+[1m[31m		</span>[39m[22m
+[1m[31m	</d[39m[22m[1m[31miv>[39m[22m
+[1m[31m[ERROR ->]</div>[39m[22m
+[1m[31m<div style="color: #595959;font-size: 14px;font-family: Arial;padding-top:16px;">This privacy "): /home/bsakai/AutoDoorCtrlWeb/src/app/privacy/privacy.component.html@1588:0[39m[31m[22m[1m[0m[39m[22m
