@@ -9,6 +9,7 @@ import { RequestStudentsComponent } from './request-students/request-students.co
 import { ListComplaintsComponent } from './list-complaints/list-complaints.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { SubmitComplaintComponent } from './submit-complaint/submit-complaint.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'list-complaints', component:ListComplaintsComponent,canActivate:[LoginService]},
   { path: 'reset-password', component:ResetPasswordComponent,canActivate:[LoginService]},
   { path: 'submit-complaint', component:SubmitComplaintComponent},
+  { path: 'privacy', component:PrivacyComponent},
   { path: '**', redirectTo: 'login'}	
 ];
 
