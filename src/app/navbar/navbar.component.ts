@@ -44,6 +44,10 @@ export class NavbarComponent implements OnInit {
 		this.loginService.changePassword(username, oldPass, newPass);
 	}
 
+	resetPassword(username):void {
+		this.loginService.resetPassword(username);
+	}
+
 	showFailedLogin():void {
 		document.getElementById('badLogin').style.visibility = 'visible';
 	}
