@@ -207,4 +207,14 @@ describe('LoginService', () => {
 		expect(NavbarMock.checkLoggedIn).toHaveBeenCalled();
 		httpMock.verify();
 	});
+
+	it('should call /api/forgot_password correctly', () => {
+		let httpMock = TestBed.get(HttpTestingController);
+		service.resetPassword('testRCS');
+		let req = httpMock.expectOne(apiServer + '/api/forgot_password');
+		req.flush("");
+		expect(req.request.method).toBe('POST');
+    		expect(req.request.body).toBe('{"rcsid":"testRCS"}');
+		httpMock.verify();
+	});
 });
