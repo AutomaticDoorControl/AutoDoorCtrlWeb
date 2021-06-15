@@ -3,6 +3,7 @@ import { Component, Input, Output, EventEmitter, Directive } from '@angular/core
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { LoginService } from '../login.service';
@@ -74,6 +75,8 @@ describe('ListComplaintsComponent', () => {
 	});
 
 	it('should logout on failed request', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		StudentMock.listComplaints.and.returnValue(
 			new Observable( (observer) => {
 				observer.error("Oh no");

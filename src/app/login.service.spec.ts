@@ -29,6 +29,8 @@ describe('LoginService', () => {
 	});
 
 	it('#logout should remove user from localStorage', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.setItem("user", "failure");
 		service.logout();
@@ -39,6 +41,8 @@ describe('LoginService', () => {
 	});
 
 	it('#canActivate should be false if not logged in', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.setItem("user", "failure");
 		service.logout();
@@ -55,6 +59,8 @@ describe('LoginService', () => {
 	});
 
 	it('#canActivate should always be equivalent to #loggedInAdmin', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.setItem("user", "loggedIn");
 		localStorage.setItem("isAdmin", "1");
@@ -69,6 +75,8 @@ describe('LoginService', () => {
 	});
 
 	it('#login should set localStorage with good credentials', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.removeItem("user");
 		localStorage.removeItem("isAdmin");
@@ -82,6 +90,8 @@ describe('LoginService', () => {
 	});
 
 	it('#login should set localStorage with admin credentials', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.removeItem("user")
 		service.login('test', 'test');
@@ -94,6 +104,8 @@ describe('LoginService', () => {
 	});
 
 	it('#login should not set localStorage with bad credentials', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.setItem("user", "removeme");
     		service.login('test', 'test');
@@ -177,6 +189,8 @@ describe('LoginService', () => {
 	});
 
 	it('should send a logout to the API on logout', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		localStorage.setItem("user", "fakeToken");
 		service.logout();
