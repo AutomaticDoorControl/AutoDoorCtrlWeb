@@ -2,6 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { Router } from '@angular/router';
 
 import { apiServer } from './globals';
 import { LoginService } from './login.service';
@@ -141,6 +142,8 @@ describe('StudentService', () => {
 	});
 
 	it('should post a single complaint', () => {
+		let router = TestBed.get(Router);
+		let routerSpy = spyOn(router, 'navigate')
 		let httpMock = TestBed.get(HttpTestingController);
 		service.submitComplaint('locationTest', 'messageTest');
 		let req = httpMock.expectOne(apiServer + '/api/submit_complaint');
