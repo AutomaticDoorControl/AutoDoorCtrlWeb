@@ -99,6 +99,19 @@ export class LoginService implements CanActivate {
 		);
 	}
 
+	resetPassword(RCSid):void {
+		const headers = new HttpHeaders().set('Content-Type', 'application/json');
+		let body = JSON.stringify({rcsid:RCSid});
+		this.http.post<any>(apiServer + "/api/forgot_password", body, {headers: headers}).subscribe(
+			data => {
+				this.reload();
+			},
+			err => {
+				console.error("Server Error: ", err);
+			}
+		);
+	}
+
 	reload():void {
 		window.location.reload();
 	}

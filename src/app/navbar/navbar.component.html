@@ -30,6 +30,8 @@
 			<li class="nav-item" [hidden]="!loggedIn">
 				<a class="nav-link" onclick="document.getElementById('passwordChange').style.display='block'; return false" href='#'>Change Password</a>
 			</li>
+			<li class="nav-item" [hidden]="loggedIn">
+			</li>
 			<li class="nav-item" [hidden]="!loggedIn">
 				<a class="nav-link" placement="right" href="#" (click)="logout();">Logout</a>
 			</li> 
@@ -54,6 +56,7 @@
 		<div class="bad-request" id="badLogin">
 			Incorrect username or password!
 		</div>
+		<a onclick="document.getElementById('passwordReset').style.display='block'; return false" href='#'>Forgot Password? Click here to reset</a>
 		<div class="modal-footer" style="background-color:white">
 			<button class="btn btn-primary" (click)="login(Username.value, Password.value)">Login</button>
 		</div>
@@ -94,6 +97,23 @@
 		</div>
 		<div class="modal-footer" style="background-color:white">
 			<button class="btn btn-primary" (click)="changePassword(userChange.value, oldPass.value, newPass.value)">Change Password</button>
+		</div>
+	</form>
+</div>
+
+<!-- Password Reset Form -->
+<div id="passwordReset" class="modal" *ngIf="!loggedIn">
+	<button onclick="document.getElementById('passwordReset').style.display='none'" class="close" title="Close Modal">&times;</button>
+	<!-- Modal Content -->
+	<form class="modal-content animate">
+		<h2> Reset Password </h2>
+		<div class="modal-body">
+			<div>
+				<input #userReset type="text" placeholder="Enter Username" aria-label="Current Username" required>
+			</div>
+		</div>
+		<div class="modal-footer" style="background-color:white">
+			<button class="btn btn-primary" (click)="resetPassword(userReset.value)">Reset Password</button>
 		</div>
 	</form>
 </div>
